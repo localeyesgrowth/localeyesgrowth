@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/general/Hero";
 import CityRankings from "@/components/sections/CityRankings";
-import PodcastPromoCard from "@/components/podcast/PodcastPromoCardLoader";
 import { getAllBlogPosts } from "@/lib/blog-posts";
 
 /* Everything below the first couple of sections is code-split into its
@@ -63,7 +62,7 @@ export default async function Home() {
       <Services />
       <Blog posts={posts} />
       <ClosingCta />
-      <PodcastPromoCard />
+      {/* Podcast popup hidden. The podcast is linked from the Services menu and footer. */}
     </>
   );
 }
