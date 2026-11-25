@@ -230,7 +230,7 @@ export function HeroOptionWheel() {
     <div
       ref={rootRef}
       tabIndex={0}
-      aria-label="Event business types — drag or use arrow keys to spin"
+      aria-label="Event business types, drag or use arrow keys to spin"
       className="relative h-32 w-full cursor-grab select-none overflow-hidden outline-none sm:h-36"
       style={{ touchAction: "pan-y" }}
     >
@@ -246,14 +246,14 @@ export function HeroOptionWheel() {
             transformOrigin: "center bottom",
             willChange: "transform, opacity, filter",
             color:
-              "color-mix(in srgb, #4a3421 calc(var(--ow-p, 0) * 100%), rgba(38,31,21,0.32))",
+              "color-mix(in srgb, #4a3421 calc(var(--ow-p, 0) * 100%), rgba(38, 31, 21,0.32))",
           }}
         >
           <h3>{item}</h3>
           {/* soft gold glow-dot beneath the centered item */}
           <span
             aria-hidden="true"
-            className="h-2 w-2 rounded-full bg-[#a67c3d] blur-[2.5px]"
+            className="h-2 w-2 rounded-full bg-[var(--le-accent)] blur-[2.5px]"
             style={{
               opacity: "var(--ow-p, 0)",
               transform: "scale(calc(0.4 + var(--ow-p, 0) * 0.6))",

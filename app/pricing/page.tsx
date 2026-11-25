@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PricingHero from "@/components/PricingHero";
 import Pricing from "../../components/sections/Pricing";
+import AddOns from "../../components/sections/Addons";
 import PricingFaq from "@/components/PricingFaq";
 
 /* app/pricing/page.tsx — no Header/Footer here; your layout.tsx provides them.
@@ -11,7 +12,7 @@ import PricingFaq from "@/components/PricingFaq";
 export const metadata: Metadata = {
   title: "Pricing | LocalEyes Growth Agency",
   description:
-    "Transparent pricing for LocalEyes' local SEO systems for coffee carts, beverage carts, and mobile event businesses — pick the engine that matches your operational capacity.",
+    "Transparent pricing for LocalEyes' local SEO systems for coffee carts, beverage carts, and mobile event businesses, pick the engine that matches your operational capacity.",
   alternates: {
     canonical: "/pricing",
   },
@@ -19,10 +20,13 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <main className="relative min-h-[100dvh] w-full bg-[#ededd5] text-[#261f15] overflow-x-clip selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative min-h-[100dvh] w-full bg-[#ededd5] text-[#261f15] overflow-x-clip selection:bg-[#ededd5] selection:text-[#261f15]">
       <PricingHero />
       <div className="relative z-10 bg-[#261f15]">
         <Pricing />
+      </div>
+      <div className="relative z-10 bg-[#ededd5]">
+        <AddOns />
       </div>
       <div className="relative z-10 bg-[#ededd5]">
         <PricingFaq />

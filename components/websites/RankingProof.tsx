@@ -51,7 +51,7 @@ export default function RankingProof() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-10%] top-1/2 h-[70vmax] w-[70vmax] -translate-y-1/2 rounded-full"
-        style={{ background: "radial-gradient(closest-side, rgba(198,166,106,0.16), rgba(198,166,106,0))" }}
+        style={{ background: "radial-gradient(closest-side, rgba(163, 155, 132,0.16), rgba(163, 155, 132,0))" }}
       />
 
       <div className="relative mx-auto w-full max-w-[1480px] px-6 md:px-12">
@@ -61,7 +61,7 @@ export default function RankingProof() {
             id="ranking-proof-title"
             className="font-heading font-thin not-italic text-[clamp(2.3rem,4.4vw,4rem)] leading-[1.04] tracking-[-0.02em]"
           >
-            {count} searches, <span className="text-[#c6a66a]">first on every one</span>
+            {count} searches, <span>first on every one</span>
           </h2>
           <p className="max-w-[22rem] font-sans text-[0.95rem] leading-relaxed text-[#ededd5]/60 lg:pb-2 lg:text-right">
             Client sites at the top of Google for the searches that book events, each with the screenshot it was taken from.
@@ -87,7 +87,7 @@ export default function RankingProof() {
                 >
                   <span
                     className={`font-heading text-[1.7rem] font-thin not-italic leading-none transition-colors duration-500 sm:text-[2rem] ${
-                      active === i ? "text-[#c6a66a]" : "text-[#c6a66a]/35"
+                      active === i ? "text-[var(--le-accent-dark)]" : "text-[var(--le-accent-dark)]/40"
                     }`}
                   >
                     #1
@@ -97,7 +97,7 @@ export default function RankingProof() {
                       active === i ? "text-[#ededd5]" : "text-[#ededd5]/45"
                     }`}
                   >
-                    {c.keyword} <span className={active === i ? "text-[#c6a66a]" : ""}>{c.city}</span>
+                    {c.keyword} <span className={active === i ? "text-[#a39b84]" : ""}>{c.city}</span>
                   </span>
                   <span
                     className={`font-sans text-[0.55rem] font-semibold uppercase tracking-[0.22em] transition-colors duration-500 sm:text-[0.6rem] ${
@@ -111,7 +111,7 @@ export default function RankingProof() {
                       <span
                         key={`${active}-${still}`}
                         data-paused={!running}
-                        className={`block h-full w-full bg-[#c6a66a] ${still ? "" : "le-proof-fill"}`}
+                        className={`block h-full w-full bg-[#ededd5] ${still ? "" : "le-proof-fill"}`}
                       />
                     </span>
                   )}
@@ -139,7 +139,7 @@ export default function RankingProof() {
               </div>
               <figcaption className="flex items-center justify-between gap-4 px-1 pb-1 pt-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#261f15]/55 sm:pt-4">
                 <span>
-                  {entry.client} <span className="text-[#a67c3d]">·</span> #1 on Google
+                  {entry.client} <span className="text-[var(--le-accent)]">·</span> #1 on Google
                 </span>
                 <span>
                   {String(active + 1).padStart(2, "0")} / {String(CASES.length).padStart(2, "0")}

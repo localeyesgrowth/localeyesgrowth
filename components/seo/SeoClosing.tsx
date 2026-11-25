@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import { useGrowthDiagnostic } from "@/components/growth-diagnostic/GrowthDiagnosticProvider";
 import { useCalendly, CALENDLY_BOOKING_URL } from "@/components/sections/CalendlyModal";
 import { Hairlines } from "@/components/websites/parts";
@@ -29,10 +28,10 @@ export default function SeoClosing({ lead, accent, body }: { lead: string; accen
           <defs>
             <path id="le-seo-closing-circle" d="M 50,50 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
           </defs>
-          <circle cx="50" cy="50" r="40.5" stroke="#c6a66a" strokeOpacity="0.1" strokeWidth="0.1" />
-          <text className="font-sans" fill="#c6a66a" fillOpacity="0.11" fontSize="2.3" fontWeight="600" letterSpacing="1.9">
+          <circle cx="50" cy="50" r="40.5" stroke="#a39b84" strokeOpacity="0.1" strokeWidth="0.1" />
+          <text className="font-sans" fill="#a39b84" fillOpacity="0.11" fontSize="2.3" fontWeight="600" letterSpacing="1.9">
             <textPath href="#le-seo-closing-circle" startOffset="0">
-              RANKINGS GET YOU FOUND ✦ THE PLAYBOOK GETS YOU BOOKED ✦ LOCALEYES ✦ EST. MMXXIII ✦
+              RANKINGS GET YOU FOUND · THE PLAYBOOK GETS YOU BOOKED · LOCALEYES · EST. MMXXIII
             </textPath>
           </text>
         </svg>
@@ -40,45 +39,24 @@ export default function SeoClosing({ lead, accent, body }: { lead: string; accen
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
-        style={{ background: "radial-gradient(45% 50% at 50% 50%, rgba(198,166,106,0.12), rgba(198,166,106,0) 70%)" }}
+        style={{ background: "radial-gradient(45% 50% at 50% 50%, rgba(163, 155, 132,0.12), rgba(163, 155, 132,0) 70%)" }}
       />
 
       <div className="relative mx-auto flex w-full max-w-[1480px] flex-col items-center px-6 text-center md:px-12">
-        <p className="flex items-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
+        <p className="flex items-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
           Free growth diagnostic
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
         </p>
         <h2 id="seo-closing-title" className="mt-8 max-w-[52rem] text-balance font-heading text-[clamp(2.6rem,6vw,5.4rem)] font-thin not-italic leading-[1.02] tracking-[-0.02em]">
-          {lead} <span className="text-[#c6a66a]">{accent}</span>
+          {lead} <span>{accent}</span>
         </h2>
         <p className="mt-7 max-w-[32rem] font-sans text-[1rem] leading-[1.7] text-[#ededd5]/60">{body}</p>
 
         <button
           type="button"
           onClick={openQuiz}
-          className="group/btn relative mt-11 inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:text-xs"
+          className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#ededd5] text-[#261f15] hover:bg-white mt-11"
         >
-          <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-            Run my free growth diagnostic
-          </span>
-          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-            <span
-              aria-hidden="true"
-              className="absolute inset-0 scale-100 rounded-full bg-[#3a3020] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[25] group-hover/btn:duration-[1100ms]"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute inset-0 rounded-full bg-[#3a3020] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#ededd5]"
-            />
-            <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-              <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#3a3020]" />
-            </span>
-          </span>
+          Run my free growth diagnostic
         </button>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">

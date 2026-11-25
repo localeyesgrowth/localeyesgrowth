@@ -14,6 +14,9 @@ interface NoiseProps {
  * can be scoped to a single section (e.g. a hero) rather than the whole page.
  * Source: https://reactbits.dev/animations/noise
  */
+/* Refresh: film grain switched off site-wide. Flip to true to restore. */
+const GRAIN_ON: boolean = false;
+
 const CANVAS_SIZE = 1024;
 const POOL_SIZE = 8;
 
@@ -110,6 +113,8 @@ export function Noise({
       stop();
     };
   }, [patternAlpha, patternRefreshInterval]);
+
+  if (!GRAIN_ON) return null;
 
   return (
     <canvas

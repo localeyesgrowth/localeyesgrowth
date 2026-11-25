@@ -22,12 +22,12 @@ const FAQS: FAQ[] = [
   {
     question: "Can I go month-to-month instead of committing?",
     answer:
-      "Yes. Growth runs $1,800/mo and Scale $2,800/mo on a month-to-month basis. The committed rates — $1,440 and $2,200 — reward the six months of runway the work actually needs. Solo is month-to-month by design.",
+      "Yes. Growth runs $1,800/mo and Scale $2,800/mo on a month-to-month basis. The committed rates ($1,440 and $2,200) reward the six months of runway the work actually needs. Solo is month-to-month by design.",
   },
   {
     question: "What exactly do I get for the monthly rate?",
     answer:
-      "Every plan is a working system, not a report. Depending on your tier: new SEO pages and backlinks every month, citation building, full Google Business Profile management, a lead intake form with automations, conversion optimization, and keyword tracking — from a monthly report on Solo up to a live dashboard on Scale.",
+      "Every plan is a working system, not a report. Depending on your tier: new SEO pages and backlinks every month, citation building, full Google Business Profile management, a lead intake form with automations, conversion optimization, and keyword tracking, from a monthly report on Solo up to a live dashboard on Scale.",
   },
   {
     question: "Are there any setup fees or hidden costs?",
@@ -37,7 +37,7 @@ const FAQS: FAQ[] = [
   {
     question: "Do you guarantee a specific number of bookings?",
     answer:
-      "We guarantee the execution of a proven system built specifically for mobile coffee operators. We cannot honestly guarantee a specific number of bookings — your market, your pricing, and your sales process all play a role. What we control is the machine that puts high-intent, qualified inquiries in front of you.",
+      "We guarantee the execution of a proven system built specifically for mobile coffee operators. We cannot honestly guarantee a specific number of bookings: your market, your pricing, and your sales process all play a role. What we control is the machine that puts high-intent, qualified inquiries in front of you.",
   },
   {
     question: "Can I upgrade from Solo to Growth later?",
@@ -104,11 +104,11 @@ export default function PricingFaq() {
 
       {/* Soft gold blurred circles */}
       <div
-        className={`absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] min-w-[400px] min-h-[400px] rounded-full bg-[#a3843f]/10 blur-[140px] pointer-events-none mix-blend-multiply ${!reduced ? "le-faq-spin-slow" : ""}`}
+        className={`absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] min-w-[400px] min-h-[400px] rounded-full bg-[#6a5f4e]/10 blur-[140px] pointer-events-none mix-blend-multiply ${!reduced ? "le-faq-spin-slow" : ""}`}
         aria-hidden="true"
       />
       <div
-        className={`absolute bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] min-w-[300px] min-h-[300px] rounded-full bg-[#8a6f3d]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "le-faq-spin-slow" : ""}`}
+        className={`absolute bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] min-w-[300px] min-h-[300px] rounded-full bg-[#6a5f4e]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "le-faq-spin-slow" : ""}`}
         style={{ animationDirection: "reverse" }}
         aria-hidden="true"
       />
@@ -122,19 +122,12 @@ export default function PricingFaq() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center text-center"
         >
-          <p className="flex items-center justify-center gap-4 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center justify-center gap-4 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
             Questions
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
           </p>
           <h2 className="mt-8 font-heading font-thin not-italic leading-[1.05] tracking-[-0.02em] text-[clamp(2.5rem,4vw,3.8rem)] text-[#261f15] md:mt-10">
             Frequently Asked
           </h2>
-          <div aria-hidden="true" className="mt-6 h-px w-10 bg-[#a3843f]" />
         </motion.div>
 
         <div className="mt-16 md:mt-24 mx-auto max-w-[1000px]">
@@ -157,7 +150,7 @@ export default function PricingFaq() {
                 >
                   {/* Soft Gold Glow behind open item */}
                   <div
-                    className={`absolute inset-0 z-0 bg-gradient-to-r from-transparent via-[#a3843f]/[0.08] to-transparent transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? "opacity-100" : "opacity-0"}`}
+                    className={`absolute inset-0 z-0 bg-gradient-to-r from-transparent via-[#6a5f4e]/[0.08] to-transparent transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? "opacity-100" : "opacity-0"}`}
                   />
 
                   <button
@@ -166,7 +159,7 @@ export default function PricingFaq() {
                     aria-controls={`faq-answer-${i}`}
                     id={`faq-question-${i}`}
                     onClick={() => setOpenIndex(open ? null : i)}
-                    className="relative z-10 flex w-full cursor-pointer items-start justify-between gap-4 py-8 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f] sm:gap-8 sm:py-10"
+                    className="relative z-10 flex w-full cursor-pointer items-start justify-between gap-4 py-8 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e] sm:gap-8 sm:py-10"
                   >
                     {/* Oversized Ghost Numeral */}
                     <span className="absolute left-0 top-6 -z-10 font-heading not-italic text-[5rem] tabular-nums leading-none tracking-tighter text-[#261f15]/[0.04] transition-colors duration-500 sm:text-[6.5rem]">
@@ -175,12 +168,12 @@ export default function PricingFaq() {
 
                     <div className="flex flex-1 items-baseline gap-4 sm:gap-6 pt-2">
                       {/* Smaller visible numeral */}
-                      <span className="pt-1 font-sans text-[0.6rem] font-semibold uppercase tabular-nums tracking-[0.2em] text-[#8a6f3d] shrink-0">
+                      <span className="pt-1 font-sans text-[0.6rem] font-semibold uppercase tabular-nums tracking-[0.2em] text-[#6a5f4e] shrink-0">
                         No. {num}
                       </span>
 
                       {/* Giant Thin-Serif Question */}
-                      <span className="font-heading not-italic text-2xl leading-[1.15] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#8a6f3d] sm:text-4xl">
+                      <span className="font-heading not-italic text-2xl leading-[1.15] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#6a5f4e] sm:text-4xl">
                         {faq.question}
                       </span>
 
@@ -190,18 +183,8 @@ export default function PricingFaq() {
 
                     {/* Rotating Gold Stamp */}
                     <div className="relative mt-2 flex h-8 w-8 shrink-0 items-center justify-center sm:h-10 sm:w-10">
-                      <span
-                        aria-hidden="true"
-                        className={`absolute text-xl text-[#8a6f3d] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-2xl ${
-                          open
-                            ? "rotate-[135deg] scale-110"
-                            : "rotate-0 scale-100"
-                        }`}
-                      >
-                        ✦
-                      </span>
                       <div
-                        className={`absolute inset-0 rounded-full border border-[#8a6f3d]/30 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                        className={`absolute inset-0 rounded-full border border-[#6a5f4e]/30 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                           open ? "scale-125 opacity-0" : "scale-100 opacity-100"
                         }`}
                       />
@@ -238,7 +221,7 @@ export default function PricingFaq() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mt-24 text-center"
         >
-          <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[#8a6f3d]">
+          <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[#6a5f4e]">
             Still have questions?
           </p>
           <a
@@ -247,7 +230,7 @@ export default function PricingFaq() {
               e.preventDefault();
               openCalendly();
             }}
-            className="group/cta relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full border border-[#c6a66a] bg-transparent px-8 py-3.5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#8a6f3d] transition-all duration-500 hover:border-[#261f15] hover:text-[#ededd5]"
+            className="group/cta relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full border border-[#a39b84] bg-transparent px-8 py-3.5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#6a5f4e] transition-all duration-500 hover:border-[#261f15] hover:text-[#ededd5]"
           >
             <span className="relative z-10 transition-colors duration-500">
               Book a Call

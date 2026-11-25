@@ -1,8 +1,6 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import { HeroOptionWheel } from "./HeroOptionWheel";
-import { Noise } from "../../components/effects/Noise";
 import { useGrowthDiagnostic } from "../growth-diagnostic/GrowthDiagnosticProvider";
 
 export default function Hero() {
@@ -23,73 +21,16 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* React Bits Noise — animated film grain over the whole section */}
-      <Noise patternAlpha={10} />
-
-      {/* Flanking editorial micro-labels — quiet 70s magazine detail */}
-      <span
-        aria-hidden="true"
-        className="absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 -rotate-90 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.34em] text-[#261f15]/35 lg:block"
-      >
-        MMXXIII
-      </span>
-      <span
-        aria-hidden="true"
-        className="absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 rotate-90 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.34em] text-[#261f15]/35 lg:block"
-      >
-        Tbilisi, Georgia
-      </span>
-
-      {/* Slow-spinning circular brand badge with a still star at its heart */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-[9%] right-[6%] z-20 hidden h-32 w-32 items-center justify-center lg:flex"
-      >
-        <svg
-          viewBox="0 0 100 100"
-          className="h-full w-full animate-le-spin-slow"
-          fill="none"
-        >
-          <defs>
-            <path
-              id="le-badge-circle"
-              d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-            />
-          </defs>
-          <text
-            className="font-sans"
-            fill="#261f15"
-            fillOpacity="0.5"
-            fontSize="6.1"
-            fontWeight="600"
-            letterSpacing="1.9"
-          >
-            <textPath href="#le-badge-circle" startOffset="0">
-              LOCALEYES ✦ SEO GROWTH SYSTEMS ✦ EST. MMXXIII ✦
-            </textPath>
-          </text>
-        </svg>
-        <span className="absolute font-heading text-3xl leading-none text-[#c6a66a]">
-          ✦
-        </span>
-      </div>
-
       {/* ---------- Centered content ---------- */}
       <div className="relative z-20 mx-auto flex w-full max-w-6xl flex-col items-center px-6 pt-40 text-center md:pt-52">
         {/* Eyebrow — tracks in from wide letter-spacing with a soft focus pull */}
-        <h1 className="flex items-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.26em] text-[#c6a66a] sm:text-xs animate-le-eyebrow-in">
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
+        <h1 className="flex items-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.26em] text-[#261f15]/60 sm:text-xs animate-le-eyebrow-in">
           Catering SEO Services for Coffee Carts, Mobile Bars & Every Kind of Caterer
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
         </h1>
 
         {/* Headline — each word rises out of its own clipping mask, staggered */}
         <p className="mt-[13px] max-w-6xl text-balance font-heading font-thin not-italic text-[2.6rem] leading-[1.05] tracking-[-0.015em] sm:text-6xl lg:text-[5.2rem]">
-          {"Growing Event Brands that Dominate Their Cities Search"
+          {"The Growth Agency for Event Caterers"
             .split(" ")
             .map((word, i, arr) => (
               <span key={i}>
@@ -111,52 +52,18 @@ export default function Hero() {
           className="mt-10 flex w-full flex-row flex-wrap items-center justify-center gap-3 sm:mt-12 sm:w-auto sm:gap-5 animate-le-fade-up"
           style={{ animationDelay: "760ms" }}
         >
-          {/* Growth Diagnostic — same pill mechanic, gold chip; opens the
-              quiz modal (lazy-loaded on first click) */}
           <button
             type="button"
             onClick={openQuiz}
-            className="group/btn3 relative inline-flex w-auto cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full border border-[#261f15]/25 py-1 pl-4 pr-1 font-sans text-[0.62rem] font-semibold tracking-[0.12em] uppercase text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:gap-3 sm:py-1.5 sm:pl-6 sm:pr-1.5 sm:text-xs sm:tracking-[0.14em]"
+            className="inline-flex cursor-pointer items-center justify-center rounded-[4px] bg-[#261f15] px-6 py-3.5 font-sans text-sm font-semibold text-[#ededd5] transition-colors duration-300 hover:bg-[#4a3421] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)]"
           >
-            <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn3:text-white">
-              Free Growth Score
-            </span>
-            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center sm:h-9 sm:w-9">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#a67c3d] scale-100 transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn3:scale-[14] group-hover/btn3:duration-[1100ms]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#a67c3d] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn3:bg-white"
-              />
-              <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn3:rotate-45 will-change-transform">
-                <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn3:text-[#a67c3d]" />
-              </span>
-            </span>
+            Free Growth Score
           </button>
-
-          {/* Secondary — same pill, terracotta chip */}
           <a
             href="/pricing"
-            className="group/btn2 relative inline-flex w-auto cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full border border-[#4a3421]/25 py-1 pl-4 pr-1 font-sans text-[0.62rem] font-semibold tracking-[0.12em] uppercase text-[#4a3421] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:gap-3 sm:py-1.5 sm:pl-6 sm:pr-1.5 sm:text-xs sm:tracking-[0.14em]"
+            className="inline-flex items-center justify-center rounded-[4px] border border-[#261f15]/30 px-6 py-3.5 font-sans text-sm font-semibold text-[#261f15] transition-colors duration-300 hover:border-[#261f15] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)]"
           >
-            <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-white">
-              Pricing
-            </span>
-            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center sm:h-9 sm:w-9">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#4a3421] scale-100 transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn2:scale-[14] group-hover/btn2:duration-[1100ms]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#4a3421] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:bg-white"
-              />
-              <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn2:rotate-45 will-change-transform">
-                <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#a67c3d]" />
-              </span>
-            </span>
+            Pricing
           </a>
         </div>
 
@@ -165,7 +72,7 @@ export default function Hero() {
           className="mt-10 font-sans text-[0.7rem] uppercase tracking-[0.12em] text-[#261f15]/55 sm:text-sm animate-le-fade-up"
           style={{ animationDelay: "880ms" }}
         >
-          <span className="mr-1.5 font-heading normal-case tracking-normal text-xl text-[#c6a66a] sm:text-2xl align-[-0.08em]">
+          <span className="mr-1.5 font-heading normal-case tracking-normal text-xl text-[#261f15] sm:text-2xl align-[-0.08em]">
             $350k+
           </span>
           Generated in Client Bookings each Month
@@ -186,20 +93,7 @@ export default function Hero() {
         <HeroOptionWheel />
       </div>
 
-      {/* Scroll cue — micro label + hairline track with a dripping accent */}
-      <a
-        href="#results"
-        aria-label="Scroll down to results"
-        className="group/scroll relative z-20 mt-8 mb-8 flex cursor-pointer flex-col items-center gap-3 self-center animate-le-fade-up sm:mt-auto"
-        style={{ animationDelay: "1000ms" }}
-      >
-        <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.34em] text-[#261f15]/45 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/scroll:text-[#c6a66a]">
-          Scroll
-        </span>
-        <span className="relative block h-12 w-px overflow-hidden bg-[#261f15]/15">
-          <span className="absolute left-0 top-0 h-1/2 w-px bg-[#c6a66a] animate-le-scroll-drip" />
-        </span>
-      </a>
+      
     </section>
   );
 }

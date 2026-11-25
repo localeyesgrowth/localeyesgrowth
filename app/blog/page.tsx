@@ -6,7 +6,7 @@ import { getAllBlogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "The Journal | LocalEyes Growth Agency",
   description:
-    "Practical local SEO breakdowns for coffee carts, mobile bars, and every kind of caterer — from LocalEyes.",
+    "Practical local SEO breakdowns for coffee carts, mobile bars, and every kind of caterer, from LocalEyes.",
   alternates: {
     canonical: "/blog",
   },
@@ -20,7 +20,7 @@ export default async function BlogPage() {
   const posts = await getAllBlogPosts();
 
   return (
-    <main className="relative min-h-dvh w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative min-h-dvh w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <Suspense fallback={null}>
         <BlogListing posts={posts} />
       </Suspense>

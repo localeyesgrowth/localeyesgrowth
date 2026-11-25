@@ -78,7 +78,7 @@ const DISCIPLINES: Discipline[] = [
     orbit: "Search",
     title: "Site Search Results",
     description:
-      "Strategic, precise SEO built to hit your ranking goals — and turn Google searches into real, qualified leads.",
+      "Strategic, precise SEO built to hit your ranking goals, and turn Google searches into real, qualified leads.",
     platforms: [
       { mark: "google", name: "Google" },
       { mark: "bing", name: "Bing" },
@@ -94,7 +94,7 @@ const DISCIPLINES: Discipline[] = [
     orbit: "AI Answers",
     title: "AI Features & Snippets",
     description:
-      "Writing engineered to be cited — placing you at the very top of results, whatever your clients are searching for.",
+      "Writing engineered to be cited, placing you at the very top of results, whatever your clients are searching for.",
     platforms: [
       { mark: "chatgpt", name: "ChatGPT" },
       { mark: "gemini", name: "Gemini" },
@@ -111,7 +111,7 @@ const DISCIPLINES: Discipline[] = [
     orbit: "Maps",
     title: "Local Map Pack Results",
     description:
-      "Google Business Profile optimization tailored to lift you into the local map pack — where nearby clients decide.",
+      "Google Business Profile optimization tailored to lift you into the local map pack, where nearby clients decide.",
     platforms: [
       { mark: "googlemaps", name: "Google Maps" },
       { mark: "reviews", name: "Reviews" },
@@ -143,7 +143,7 @@ const STARS: [number, number, number, number][] = [
   [58, 97, 8, 4.2],
 ];
 
-const SEAL_TEXT = "LOCALEYES ✦ SEO GROWTH SYSTEMS ✦ FOUND FIRST ✦ ";
+const SEAL_TEXT = "LOCALEYES · SEO GROWTH SYSTEMS · FOUND FIRST · ";
 
 /* ------------------------------------------------------------------ */
 /* geometry                                                            */
@@ -340,23 +340,22 @@ const QUERIES: { mark: MarkKey; text: string }[] = [
 
 function Answer({ ring }: { ring: number }) {
   const badge =
-    "grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#261f15] font-heading text-[0.95rem] leading-none text-[#c6a66a]";
+    "grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#261f15] font-heading text-[0.95rem] leading-none text-[var(--le-accent-dark)]";
   const name =
     "font-heading text-[1.3rem] leading-[1.05] text-[#261f15] sm:text-[1.4rem]";
   const meta = "mt-1 truncate font-sans text-[0.66rem] text-[#261f15]/50";
   const flag =
-    "ml-auto hidden shrink-0 self-center font-sans text-[0.52rem] font-semibold uppercase tracking-[0.22em] text-[#a67c3d] sm:block";
+    "ml-auto hidden shrink-0 self-center font-sans text-[0.52rem] font-semibold uppercase tracking-[0.22em] text-[#6a5f4e] sm:block";
 
   if (ring === 1)
     return (
       <div className="flex min-w-0 flex-1 items-center gap-3.5">
-        <span className={badge}>✦</span>
         <p className="min-w-0 font-sans text-[0.8rem] leading-snug text-[#261f15]/65">
           &ldquo;Book{" "}
           <span className="font-heading text-[1.15rem] text-[#261f15]">
             Your Business
           </span>{" "}
-          — top-rated near you.&rdquo;
+top-rated near you.&rdquo;
         </p>
         <span className={flag}>Recommended by AI</span>
       </div>
@@ -395,9 +394,8 @@ function ResultStrip({ ring }: { ring: number }) {
       {/* leads to */}
       <span
         aria-hidden="true"
-        className="hidden shrink-0 items-center text-[#a67c3d] lg:flex"
+        className="hidden shrink-0 items-center text-[var(--le-accent)] lg:flex"
       >
-        <span className="h-px w-8 bg-[#a67c3d]/60" />
         <svg viewBox="0 0 8 10" className="-ml-px h-2.5 w-2" fill="currentColor">
           <path d="M0 0l8 5-8 5z" />
         </svg>
@@ -808,7 +806,7 @@ export default function SeoServices() {
           transition: stroke 0.9s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .le-orrery .le-orbit[data-active="true"] {
-          stroke: rgba(166, 124, 61, 0.85);
+          stroke: color-mix(in srgb, var(--le-accent) 85%, transparent);
           stroke-width: 1.25;
         }
         .le-orrery .le-orbit[data-half="far"] {
@@ -819,7 +817,7 @@ export default function SeoServices() {
            blur filter (it's redrawn every frame) */
         .le-orrery .le-glow {
           fill: none;
-          stroke: #c6a66a;
+          stroke: #a39b84;
           stroke-linecap: round;
           opacity: 0;
           transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1);
@@ -839,10 +837,10 @@ export default function SeoServices() {
           transition: fill 0.9s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .le-lead[data-active="true"] line {
-          stroke: #a67c3d;
+          stroke: var(--le-accent);
         }
         .le-lead[data-active="true"] circle {
-          fill: #a67c3d;
+          fill: var(--le-accent);
         }
 
         /* planets — glazed porcelain discs holding a platform's own mark:
@@ -877,11 +875,11 @@ export default function SeoServices() {
         }
         .le-planet[data-active="true"] .le-pearl {
           box-shadow:
-            0 0 0 1.5px rgba(166, 124, 61, 0.75),
-            0 0 0 6px rgba(198, 166, 106, 0.16),
+            0 0 0 1.5px color-mix(in srgb, var(--le-accent) 75%, transparent),
+            0 0 0 6px rgba(163, 155, 132, 0.16),
             inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
             inset 0 -3px 6px rgba(120, 96, 52, 0.09),
-            0 18px 30px -16px rgba(166, 124, 61, 0.5);
+            0 18px 30px -16px color-mix(in srgb, var(--le-accent) 50%, transparent);
         }
         .le-pearl svg {
           position: relative;
@@ -940,8 +938,8 @@ export default function SeoServices() {
         }
         .le-tag[data-active="true"] {
           color: #261f15;
-          border-color: rgba(166, 124, 61, 0.7);
-          box-shadow: 0 10px 22px -14px rgba(166, 124, 61, 0.8);
+          border-color: color-mix(in srgb, var(--le-accent) 70%, transparent);
+          box-shadow: 0 10px 22px -14px color-mix(in srgb, var(--le-accent) 80%, transparent);
         }
         .le-tag-num {
           font-family: var(--font-heading);
@@ -952,7 +950,7 @@ export default function SeoServices() {
           transition: color 0.9s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .le-tag[data-active="true"] .le-tag-num {
-          color: #a67c3d;
+          color: var(--le-accent);
         }
 
         /* the monogram — fades and settles in when the stage opens */
@@ -1056,12 +1054,9 @@ export default function SeoServices() {
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 py-20 md:px-12 md:py-28">
         {/* ------------------------- header --------------------------- */}
         <div ref={headRef}>
-          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a67c3d] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
             What We Do
-            <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
+            <span aria-hidden="true" className="flex-1" />
           </p>
 
           <div className="mt-6 flex flex-col gap-6 md:mt-8 md:flex-row md:items-end md:justify-between md:gap-12">
@@ -1069,7 +1064,7 @@ export default function SeoServices() {
               SEO
             </h2>
             <p className="max-w-sm font-sans text-sm leading-relaxed text-[#261f15]/70 sm:text-[0.95rem] md:pb-3">
-              Only the newest practices that actually move rankings — applied as
+              Only the newest practices that actually move rankings, applied as
               fast as Google allows. Never the outdated, box&#8209;ticking work
               that looks like effort and delivers little.
             </p>
@@ -1087,14 +1082,14 @@ export default function SeoServices() {
             {/* the plane itself — a faint warm floor under the system */}
             <div
               ref={floorRef}
-              className="pointer-events-none absolute rounded-[50%] bg-[radial-gradient(closest-side,rgba(166,124,61,0.11),rgba(166,124,61,0.04)_62%,transparent)]"
+              className="pointer-events-none absolute rounded-[50%] bg-[radial-gradient(closest-side,color-mix(in_srgb,var(--le-accent)_11%,transparent),color-mix(in_srgb,var(--le-accent)_4%,transparent)_62%,transparent)]"
             />
             {/* gold aura behind the monogram — a glow, never a spotlight */}
             <div
               ref={auraRef}
               className="pointer-events-none absolute h-[calc(var(--m)*5.4)] w-[calc(var(--m)*5.4)] -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="h-full w-full rounded-full bg-[radial-gradient(closest-side,rgba(198,166,106,0.42),rgba(198,166,106,0.12)_45%,transparent)] animate-le-breathe" />
+              <div className="h-full w-full rounded-full bg-[radial-gradient(closest-side,rgba(163,155,132,0.42),rgba(163,155,132,0.12)_45%,transparent)] animate-le-breathe" />
             </div>
 
             <svg className="pointer-events-none absolute inset-0 h-full w-full overflow-visible">
@@ -1108,9 +1103,9 @@ export default function SeoServices() {
                     }}
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stopColor="#c6a66a" stopOpacity="0" />
-                    <stop offset="0.7" stopColor="#c6a66a" stopOpacity="0.55" />
-                    <stop offset="1" stopColor="#a67c3d" stopOpacity="1" />
+                    <stop offset="0" stopColor="#a39b84" stopOpacity="0" />
+                    <stop offset="0.7" stopColor="#a39b84" stopOpacity="0.55" />
+                    <stop offset="1" stopColor="var(--le-accent)" stopOpacity="1" />
                   </linearGradient>
                 ))}
               </defs>
@@ -1118,7 +1113,7 @@ export default function SeoServices() {
                 <path
                   ref={bezelRef}
                   fill="none"
-                  stroke="rgba(38,31,21,0.18)"
+                  stroke="rgba(38, 31, 21,0.18)"
                   strokeWidth="1"
                 />
                 {DISCIPLINES.map((d, i) => (
@@ -1175,7 +1170,7 @@ export default function SeoServices() {
                     ref={(el) => {
                       spokeRefs.current[i] = el;
                     }}
-                    stroke="#a67c3d"
+                    stroke="var(--le-accent)"
                     strokeWidth="1"
                     strokeDasharray="2 7"
                     strokeLinecap="round"
@@ -1199,28 +1194,13 @@ export default function SeoServices() {
                         sparkRefs.current[i] = el;
                       }}
                       r="2.6"
-                      fill="#a67c3d"
+                      fill="var(--le-accent)"
                       style={{ opacity: 0 }}
                     />
                   </g>
                 ))}
               </g>
             </svg>
-
-            {STARS.map(([left, top, size, delay]) => (
-              <span
-                key={`${left}-${top}`}
-                className="le-twinkle pointer-events-none absolute font-heading leading-none text-[#a67c3d]"
-                style={{
-                  left: `${left}%`,
-                  top: `${top}%`,
-                  fontSize: size,
-                  animationDelay: `${delay}s`,
-                }}
-              >
-                ✦
-              </span>
-            ))}
 
             {/* The monogram — LE in the display face, gold on ink, inside a
                slowly turning seal (same voice as the hero badge) */}
@@ -1249,13 +1229,13 @@ export default function SeoServices() {
                   </textPath>
                 </text>
               </svg>
-              <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#261f15] shadow-[0_0_0_1px_rgba(38,31,21,0.12),0_0_0_7px_rgba(237,237,213,0.55),0_0_0_8px_rgba(166,124,61,0.35),0_30px_60px_-24px_rgba(38,31,21,0.7)]">
+              <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#261f15] shadow-[0_0_0_1px_rgba(38,31,21,0.12),0_0_0_7px_rgba(237,237,213,0.55),0_0_0_8px_color-mix(in srgb, var(--le-accent) 35%, transparent),0_30px_60px_-24px_rgba(38, 31, 21,0.7)]">
                 <span aria-hidden="true" className="le-sheen" />
                 <span
                   aria-hidden="true"
-                  className="absolute inset-[6px] rounded-full border border-[#c6a66a]/35"
+                  className="absolute inset-[6px] rounded-full border border-[#a39b84]/35"
                 />
-                <span className="relative font-heading text-[calc(var(--m)*0.86)] leading-none tracking-[-0.02em] text-[#c6a66a]">
+                <span className="relative font-heading text-[calc(var(--m)*0.86)] leading-none tracking-[-0.02em] text-[#a39b84]">
                   LE
                 </span>
               </div>
@@ -1312,7 +1292,6 @@ export default function SeoServices() {
                 }}
                 className="le-tag hidden font-sans xl:inline-flex"
               >
-                <span className="le-tag-num">{d.number}</span>
                 {d.orbit}
               </span>
             ))}
@@ -1325,10 +1304,8 @@ export default function SeoServices() {
             aria-hidden="true"
             className="le-results relative mx-auto mt-4 w-full max-w-[24rem] lg:mt-0 lg:max-w-[54rem]"
           >
-            <p className="flex items-center justify-center gap-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#a67c3d]">
-              <span className="h-px w-10 bg-[#a67c3d]/40" />
+            <p className="flex items-center justify-center gap-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e]">
               What your clients see
-              <span className="h-px w-10 bg-[#a67c3d]/40" />
             </p>
             <div className="mt-4 grid">
               {DISCIPLINES.map((d, i) => (
@@ -1340,9 +1317,6 @@ export default function SeoServices() {
                   {/* the orbit's name — the stage only labels its rings on
                      wide screens */}
                   <p className="-mb-1 flex shrink-0 items-center gap-2 px-1.5 font-sans text-[0.52rem] font-semibold uppercase tracking-[0.26em] text-[#261f15]/50 lg:mb-0 lg:pl-3 xl:hidden">
-                    <span className="font-heading text-[0.85rem] font-thin tracking-normal text-[#a67c3d]">
-                      {d.number}
-                    </span>
                     {d.orbit}
                   </p>
                   <ResultStrip ring={i} />
@@ -1354,9 +1328,6 @@ export default function SeoServices() {
 
         {/* ---------------------- the three disciplines --------------- */}
         <p className="mt-14 flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/55 lg:mt-16">
-          <span aria-hidden="true" className="text-[#a67c3d]">
-            ✦
-          </span>
           Three disciplines. Found first.
         </p>
 
@@ -1380,23 +1351,16 @@ export default function SeoServices() {
                 className="relative border-b border-[#261f15]/10 py-8 md:border-b-0 md:border-l md:px-8 md:py-9 md:first:border-l-0 md:first:pl-0 md:last:pr-0 lg:px-10"
               >
                 <div className="flex items-baseline gap-5">
-                  <span
-                    className={`font-heading font-thin not-italic text-5xl leading-none transition-colors duration-700 ${
-                      on ? "text-[#a67c3d]" : "text-[#261f15]/25"
-                    }`}
-                  >
-                    {d.number}
-                  </span>
-                  {/* hairline that fills gold while this one is lit */}
+                  {/* progress bar kept for the cycle timing, not shown */}
                   <span
                     aria-hidden="true"
-                    className="relative h-px flex-1 self-center overflow-hidden bg-[#261f15]/10"
+                    className="hidden"
                   >
                     <span
                       ref={(el) => {
                         barRefs.current[i] = el;
                       }}
-                      className="le-bar absolute inset-0 bg-[#a67c3d]"
+                      className="le-bar absolute inset-0 bg-[var(--le-accent)]"
                     />
                   </span>
                   <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/55">

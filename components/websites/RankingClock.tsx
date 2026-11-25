@@ -46,7 +46,7 @@ const TRACKS: Track[] = [
 const TONE: Record<Span["tone"], string> = {
   build: "bg-[#261f15]/25",
   late: "bg-[#261f15]/50",
-  ours: "bg-[#c6a66a]",
+  ours: "bg-[#ededd5]",
   sandbox: "le-clock-sand border border-[#261f15]/15",
 };
 
@@ -90,7 +90,7 @@ export default function RankingClock({
             id="ranking-clock-title"
             className="mt-8 font-heading font-thin not-italic text-[clamp(2.3rem,4.4vw,4rem)] leading-[1.04] tracking-[-0.02em]"
           >
-            {lead} <span className="text-[#a67c3d]">{accent}</span>
+            {lead} <span>{accent}</span>
           </h2>
           <div className="mt-8 flex max-w-[34rem] flex-col gap-5">
             {paragraphs.map((p, i) => (
@@ -109,7 +109,7 @@ export default function RankingClock({
             className="rounded-[1.6rem] border border-[#261f15]/10 bg-[#f4efdc] p-6 shadow-[0_1px_2px_rgba(38,31,21,0.05),0_40px_70px_-45px_rgba(38,31,21,0.45)] sm:p-9 lg:sticky lg:top-28"
           >
             <div className="flex items-end gap-5 border-b border-[#261f15]/10 pb-7">
-              <p className="whitespace-nowrap font-heading font-thin not-italic text-[clamp(3.4rem,6vw,4.8rem)] leading-[0.85] tracking-[-0.03em] text-[#8a6f3d]">
+              <p className="whitespace-nowrap font-heading font-thin not-italic text-[clamp(3.4rem,6vw,4.8rem)] leading-[0.85] tracking-[-0.03em] text-[#6a5f4e]">
                 {stat}
               </p>
               <p className="max-w-[15rem] pb-1 font-sans text-[0.8rem] font-semibold leading-snug text-[#261f15]/60">
@@ -134,7 +134,7 @@ export default function RankingClock({
                     </p>
                     <p
                       className={`font-sans text-[0.52rem] font-semibold uppercase tracking-[0.24em] ${
-                        t.ours ? "text-[#8a6f3d]" : "text-[#261f15]/40"
+                        t.ours ? "text-[#6a5f4e]" : "text-[#261f15]/40"
                       }`}
                     >
                       {t.note}
@@ -177,7 +177,7 @@ export default function RankingClock({
                           d="M0 30 C 30 29, 55 22, 100 2"
                           pathLength={1}
                           fill="none"
-                          stroke="#a67c3d"
+                          stroke="var(--le-accent)"
                           strokeWidth="1.6"
                           vectorEffect="non-scaling-stroke"
                           className="le-clock-rise"
@@ -187,7 +187,7 @@ export default function RankingClock({
                     )}
                     {/* the ranking clock starts */}
                     <span
-                      className="le-clock-fade absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-[#ededd5] bg-[#a67c3d]"
+                      className="le-clock-fade absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-[#ededd5] bg-[var(--le-accent)]"
                       style={{ left: `${t.starts}%`, transitionDelay: `${ti * 250 + t.starts * 16 + 500}ms` }}
                     />
                   </div>
@@ -197,7 +197,7 @@ export default function RankingClock({
                       <span
                         key={s.label}
                         className={`absolute pr-2 font-sans text-[0.52rem] font-semibold uppercase leading-tight tracking-[0.16em] sm:text-[0.56rem] ${
-                          s.tone === "ours" ? "text-[#8a6f3d]" : "text-[#261f15]/50"
+                          s.tone === "ours" ? "text-[#6a5f4e]" : "text-[#261f15]/50"
                         }`}
                         style={{ left: `${s.from}%`, width: `${s.to - s.from}%` }}
                       >
@@ -205,7 +205,7 @@ export default function RankingClock({
                       </span>
                     ))}
                     <span
-                      className="le-clock-fade absolute whitespace-nowrap font-sans text-[0.52rem] font-semibold uppercase tracking-[0.16em] text-[#8a6f3d] sm:text-[0.56rem]"
+                      className="le-clock-fade absolute whitespace-nowrap font-sans text-[0.52rem] font-semibold uppercase tracking-[0.16em] text-[#6a5f4e] sm:text-[0.56rem]"
                       style={{
                         ...(t.starts > 70 ? { right: `${100 - t.starts - 2}%` } : { left: `${t.starts + 1.5}%` }),
                         top: t.ours ? 0 : "1.1rem",
@@ -221,11 +221,11 @@ export default function RankingClock({
               {/* what the usual order costs */}
               <div className="le-clock-fade relative mt-3 h-12" style={{ transitionDelay: "1.9s" }}>
                 <span
-                  className="absolute top-0 h-3 rounded-b-[3px] border-x border-b border-[#a67c3d]/70"
+                  className="absolute top-0 h-3 rounded-b-[3px] border-x border-b border-[var(--le-accent)]/70"
                   style={{ left: "52%", width: "28%" }}
                 />
                 <span
-                  className="absolute top-5 text-center font-sans text-[0.52rem] font-semibold uppercase leading-snug tracking-[0.18em] text-[#8a6f3d] sm:text-[0.56rem]"
+                  className="absolute top-5 text-center font-sans text-[0.52rem] font-semibold uppercase leading-snug tracking-[0.18em] text-[#6a5f4e] sm:text-[0.56rem]"
                   style={{ left: "44%", width: "44%" }}
                 >
                   Months later than it needed to

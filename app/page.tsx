@@ -21,9 +21,9 @@ const KnownFor = dynamic(() => import("@/components/sections/Knownfor"));
 const Logos = dynamic(() => import("@/components/sections/Logos"));
 /* the Google results, the same section as on the websites page */
 const RankingProof = dynamic(() => import("@/components/websites/RankingProof"));
-const FeaturedCases = dynamic(
+/* const FeaturedCases = dynamic(
   () => import("@/components/sections/FeaturedCases"),
-);
+); */
 const SeoServices = dynamic(() => import("@/components/sections/SeoServices"));
 const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const AddOns = dynamic(() => import("@/components/sections/Addons"));
@@ -53,7 +53,8 @@ export default async function Home() {
       <KnownFor />
       <Logos />
       <RankingProof />
-      <FeaturedCases />
+      {/* Featured work is hidden for now. Uncomment to bring it back. */}
+      {/* <FeaturedCases /> */}
       <WebsitePreviews />
       <SeoServices />
       <Pricing />

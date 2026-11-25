@@ -50,10 +50,10 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
         {/* ---------------------- info matrix ---------------------- */}
         <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
           <div className="flex items-center gap-3">
-            <span className="font-heading font-thin not-italic text-3xl leading-none text-[#a67c3d] sm:text-4xl">
+            <span className="font-heading font-thin not-italic text-3xl leading-none text-[var(--le-accent)] sm:text-4xl">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
+            <span aria-hidden="true" className="flex-1" />
           </div>
 
           {study.logo ? (
@@ -68,7 +68,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
             </h3>
           )}
 
-          <p className="mt-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
+          <p className="mt-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
             {study.tagline}
           </p>
 
@@ -98,7 +98,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
           <div className="relative min-h-[16rem] w-full lg:min-h-full">
             <Image
               src={study.photo}
-              alt={study.photoAlt ?? `${study.client} — proof`}
+              alt={study.photoAlt ?? `${study.client}, proof`}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -178,19 +178,13 @@ export default function CaseStudiesPage({ studies }: { studies: CaseStudy[] }) {
   }, []);
 
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <section ref={sectionRef} className="relative w-full pb-24 pt-40 md:pb-32 md:pt-48">
         <div className="relative mx-auto max-w-3xl px-6 text-center md:px-12">
           <Noise patternAlpha={5} />
           <div className="relative z-10">
-            <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-              <span aria-hidden="true" className="text-[0.8em]">
-                ✦
-              </span>
+            <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
               Case Studies
-              <span aria-hidden="true" className="text-[0.8em]">
-                ✦
-              </span>
             </p>
             <h1 className="mx-auto mt-5 font-heading font-thin not-italic text-[clamp(2.4rem,5.2vw,4.2rem)] leading-[1.06] tracking-[-0.01em] text-[#261f15]">
               Real Clients, Real Rankings
@@ -207,7 +201,7 @@ export default function CaseStudiesPage({ studies }: { studies: CaseStudy[] }) {
           ))}
         </div>
 
-        <div className="le-cs-block relative z-20 mx-auto mt-16 max-w-2xl rounded-[1.75rem] border border-[#c6a66a]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-20 md:px-14 md:py-16">
+        <div className="le-cs-block relative z-20 mx-auto mt-16 max-w-2xl rounded-[1.75rem] border border-[#a39b84]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-20 md:px-14 md:py-16">
           <h2 className="font-heading font-thin not-italic text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.15] tracking-[-0.01em]">
             Want to be the next one on this page?
           </h2>
@@ -217,21 +211,9 @@ export default function CaseStudiesPage({ studies }: { studies: CaseStudy[] }) {
           <button
             type="button"
             onClick={openQuiz}
-            className="group/btn2 relative mt-8 inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:text-xs"
+            className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#ededd5] text-[#261f15] hover:bg-white mt-8"
           >
-            <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#ededd5]">
-              Run My Free Growth Diagnostic
-            </span>
-            <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 scale-100 rounded-full bg-[#3a3020] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn2:scale-[25] group-hover/btn2:duration-[1100ms]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#3a3020] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:bg-[#ededd5]"
-              />
-            </span>
+            Run My Free Growth Diagnostic
           </button>
         </div>
       </section>

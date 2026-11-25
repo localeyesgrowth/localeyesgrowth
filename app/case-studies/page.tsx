@@ -11,7 +11,7 @@ import imgLa from "@/public/LA-01.webp";
 export const metadata: Metadata = {
   title: "Case Studies | LocalEyes",
   description:
-    "Real client results from LocalEyes — coffee cart, mobile bar, and catering businesses ranking #1 on Google in their markets.",
+    "Real client results from LocalEyes: coffee cart, mobile bar, and catering businesses ranking #1 on Google in their markets.",
   alternates: {
     canonical: "/case-studies",
   },
@@ -26,8 +26,8 @@ const studies: CaseStudy[] = [
     photoAlt: "The Valor Coffee Podcast team",
     matrix: [
       { label: "Focus", value: "Coffee catering “near me”" },
-      { label: "Inquiries before", value: "1–2 per day" },
-      { label: "Inquiries after", value: "5–7 per day" },
+      { label: "Inquiries before", value: "1 to 2 per day" },
+      { label: "Inquiries after", value: "5 to 7 per day" },
       { label: "Source", value: "Organic SEO" },
     ],
     story: [
@@ -38,7 +38,7 @@ const studies: CaseStudy[] = [
   },
   {
     client: "Anecho",
-    tagline: "Coffee Catering — New York City",
+    tagline: "Coffee Catering: New York City",
     logo: imgAnechoLogo,
     photo: imgNyc,
     photoAlt: "Anecho ranking #1 on Google for coffee catering in New York City",
@@ -49,14 +49,14 @@ const studies: CaseStudy[] = [
       { label: "Focus", value: "Local SEO" },
     ],
     story: [
-      "New York is one of the most competitive coffee catering markets in the country — dozens of operators fighting for the same handful of map pack spots. Anecho's profile and site were solid, but not structured to compete for the exact terms corporate planners in the city actually search.",
+      "New York is one of the most competitive coffee catering markets in the country, dozens of operators fighting for the same handful of map pack spots. Anecho's profile and site were solid, but not structured to compete for the exact terms corporate planners in the city actually search.",
       "We rebuilt the local SEO foundation: Google Business Profile category and structure, on-page targeting for “coffee catering” specifically, and the citation consistency that convinces Google the business is real and locally rooted.",
-      "Anecho now holds the #1 organic ranking for coffee catering in New York City — the screenshot above is the live result, not a projection.",
+      "Anecho now holds the #1 organic ranking for coffee catering in New York City: the screenshot above is the live result, not a projection.",
     ],
   },
   {
     client: "North Village",
-    tagline: "Coffee Cart Catering — Chicago",
+    tagline: "Coffee Cart Catering: Chicago",
     logo: imgNorthVillageLogo,
     photo: imgChicago,
     photoAlt: "North Village ranking #1 on Google for coffee cart catering in Chicago",
@@ -68,13 +68,13 @@ const studies: CaseStudy[] = [
     ],
     story: [
       "North Village needed to stand out in a Chicago market where “coffee cart” and “coffee catering” searches were splitting traffic across dozens of competitors, most without a clear specialty.",
-      "The work centered on precise keyword targeting for “coffee cart catering” specifically — the exact phrase their ideal corporate and wedding clients use — paired with a Google Business Profile built to reinforce that positioning.",
+      "The work centered on precise keyword targeting for “coffee cart catering” specifically (the exact phrase their ideal corporate and wedding clients use) paired with a Google Business Profile built to reinforce that positioning.",
       "The result is the #1 organic ranking for that exact search in Chicago, shown above straight from Google.",
     ],
   },
   {
     client: "Always Kind",
-    tagline: "Coffee Catering — Los Angeles",
+    tagline: "Coffee Catering: Los Angeles",
     photo: imgLa,
     photoAlt: "Always Kind ranking #1 on Google for coffee catering in Los Angeles",
     matrix: [
@@ -84,7 +84,7 @@ const studies: CaseStudy[] = [
       { label: "Focus", value: "Local SEO" },
     ],
     story: [
-      "Los Angeles is a sprawling, high-volume market — competing here means ranking across a wide service area, not just one neighborhood. Always Kind's profile needed a service-area structure that could hold visibility across the whole metro, not just their home base.",
+      "Los Angeles is a sprawling, high-volume market, competing here means ranking across a wide service area, not just one neighborhood. Always Kind's profile needed a service-area structure that could hold visibility across the whole metro, not just their home base.",
       "We rebuilt the local SEO foundation around that reality: correct service-area configuration, consistent citations across the LA metro, and content built for the coffee catering searches that actually carry a budget.",
       "Always Kind now holds the #1 organic ranking for coffee catering across Los Angeles.",
     ],

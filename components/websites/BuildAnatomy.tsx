@@ -84,7 +84,7 @@ export default function BuildAnatomy({
             id="build-anatomy-title"
             className="font-heading font-thin not-italic text-[clamp(2.3rem,4.4vw,4rem)] leading-[1.04] tracking-[-0.02em]"
           >
-            {lead} <span className="text-[#a67c3d]">{accent}</span>
+            {lead} <span>{accent}</span>
           </h2>
           <p className="max-w-[22rem] font-sans text-[0.95rem] leading-relaxed text-[#261f15]/65 lg:pb-2 lg:text-right">{intro}</p>
         </div>
@@ -110,7 +110,7 @@ export default function BuildAnatomy({
                     {/* the part the point is about, lit; the rest of the page dimmed */}
                     <span
                       aria-hidden="true"
-                      className="absolute rounded-[6px] border border-[#c6a66a] shadow-[0_0_0_9999px_rgba(24,19,12,0.5),0_0_24px_rgba(198,166,106,0.35)]"
+                      className="absolute rounded-[6px] border border-[#a39b84] shadow-[0_0_0_9999px_rgba(24,19,12,0.5),0_0_24px_rgba(163,155,132,0.35)]"
                       style={f.lit}
                     />
                   </div>
@@ -118,8 +118,8 @@ export default function BuildAnatomy({
 
                 {/* the point */}
                 <div className="mt-6 border-t border-[#261f15]/12 pt-5">
-                  <p className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.26em] text-[#8a6f3d]">
-                    {pad(i + 1)} <span className="text-[#c6a66a]">/</span> {pad(items.length)}
+                  <p className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.26em] text-[#6a5f4e]">
+                    {pad(i + 1)} <span className="text-[#a39b84]">/</span> {pad(items.length)}
                   </p>
                   <h3 className="mt-3 font-heading text-[1.4rem] font-thin not-italic leading-[1.15] tracking-[-0.01em]">{item.title}</h3>
                   <p className="mt-3 font-sans text-[0.9rem] leading-relaxed text-[#261f15]/65">{item.body}</p>
@@ -130,8 +130,8 @@ export default function BuildAnatomy({
         </ol>
 
         <p className="mt-14 flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#261f15]/45">
-          Details from Arbour Coffee Co.&apos;s home page <span className="text-[#c6a66a]">·</span> Raleigh, NC
-          <span className="text-[#c6a66a]">·</span> One of the nine above
+          Details from Arbour Coffee Co.&apos;s home page <span className="text-[#a39b84]">·</span> Raleigh, NC
+          <span className="text-[#a39b84]">·</span> One of the nine above
         </p>
       </div>
     </section>

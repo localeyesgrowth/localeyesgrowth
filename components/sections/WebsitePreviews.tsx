@@ -99,17 +99,17 @@ const WEBSITE_PROJECTS: WebsiteProject[] = [
       "A mobile espresso bar bringing personalized hospitality to weddings, corporate events, and film sets across Manhattan, Brooklyn, and Queens.",
     liveUrl: "https://www.servecoffee.nyc/",
     image: "/serve-coffee-website-homepage.webp",
-    bobbleColor: "#c6a66a",
+    bobbleColor: "#a39b84",
   },
   {
     name: "Re:defined",
     category: "Coffee Cart Catering",
-    location: "Dallas–Fort Worth, TX",
+    location: "Dallas-Fort Worth, TX",
     blurb:
-      "A mobile espresso bar and coffee cart catering for weddings, corporate events, and brand activations across Dallas–Fort Worth.",
+      "A mobile espresso bar and coffee cart catering for weddings, corporate events, and brand activations across Dallas-Fort Worth.",
     liveUrl: "https://www.redefinedcoffeehouse.com/",
     image: "/redefined-coffeehouse-website-homepage.webp",
-    bobbleColor: "#8a6f3d",
+    bobbleColor: "#6a5f4e",
   },
 ];
 
@@ -305,14 +305,11 @@ export default function WebsitePreviews() {
           className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10"
         >
           <div>
-            <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a67c3d] sm:text-xs">
-              <span aria-hidden="true" className="text-[0.8em]">
-                ✦
-              </span>
+            <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
               Our Work
             </p>
             <h2 className="mt-6 max-w-2xl font-heading font-thin not-italic text-[clamp(2.4rem,5.5vw,4.5rem)] leading-[1.05] tracking-[-0.01em] text-[#261f15]">
-              Websites built to <span className="text-[#a67c3d]">rank</span>, not
+              Websites built to <span>rank</span>, not
               just look good
             </h2>
           </div>
@@ -410,7 +407,7 @@ export default function WebsitePreviews() {
                   type="button"
                   onClick={close}
                   aria-label="Close preview"
-                  className="group/x flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-[#261f15]/20 bg-[#f7f5e8] py-2 pl-4 pr-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#261f15]/70 transition-colors duration-300 hover:border-[#261f15]/25 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a67c3d]"
+                  className="group/x flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-[#261f15]/20 bg-[#f7f5e8] py-2 pl-4 pr-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#261f15]/70 transition-colors duration-300 hover:border-[#261f15]/25 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)]"
                 >
                   Close
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#261f15]/8">
@@ -423,7 +420,7 @@ export default function WebsitePreviews() {
               </div>
 
               <div className="flex flex-col gap-4">
-                <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#a67c3d]">
+                <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#6a5f4e]">
                   {project.category} · {project.location}
                 </p>
                 <h3 className="font-heading font-thin not-italic text-[clamp(2rem,3.6vw,2.8rem)] leading-[1.1] tracking-[-0.01em] text-[#261f15]">
@@ -438,7 +435,7 @@ export default function WebsitePreviews() {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/visit inline-flex w-fit cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2.5 pl-6 pr-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a]"
+                className="group/visit inline-flex w-fit cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#ededd5] py-2.5 pl-6 pr-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a39b84]"
               >
                 <span className="relative z-10 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/visit:text-[#ededd5]">
                   Visit live site
@@ -475,7 +472,7 @@ export default function WebsitePreviews() {
                     <span className="truncate">{hostnameOf(project.liveUrl)}</span>
                   </span>
                   {iframeBlocked && (
-                    <span className="shrink-0 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#a67c3d]">
+                    <span className="shrink-0 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#6a5f4e]">
                       Homepage preview
                     </span>
                   )}
@@ -501,7 +498,7 @@ export default function WebsitePreviews() {
                     ) : (
                       <iframe
                         src={project.liveUrl}
-                        title={`${project.name} — live, interactive preview`}
+                        title={`${project.name}, live, interactive preview`}
                         className="h-full w-full border-0"
                       />
                     )}

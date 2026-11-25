@@ -23,12 +23,9 @@ export function Eyebrow({ children, dark = false }: { children: ReactNode; dark?
   return (
     <p
       className={`flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] sm:text-xs ${
-        dark ? "text-[#c6a66a]" : "text-[#8a6f3d]"
+        dark ? "text-[#a39b84]" : "text-[#6a5f4e]"
       }`}
     >
-      <span aria-hidden="true" className="text-[0.8em]">
-        ✦
-      </span>
       {children}
       <span aria-hidden="true" className={`h-px flex-1 ${dark ? "bg-[#ededd5]/[0.12]" : "bg-[#261f15]/[0.12]"}`} />
     </p>

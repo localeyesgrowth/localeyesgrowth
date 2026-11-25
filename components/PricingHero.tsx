@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
 import CurvedLoop from "@/components/CurvedLoop";
 import { Noise } from "@/components/effects/Noise";
 
@@ -88,19 +87,13 @@ export default function PricingHero() {
         ref={textRef}
         className="relative z-10 mx-auto flex w-full max-w-[1480px] flex-col items-center px-6 text-center md:px-12"
       >
-        <p className="le-hero-reveal font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-          <span aria-hidden="true" className="mr-3 text-[0.8em]">
-            ✦
-          </span>
+        <p className="le-hero-reveal font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
           Investment
-          <span aria-hidden="true" className="ml-3 text-[0.8em]">
-            ✦
-          </span>
         </p>
 
         <h1 className="le-hero-reveal mt-5 max-w-5xl font-heading font-thin not-italic text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] tracking-[-0.02em] text-[#261f15]">
           Growth is an{" "}
-          <span className="text-[#8a6f3d] not-italic">equation</span>, not an
+          equation, not an
           expense.
         </h1>
 
@@ -114,24 +107,9 @@ export default function PricingHero() {
           {/* Same pill treatment as the header CTA — gold wash floods on hover */}
           <a
             href="#pricing"
-            className="group/btn relative inline-flex cursor-pointer items-center gap-4 overflow-hidden rounded-full border border-[#261f15]/25 py-1.5 pl-8 pr-1.5 font-sans text-sm uppercase tracking-[0.12em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] border border-[#261f15]/30 text-[#261f15] hover:border-[#261f15]"
           >
-            <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-white">
-              View Rate Card
-            </span>
-            <span className="relative flex h-11 w-11 shrink-0 items-center justify-center">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 scale-100 rounded-full bg-[#4a3421] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#4a3421] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-white"
-              />
-              <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                <ArrowUpRight className="h-[1.15rem] w-[1.15rem] text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#4a3421]" />
-              </span>
-            </span>
+            View Rate Card
           </a>
         </div>
       </div>

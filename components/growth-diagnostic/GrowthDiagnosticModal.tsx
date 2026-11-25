@@ -171,7 +171,7 @@ export default function GrowthDiagnosticModal({
 
       {/* panel — full-screen takeover on phones, framed card upward */}
       <div
-        className={`le-gd-panel relative flex h-[100dvh] w-full flex-col overflow-hidden bg-[#f6f1e3] shadow-[0_60px_140px_-30px_rgba(20,15,8,0.65)] transition-[opacity,transform] duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-auto sm:max-h-[92dvh] sm:w-[min(94vw,43rem)] sm:rounded-lg sm:border sm:border-[#c6a66a]/35 ${
+        className={`le-gd-panel relative flex h-[100dvh] w-full flex-col overflow-hidden bg-[#f6f1e3] shadow-[0_60px_140px_-30px_rgba(20,15,8,0.65)] transition-[opacity,transform] duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-auto sm:max-h-[92dvh] sm:w-[min(94vw,43rem)] sm:rounded-lg sm:border sm:border-[#a39b84]/35 ${
           reduced ? "!duration-0" : ""
         } ${
           visible
@@ -185,7 +185,7 @@ export default function GrowthDiagnosticModal({
           type="button"
           onClick={requestClose}
           aria-label="Close the quiz"
-          className="group/x absolute right-3 top-3 z-20 flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#261f15] text-[#f6f1e3]/90 ring-1 ring-[#f6f1e3]/25 transition-colors duration-300 hover:bg-[#43361f] hover:text-[#f6f1e3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+          className="group/x absolute right-3 top-3 z-20 flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#261f15] text-[#f6f1e3]/90 ring-1 ring-[#f6f1e3]/25 transition-colors duration-300 hover:bg-[#43361f] hover:text-[#f6f1e3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
         >
           <X
             strokeWidth={1.5}
@@ -228,14 +228,14 @@ export default function GrowthDiagnosticModal({
                   ref={keepGoingRef}
                   type="button"
                   onClick={() => setConfirming(false)}
-                  className="le-gd-ui cursor-pointer bg-[#c6a66a] px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#261f15] transition-colors duration-200 hover:bg-[#b8934e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
+                  className="le-gd-ui cursor-pointer bg-[#ededd5] px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#261f15] transition-colors duration-200 hover:bg-[#ededd5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
                 >
                   Keep going
                 </button>
                 <button
                   type="button"
                   onClick={onClose}
-                  className="le-gd-ui cursor-pointer text-[12.5px] text-[#7a715c] underline underline-offset-2 transition-colors duration-200 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+                  className="le-gd-ui cursor-pointer text-[12.5px] text-[#7a715c] underline underline-offset-2 transition-colors duration-200 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
                 >
                   Close for now
                 </button>

@@ -248,7 +248,7 @@ export default function GrowthDiagnostic({
           startVelocity: 38,
           origin: { y: 0.3 },
           zIndex: 260,
-          colors: ["#c6a66a", "#a3843f", "#9c4a2f", "#f6f1e3"],
+          colors: ["#a39b84", "#6a5f4e", "#9c4a2f", "#f6f1e3"],
           ...(shapes ? { shapes, scalar: 1.6 } : {}),
         });
       })
@@ -365,13 +365,8 @@ export default function GrowthDiagnostic({
     screen = (
       <div className="gd-cover">
         <p className="gd-kicker">
-          <span className="star" aria-hidden="true">
-            ✦
-          </span>{" "}
+{" "}
           LocalEyes &middot; Built only for event caterers{" "}
-          <span className="star" aria-hidden="true">
-            ✦
-          </span>
         </p>
         <h1>
           What's your <span className="tt">Mobile Catering Growth Score</span>?
@@ -512,9 +507,7 @@ export default function GrowthDiagnostic({
     screen = (
       <>
         <div className="gd-sec">
-          <span className="star" aria-hidden="true">
-            ✦
-          </span>{" "}
+{" "}
           {item.domain.name}
         </div>
         <fieldset className="q">
@@ -634,12 +627,12 @@ export default function GrowthDiagnostic({
           </div>
         </div>
         <div className="audit-offer">
-          <p className="audit-offer-kicker">✦ Included with your score ✦</p>
+          <p className="audit-offer-kicker">Included with your score</p>
           <h2 className="audit-offer-title">
             Free <span className="gold">SEO Audit</span>
           </h2>
           <p className="audit-offer-value">
-            A<span className="strikeval">$679</span>value — yours free
+            A<span className="strikeval">$679</span>value, yours free
           </p>
           <button type="button" className="btn w100" onClick={onBookTop}>
             Book my free breakdown &rarr;
@@ -754,9 +747,7 @@ export default function GrowthDiagnostic({
           <div className="gd-run">
             <div className="brand">
               LocalEyes{" "}
-              <span className="star" aria-hidden="true">
-                ✦
-              </span>{" "}
+{" "}
               Growth Diagnostic
             </div>
             <div className="count">{counter}</div>

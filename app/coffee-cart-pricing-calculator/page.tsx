@@ -75,12 +75,12 @@ const CONFIG = {
     CART_TYPES: {
       espresso: {
         title: "Espresso Cart",
-        sub: "Espresso machine on board — lattes, cappuccinos, hot & iced espresso drinks",
+        sub: "Espresso machine on board: lattes, cappuccinos, hot & iced espresso drinks",
         multiplier: 1.0,
       },
       nonEspresso: {
         title: "Non-Espresso Cart",
-        sub: "No espresso machine — drip, cold brew, matcha & iced lattes",
+        sub: "No espresso machine: drip, cold brew, matcha & iced lattes",
         multiplier: 0.75 /* VERIFY */,
       },
     },
@@ -210,16 +210,16 @@ const CONFIG = {
 
   copy: {
     eyebrow:
-      "Know exactly what to charge for any coffee cart or mobile espresso event — in seconds.",
+      "Know exactly what to charge for any coffee cart or mobile espresso event, in seconds.",
     h1: "Coffee Catering Price Calculator",
     intro:
-      "Pricing a coffee cart event by gut feel leaves money on the table — or scares clients away. Tune the event below and get value, standard, and premium pricing instantly, plus a client-ready quote you can send on the spot.",
+      "Pricing a coffee cart event by gut feel leaves money on the table, or scares clients away. Tune the event below and get value, standard, and premium pricing instantly, plus a client-ready quote you can send on the spot.",
     trustLine:
       "Built from years consulting with 60+ coffee caterers · 12+ years in the specialty coffee industry.",
 
     calcHeading: "What should you charge for this event?",
     calcSub:
-      "It starts with a typical event — espresso cart, standard positioning, 100 guests, 3 hours, 15 miles. Adjust anything; your price updates live.",
+      "It starts with a typical event: espresso cart, standard positioning, 100 guests, 3 hours, 15 miles. Adjust anything; your price updates live.",
 
     steps: {
       cart: { title: "Choose your cart" },
@@ -233,7 +233,7 @@ const CONFIG = {
       hours: {
         label: "Service hours",
         minimumNote:
-          "2-hour minimum — shorter events are billed at the 2-hour base.",
+          "2-hour minimum, shorter events are billed at the 2-hour base.",
       },
       miles: { label: "Travel distance" },
     },
@@ -251,12 +251,12 @@ const CONFIG = {
       baseLine: "Base service price",
       travelLine: "Travel fee",
       totalLine: "Recommended total",
-      setupPace: "a comfortable pace is 45–60/hr per barista",
+      setupPace: "a comfortable pace is 45 to 60/hr per barista",
     },
 
     lead: {
       heading: "Lock in this quote",
-      body: "Enter your details and we'll generate a polished, client-ready quote you can send today — and email a copy to you.",
+      body: "Enter your details and we'll generate a polished, client-ready quote you can send today, and email a copy to you.",
       fields: {
         name: "Your name",
         email: "Your email",
@@ -266,7 +266,7 @@ const CONFIG = {
         date: "Event date",
       },
       datePlaceholder: "Select a date",
-      dateNote: "Past dates are unavailable — events start today or later.",
+      dateNote: "Past dates are unavailable, events start today or later.",
       submit: "Generate my client-ready quote",
       ctaShort: "Lock in",
       copySummary: "Copy summary",
@@ -274,16 +274,16 @@ const CONFIG = {
       startOver: "Start over",
       successTitle: "Quote request received.",
       successBody:
-        "We're generating your client-ready quote now — a copy is on its way to",
+        "We're generating your client-ready quote now, a copy is on its way to",
       errorRequired: "Required",
       errorEmail: "Enter a valid email",
-      errorSubmit: "Something went wrong — please try again.",
+      errorSubmit: "Something went wrong, please try again.",
     },
 
     embed: {
       affordance: "Get this calculator for your site",
       title: "Embed this calculator",
-      body: "Paste this snippet anywhere on your site. It's free — just keep the link back to LocalEyes.",
+      body: "Paste this snippet anywhere on your site. It's free. Just keep the link back to LocalEyes.",
       copyButton: "Copy snippet",
       copied: "Copied",
       poweredBy: "Calculator by LocalEyes",
@@ -295,7 +295,7 @@ const CONFIG = {
       items: [
         {
           title: "Guest count",
-          body: "The single biggest lever. More guests means more drinks, more baristas, and eventually a second cart — each one a step change in price, not a smooth curve.",
+          body: "The single biggest lever. More guests means more drinks, more baristas, and eventually a second cart. Each one a step change in price, not a smooth curve.",
         },
         {
           title: "Service hours",
@@ -303,19 +303,19 @@ const CONFIG = {
         },
         {
           title: "Staffing ratios",
-          body: "A barista comfortably sustains 45–60 drinks an hour. Past that, the line backs up and the experience dies. Staff to throughput, then price the staff.",
+          body: "A barista comfortably sustains 45 to 60 drinks an hour. Past that, the line backs up and the experience dies. Staff to throughput, then price the staff.",
         },
         {
           title: "Travel",
-          body: "Distance is a real cost — fuel, drive time, load-in. Most carts fold a local radius into the base, then bill per mile beyond it. Absorb it and you're quietly discounting every far-away event.",
+          body: "Distance is a real cost: fuel, drive time, load-in. Most carts fold a local radius into the base, then bill per mile beyond it. Absorb it and you're quietly discounting every far-away event.",
         },
         {
           title: "Add-ons",
-          body: "Branded cups, cold brew, latte art printing — anything bespoke carries product and setup cost and should carry a line item. Custom work priced at zero reads as worthless.",
+          body: "Branded cups, cold brew, latte art printing, anything bespoke carries product and setup cost and should carry a line item. Custom work priced at zero reads as worthless.",
         },
         {
           title: "Minimums",
-          body: "The 2-hour minimum protects your floor. Every event carries fixed costs — prep, load-in, teardown — whether it's 20 guests or 200.",
+          body: "The 2-hour minimum protects your floor. Every event carries fixed costs (prep, load-in, teardown) whether it's 20 guests or 200.",
         },
       ],
     },
@@ -324,8 +324,8 @@ const CONFIG = {
       eyebrow: "The pattern",
       title: "How most carts underprice",
       body: [
-        "Most operators price their time instead of their throughput. They quote an hourly rate that feels fair for a person, when the client is actually buying a system — cart, equipment, staffing, and a line that keeps moving for three hundred people.",
-        "The second mistake is absorbing the edges: travel gets folded in, the extra half-hour gets waved off, the branded cups get thrown in to close the deal. Each one feels small. Together they routinely erase 15–20% of an event's margin.",
+        "Most operators price their time instead of their throughput. They quote an hourly rate that feels fair for a person, when the client is actually buying a system: cart, equipment, staffing, and a line that keeps moving for three hundred people.",
+        "The second mistake is absorbing the edges: travel gets folded in, the extra half-hour gets waved off, the branded cups get thrown in to close the deal. Each one feels small. Together they routinely erase 15 to 20% of an event's margin.",
         "And almost nobody re-prices. The rate that made sense at ten events a year quietly becomes a discount at forty. If your calendar is full and nobody has pushed back on price in six months, you are underpriced.",
       ],
     },
@@ -336,27 +336,27 @@ const CONFIG = {
       items: [
         {
           q: "How much should a coffee cart charge per event?",
-          a: "Most professional carts land between $800 and $2,500 per event, driven by guest count, service hours, cart type, and travel. A 100-guest, 3-hour espresso cart event benchmarks around $1,105 at the market median — with value operators near $880 and premium carts near $1,480. Use the calculator above for your exact event shape.",
+          a: "Most professional carts land between $800 and $2,500 per event, driven by guest count, service hours, cart type, and travel. A 100-guest, 3-hour espresso cart event benchmarks around $1,105 at the market median, with value operators near $880 and premium carts near $1,480. Use the calculator above for your exact event shape.",
         },
         {
           q: "How many baristas do I need for 100 guests?",
-          a: "Plan around throughput, not headcount: one barista comfortably pours 45–60 drinks an hour. 100 guests over 3 hours is roughly 150 drinks — about 50 an hour — which one skilled barista handles at a comfortable pace. Compress the same event into 2 hours and you'll want a second pair of hands.",
+          a: "Plan around throughput, not headcount: one barista comfortably pours 45 to 60 drinks an hour. 100 guests over 3 hours is roughly 150 drinks (about 50 an hour) which one skilled barista handles at a comfortable pace. Compress the same event into 2 hours and you'll want a second pair of hands.",
         },
         {
           q: "What is a typical coffee cart minimum?",
-          a: "Two hours is the standard billing minimum, with base packages commonly starting around $600–$900 for smaller guest counts. Prep, load-in, and teardown cost you the same whether you pour for one hour or four — the minimum is what keeps short events from costing you money.",
+          a: "Two hours is the standard billing minimum, with base packages commonly starting around $600-$900 for smaller guest counts. Prep, load-in, and teardown cost you the same whether you pour for one hour or four: the minimum is what keeps short events from costing you money.",
         },
         {
           q: "Should I charge a travel fee?",
-          a: "Yes — beyond your local radius, always. A common structure is a free radius of around 30 miles, then $2–$3 per mile beyond it. Fold travel into the base price and you're silently discounting every distant event.",
+          a: "Yes, beyond your local radius, always. A common structure is a free radius of around 30 miles, then $2-$3 per mile beyond it. Fold travel into the base price and you're silently discounting every distant event.",
         },
         {
           q: "How much deposit should I take?",
-          a: "25–50% at booking is standard, non-refundable inside your cancellation window. A real deposit filters out non-serious inquiries and protects the date you're turning other clients away from.",
+          a: "25 to 50% at booking is standard, non-refundable inside your cancellation window. A real deposit filters out non-serious inquiries and protects the date you're turning other clients away from.",
         },
         {
           q: "Why do coffee carts have a 2-hour minimum?",
-          a: "Because the expensive part isn't the pouring — it's everything around it. Load-in, water, power, dial-in, and teardown take the same effort for a 1-hour event as a 4-hour one. The 2-hour base package prices that fixed work honestly; extra hours are billed at a lower hourly rate on top.",
+          a: "Because the expensive part isn't the pouring. It's everything around it. Load-in, water, power, dial-in, and teardown take the same effort for a 1-hour event as a 4-hour one. The 2-hour base package prices that fixed work honestly; extra hours are billed at a lower hourly rate on top.",
         },
       ],
     },
@@ -523,12 +523,9 @@ function Eyebrow({
   return (
     <p
       className={`flex items-center gap-4 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.3em] sm:text-xs ${
-        dark ? "text-[#c6a66a]" : "text-[#8a6f3d]"
+        dark ? "text-[#a39b84]" : "text-[#6a5f4e]"
       }`}
     >
-      <span aria-hidden="true" className="text-[0.8em]">
-        ✦
-      </span>
       {children}
       <span
         aria-hidden="true"
@@ -556,7 +553,7 @@ function DriversSection({ reduced }: { reduced: boolean }) {
 
       {/* Decorative Circular Blurs */}
       <div
-        className={`absolute top-[-10%] right-[-5%] w-[45vw] h-[45vw] min-w-[400px] min-h-[400px] rounded-full bg-[#8a6f3d]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
+        className={`absolute top-[-10%] right-[-5%] w-[45vw] h-[45vw] min-w-[400px] min-h-[400px] rounded-full bg-[#6a5f4e]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
       />
       <div
         className={`absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] min-w-[500px] min-h-[500px] rounded-full bg-[#261f15]/10 blur-[130px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
@@ -597,11 +594,11 @@ function DriversSection({ reduced }: { reduced: boolean }) {
                     id={`driver-tab-${i}`}
                     onMouseEnter={() => setActiveIndex(i)}
                     onClick={() => setActiveIndex(i)}
-                    className={`w-full flex items-center justify-between py-5 lg:py-6 text-left cursor-pointer transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f] ${active ? "text-[#a3843f]" : "text-[#261f15]/60 hover:text-[#261f15]"}`}
+                    className={`w-full flex items-center justify-between py-5 lg:py-6 text-left cursor-pointer transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e] ${active ? "text-[#6a5f4e]" : "text-[#261f15]/60 hover:text-[#261f15]"}`}
                   >
                     <span className="flex items-center gap-6">
                       <span
-                        className={`font-mono text-[0.8rem] tracking-widest tabular-nums transition-colors duration-300 ${active ? "text-[#a3843f]" : "text-[#8a6f3d]/60 group-hover:text-[#8a6f3d]"}`}
+                        className={`font-mono text-[0.8rem] tracking-widest tabular-nums transition-colors duration-300 ${active ? "text-[#6a5f4e]" : "text-[#6a5f4e]/60 group-hover:text-[#6a5f4e]"}`}
                       >
                         0{i + 1}
                       </span>
@@ -610,11 +607,6 @@ function DriversSection({ reduced }: { reduced: boolean }) {
                       >
                         {item.title}
                       </span>
-                    </span>
-                    <span
-                      className={`text-[0.78rem] transition-opacity duration-300 ${active ? "opacity-100 text-[#a3843f]" : "opacity-0"}`}
-                    >
-                      ✦
                     </span>
                   </button>
                   {/* Mobile expansion */}
@@ -639,7 +631,7 @@ function DriversSection({ reduced }: { reduced: boolean }) {
           <div className="hidden lg:block relative w-full lg:w-[55%] min-h-[420px]">
             <div
               aria-hidden="true"
-              className={`absolute -bottom-28 left-1/2 h-[440px] w-[440px] -translate-x-1/2 rounded-full bg-[#a3843f]/30 blur-[90px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
+              className={`absolute -bottom-28 left-1/2 h-[440px] w-[440px] -translate-x-1/2 rounded-full bg-[#6a5f4e]/30 blur-[90px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
             />
             <div className="absolute inset-0 flex flex-col justify-center">
               <AnimatePresence mode="wait">
@@ -658,7 +650,7 @@ function DriversSection({ reduced }: { reduced: boolean }) {
                   className="px-10 py-12"
                 >
                   <div className="flex items-center gap-6 mb-8">
-                    <span className="font-mono text-sm text-[#8a6f3d] tracking-widest tabular-nums">
+                    <span className="font-mono text-sm text-[#6a5f4e] tracking-widest tabular-nums">
                       0{activeIndex + 1}
                     </span>
                     <div className="h-px flex-1 border-t border-dotted border-[#261f15]/40"></div>
@@ -732,21 +724,15 @@ function TicketRadio({
             tabIndex={i === selectedIndex ? 0 : -1}
             onKeyDown={(e) => onKeyDown(e, i)}
             onClick={() => onChange(opt.id)}
-            className={`group mb-2.5 flex w-full cursor-pointer items-baseline gap-4 border px-5 py-3.5 text-left transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f] ${
+            className={`group mb-2.5 flex w-full cursor-pointer items-baseline gap-4 border px-5 py-3.5 text-left transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e] ${
               selected
-                ? "border-[#a3843f] bg-[#a3843f]/[0.07]"
+                ? "border-[#6a5f4e] bg-[#6a5f4e]/[0.07]"
                 : "border-[#261f15]/25 hover:border-[#261f15]/60"
             }`}
           >
             <span className="w-5 shrink-0 text-center">
               {selected && (
-                <span
-                  key={value}
-                  aria-hidden="true"
-                  className="lec-stampmark text-[0.85rem] leading-none"
-                >
-                  ✦
-                </span>
+                <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-[var(--le-accent)]" />
               )}
             </span>
             <span className="min-w-0">
@@ -833,8 +819,8 @@ function StampColumns({
               tabIndex={i === selectedIndex ? 0 : -1}
               onKeyDown={(e) => onKeyDown(e, i)}
               onClick={() => onChange(opt.id)}
-              className={`cursor-pointer py-3.5 text-center transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#a3843f] ${
-                isSelected ? "bg-[#a3843f]/[0.07]" : "hover:bg-[#261f15]/[0.04]"
+              className={`cursor-pointer py-3.5 text-center transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#6a5f4e] ${
+                isSelected ? "bg-[#6a5f4e]/[0.07]" : "hover:bg-[#261f15]/[0.04]"
               }`}
             >
               {isSelected ? (
@@ -941,14 +927,14 @@ function SliderRow({
               type="text"
               inputMode="numeric"
               pattern="[0-9]*"
-              aria-label={`${label} — type a number`}
+              aria-label={`${label}, type a number`}
               value={text}
               onFocus={() => {
                 focusedRef.current = true;
               }}
               onChange={(e) => onTextChange(e.target.value)}
               onBlur={onTextBlur}
-              className="w-[4.75rem] rounded-none border-0 border-b border-[#261f15]/30 bg-transparent px-1 pb-1 text-right font-heading not-italic text-4xl leading-none tracking-[-0.01em] text-[#261f15] tabular-nums transition-colors focus-visible:border-[#a3843f] focus-visible:outline-none"
+              className="w-[4.75rem] rounded-none border-0 border-b border-[#261f15]/30 bg-transparent px-1 pb-1 text-right font-heading not-italic text-4xl leading-none tracking-[-0.01em] text-[#261f15] tabular-nums transition-colors focus-visible:border-[#6a5f4e] focus-visible:outline-none"
             />
             <span className="pb-1 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/45">
               {maxIsPlus && value >= max ? `${unit}+` : unit}
@@ -976,7 +962,7 @@ function SliderRow({
         style={{ "--lec-fill": `${pct}%` } as React.CSSProperties}
       />
       {note && (
-        <p className="font-sans text-[0.78rem] font-semibold leading-relaxed text-[#8a6f3d]">
+        <p className="font-sans text-[0.78rem] font-semibold leading-relaxed text-[#6a5f4e]">
           {note}
         </p>
       )}
@@ -1191,7 +1177,7 @@ function DateField({
   for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
 
   const navClass =
-    "flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center border border-[#261f15]/30 font-sans text-base leading-none text-[#261f15]/70 transition-colors hover:border-[#a3843f] hover:text-[#261f15] disabled:cursor-default disabled:opacity-30 disabled:hover:border-[#261f15]/30 disabled:hover:text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]";
+    "flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center border border-[#261f15]/30 font-sans text-base leading-none text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] disabled:cursor-default disabled:opacity-30 disabled:hover:border-[#261f15]/30 disabled:hover:text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]";
 
   return (
     <div>
@@ -1208,20 +1194,12 @@ function DateField({
         aria-expanded={open}
         aria-controls="lec-date-calendar"
         onClick={() => (open ? closeCalendar(false) : openCalendar())}
-        className="mt-2 flex w-full cursor-pointer items-baseline justify-between gap-4 border-b border-[#261f15]/30 py-2 text-left font-sans text-sm transition-colors hover:border-[#261f15]/60 focus-visible:border-[#a3843f] focus-visible:outline-none"
+        className="mt-2 flex w-full cursor-pointer items-baseline justify-between gap-4 border-b border-[#261f15]/30 py-2 text-left font-sans text-sm transition-colors hover:border-[#261f15]/60 focus-visible:border-[#6a5f4e] focus-visible:outline-none"
       >
         <span className={selected ? "text-[#261f15]" : "text-[#261f15]/35"}>
           {selected
             ? formatDateLong(selected)
             : CONFIG.copy.lead.datePlaceholder}
-        </span>
-        <span
-          aria-hidden="true"
-          className={`shrink-0 text-[0.78rem] text-[#8a6f3d] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            open ? "rotate-45" : "rotate-0"
-          }`}
-        >
-          ✦
         </span>
       </button>
 
@@ -1252,12 +1230,7 @@ function DateField({
               </button>
               <p className="font-sans text-[0.8rem] font-semibold uppercase tracking-[0.24em] text-[#261f15]">
                 {MONTH_NAMES[viewMonth.getMonth()]}{" "}
-                <span
-                  aria-hidden="true"
-                  className="mx-1 text-[0.75em] text-[#8a6f3d]"
-                >
-                  ✦
-                </span>{" "}
+{" "}
                 <span className="tabular-nums">{viewMonth.getFullYear()}</span>
               </p>
               <button
@@ -1310,9 +1283,9 @@ function DateField({
                           onChange(toISODate(day));
                           closeCalendar(true);
                         }}
-                        className={`relative flex h-10 w-full cursor-pointer items-center justify-center font-heading not-italic text-sm tabular-nums transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#a3843f] disabled:cursor-default ${
+                        className={`relative flex h-10 w-full cursor-pointer items-center justify-center font-heading not-italic text-sm tabular-nums transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#6a5f4e] disabled:cursor-default ${
                           selected && sameDay(day, selected)
-                            ? "bg-[#a3843f] font-semibold text-[#261f15]"
+                            ? "bg-[#6a5f4e] font-semibold text-[#261f15]"
                             : day < today
                               ? "text-[#261f15]/20"
                               : "text-[#261f15]/75 hover:bg-[#261f15]/[0.05] hover:text-[#261f15]"
@@ -1323,7 +1296,7 @@ function DateField({
                           !(selected && sameDay(day, selected)) && (
                             <span
                               aria-hidden="true"
-                              className="absolute bottom-1.5 left-1/2 h-px w-3.5 -translate-x-1/2 bg-[#8a6f3d]"
+                              className="absolute bottom-1.5 left-1/2 h-px w-3.5 -translate-x-1/2 bg-[#6a5f4e]"
                             />
                           )}
                       </button>
@@ -1364,7 +1337,7 @@ function buildSummary(args: {
       ? q.addonLines.map((l) => `  - ${l.label}: ${money(l.amount)}`).join("\n")
       : "  none";
   return [
-    `Coffee Catering Price Calculator — LocalEyes`,
+    `Coffee Catering Price Calculator | LocalEyes`,
     ``,
     `Event: ${cart} · ${pos} positioning`,
     `Guests: ${guestsLabel(args.guests)} · Service hours: ${args.hours} · Travel: ${args.miles} mi`,
@@ -1372,7 +1345,7 @@ function buildSummary(args: {
     addonList,
     ``,
     `Recommended price: ${money(q.recommended)}`,
-    `Market range: ${money(q.prices.value)} – ${money(q.prices.premium)}`,
+    `Market range: ${money(q.prices.value)} - ${money(q.prices.premium)}`,
     `Per guest: ${money(q.perGuest)} · Per drink: $${q.perDrink.toFixed(2)} · Drinks served: ~${q.totalDrinks}`,
     `Suggested setup: ${q.baristas} barista${q.baristas === 1 ? "" : "s"} · ${q.carts} cart${q.carts === 1 ? "" : "s"} (~${Math.round(q.drinksPerHour)} drinks/hr)`,
     ``,
@@ -1470,34 +1443,34 @@ function buildQuoteHtml(args: Parameters<typeof buildQuoteText>[0]) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${biz} — Event Quote ${esc(quoteRef.num)}</title>
+<title>${biz}: Event Quote ${esc(quoteRef.num)}</title>
 <style>
   :root { --serif: "Ivy Presto Display", Georgia, "Times New Roman", serif; --sans: "Helvetica Neue", Arial, sans-serif; }
   * { box-sizing: border-box; }
   body { margin: 0; background: #ededd5; color: #261f15; font-family: var(--sans); }
-  .sheet { max-width: 760px; margin: 40px auto; background: #f4f1e3; border: 1px solid rgba(38,31,21,.15); padding: 56px 56px 40px; }
-  .label { font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: #8a6f3d; }
+  .sheet { max-width: 760px; margin: 40px auto; background: #f4f1e3; border: 1px solid rgba(38, 31, 21,.15); padding: 56px 56px 40px; }
+  .label { font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: #6a5f4e; }
   .masthead { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
   h1 { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; margin: 10px 0 0; }
-  .ref { text-align: right; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgba(38,31,21,.6); font-variant-numeric: tabular-nums; }
+  .ref { text-align: right; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgba(38, 31, 21,.6); font-variant-numeric: tabular-nums; }
   .ref p { margin: 2px 0; }
   .rules { margin-top: 22px; border-top: 2px solid #261f15; }
   .rules div { margin-top: 3px; border-top: 1px solid #261f15; }
   .block { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; margin-top: 28px; }
-  .block h2, section h2 { font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: rgba(38,31,21,.5); margin: 0 0 8px; }
+  .block h2, section h2 { font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: rgba(38, 31, 21,.5); margin: 0 0 8px; }
   .block p, section p { margin: 0; font-size: 14px; line-height: 1.7; }
-  .muted { color: rgba(38,31,21,.6); font-size: 12px; }
+  .muted { color: rgba(38, 31, 21,.6); font-size: 12px; }
   section { margin-top: 28px; }
   .details { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; margin-top: 6px; }
-  .drow { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px dotted rgba(38,31,21,.35); padding: 9px 0; font-size: 13px; }
-  .drow span { color: rgba(38,31,21,.6); }
+  .drow { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px dotted rgba(38, 31, 21,.35); padding: 9px 0; font-size: 13px; }
+  .drow span { color: rgba(38, 31, 21,.6); }
   .drow b { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
   @media (max-width: 560px) { .details { grid-template-columns: 1fr; } }
   table { width: 100%; border-collapse: collapse; margin-top: 10px; font-variant-numeric: tabular-nums; }
-  td { padding: 10px 0; font-size: 14px; border-bottom: 1px solid rgba(38,31,21,.15); }
+  td { padding: 10px 0; font-size: 14px; border-bottom: 1px solid rgba(38, 31, 21,.15); }
   td.amt { text-align: right; }
   tr.total td { border-bottom: none; border-top: 2px solid #261f15; font-family: var(--serif); font-size: 24px; padding-top: 16px; }
-  .foot { margin-top: 36px; padding-top: 14px; border-top: 1px solid rgba(38,31,21,.2); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(38,31,21,.55); text-align: center; }
+  .foot { margin-top: 36px; padding-top: 14px; border-top: 1px solid rgba(38, 31, 21,.2); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(38, 31, 21,.55); text-align: center; }
   @media print { body { background: #fff; } .sheet { margin: 0 auto; border: none; background: #fff; } }
   @page { margin: 14mm; }
 </style>
@@ -1506,7 +1479,7 @@ function buildQuoteHtml(args: Parameters<typeof buildQuoteText>[0]) {
   <div class="sheet">
     <div class="masthead">
       <div>
-        <p class="label">✦ Event Quote</p>
+        <p class="label">Event Quote</p>
         <h1>${biz}</h1>
       </div>
       <div class="ref">
@@ -1544,7 +1517,7 @@ function buildQuoteHtml(args: Parameters<typeof buildQuoteText>[0]) {
       <table>${ledger}</table>
       <p class="muted" style="text-align:right;margin-top:8px;">${money(quote.perGuest)} per guest</p>
     </section>
-    <p class="foot">Quote valid 14 days · Prepared with LocalEyes ✦</p>
+    <p class="foot">Quote valid 14 days · Prepared with LocalEyes</p>
   </div>
 </body>
 </html>
@@ -1816,7 +1789,7 @@ export default function CoffeeCartCalculatorPage() {
 
   const cartMeta = CONFIG.model.CART_TYPES[cartType];
   const posMeta = CONFIG.model.POSITIONING[positioning];
-  const setupSentence = `${quote.baristas} barista${quote.baristas === 1 ? "" : "s"} · ${quote.carts} cart${quote.carts === 1 ? "" : "s"} · serving ~${quote.totalDrinks} drinks over ${hours} hr${hours === 1 ? "" : "s"}. (~${Math.round(quote.drinksPerHour)} drinks/hr — ${CONFIG.copy.results.setupPace}.)`;
+  const setupSentence = `${quote.baristas} barista${quote.baristas === 1 ? "" : "s"} · ${quote.carts} cart${quote.carts === 1 ? "" : "s"} · serving ~${quote.totalDrinks} drinks over ${hours} hr${hours === 1 ? "" : "s"}. (~${Math.round(quote.drinksPerHour)} drinks/hr, ${CONFIG.copy.results.setupPace}.)`;
 
   /* WebApplication JSON-LD — the calculator is a tool, so this is the
      page's PRIMARY schema. FAQPage stays as its own separate script,
@@ -1828,7 +1801,7 @@ export default function CoffeeCartCalculatorPage() {
     name: "Coffee Catering Price Calculator",
     url: CONFIG.links.CANONICAL_URL,
     description:
-      "Know exactly what to charge for any coffee cart or mobile espresso event — in seconds. Get value, standard, and premium pricing instantly, plus a client-ready quote.",
+      "Know exactly what to charge for any coffee cart or mobile espresso event, in seconds. Get value, standard, and premium pricing instantly, plus a client-ready quote.",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Any",
     isAccessibleForFree: true,
@@ -1851,7 +1824,7 @@ export default function CoffeeCartCalculatorPage() {
   };
 
   /* ==================== the calculator (shared by embed) ============= */
-  const configLine = `${cartMeta.title} · ${posMeta.title} · ${guestsLabel(guests)} guests · ${hours} hr${hours === 1 ? "" : "s"} · ${miles} mi — ${money(quote.recommended)}`;
+  const configLine = `${cartMeta.title} · ${posMeta.title} · ${guestsLabel(guests)} guests · ${hours} hr${hours === 1 ? "" : "s"} · ${miles} mi, ${money(quote.recommended)}`;
 
   const calculator = (
     <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-8">
@@ -1963,13 +1936,13 @@ export default function CoffeeCartCalculatorPage() {
                       type="button"
                       aria-pressed={selected}
                       onClick={() => toggleAddon(id)}
-                      className="group -mx-2 flex w-full cursor-pointer items-baseline gap-3 px-2 py-2.5 text-left transition-colors duration-200 hover:bg-[#261f15]/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+                      className="group -mx-2 flex w-full cursor-pointer items-baseline gap-3 px-2 py-2.5 text-left transition-colors duration-200 hover:bg-[#261f15]/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
                     >
                       <span
                         aria-hidden="true"
                         className={`relative top-[3px] flex h-[17px] w-[17px] shrink-0 items-center justify-center border transition-colors duration-200 ${
                           selected
-                            ? "border-[#a3843f]"
+                            ? "border-[#6a5f4e]"
                             : "border-[#261f15]/35 group-hover:border-[#261f15]/70"
                         }`}
                       >
@@ -2023,13 +1996,13 @@ export default function CoffeeCartCalculatorPage() {
               </p>
 
               {/* THE price — enormous tabular numerals, the accent */}
-              <p className="mt-4 font-heading font-thin not-italic leading-none tracking-[-0.02em] tabular-nums text-[clamp(3.8rem,4.6vw,5.4rem)] text-[#a3843f]">
+              <p className="mt-4 font-heading font-thin not-italic leading-none tracking-[-0.02em] tabular-nums text-[clamp(3.8rem,4.6vw,5.4rem)] text-[#6a5f4e]">
                 <RollingMoney value={quote.recommended} reduced={reduced} />
               </p>
               <p className="mt-3 font-sans text-[0.8rem] leading-relaxed text-[#261f15]/55">
                 {CONFIG.copy.results.rangePrefix}{" "}
                 <span className="font-semibold text-[#261f15]/80 tabular-nums">
-                  {money(quote.prices.value)} – {money(quote.prices.premium)}
+                  {money(quote.prices.value)} - {money(quote.prices.premium)}
                 </span>
               </p>
 
@@ -2082,15 +2055,15 @@ export default function CoffeeCartCalculatorPage() {
                         type="button"
                         aria-pressed={active}
                         onClick={() => setPositioning(id)}
-                        className={`cursor-pointer px-2 py-2.5 text-center transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#a3843f] ${
+                        className={`cursor-pointer px-2 py-2.5 text-center transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#6a5f4e] ${
                           active
-                            ? "bg-[#a3843f]/[0.07]"
+                            ? "bg-[#6a5f4e]/[0.07]"
                             : "hover:bg-[#261f15]/[0.04]"
                         }`}
                       >
                         <span
                           className={`block font-sans text-[0.6rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-200 ${
-                            active ? "text-[#a3843f]" : "text-[#261f15]/40"
+                            active ? "text-[#6a5f4e]" : "text-[#261f15]/40"
                           }`}
                         >
                           {CONFIG.model.POSITIONING[id].title}
@@ -2148,19 +2121,19 @@ export default function CoffeeCartCalculatorPage() {
 
               {/* suggested setup — a footnote, not a callout */}
               <p className="mt-6 font-sans text-[0.8rem] leading-relaxed text-[#261f15]/50">
-                N.B. — {setupSentence}
+                N.B. {setupSentence}
               </p>
 
               {/* print device no. 2 — the perforated ticket CTA */}
               <button
                 type="button"
                 onClick={openQuote}
-                className="group mt-7 flex w-full cursor-pointer items-stretch text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                className="group mt-7 flex w-full cursor-pointer items-stretch text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
               >
-                <span className="flex flex-1 items-center bg-[#b5965a] px-6 py-4 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 group-hover:bg-[#a3843f]">
+                <span className="flex flex-1 items-center bg-[#ededd5] px-6 py-4 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 group-hover:bg-[#6a5f4e]">
                   {CONFIG.copy.lead.heading}
                 </span>
-                <span className="relative flex items-center border-l border-dashed border-white/50 bg-[#b5965a] px-5 font-heading not-italic text-lg leading-none tabular-nums text-white transition-colors duration-300 group-hover:bg-[#a3843f]">
+                <span className="relative flex items-center border-l border-dashed border-white/50 bg-[#ededd5] px-5 font-heading not-italic text-lg leading-none tabular-nums text-white transition-colors duration-300 group-hover:bg-[#6a5f4e]">
                   {money(quote.recommended)}
                   <span
                     aria-hidden="true"
@@ -2176,7 +2149,7 @@ export default function CoffeeCartCalculatorPage() {
                 <button
                   type="button"
                   onClick={copySummary}
-                  className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                  className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                 >
                   {summaryCopied
                     ? CONFIG.copy.lead.copied
@@ -2185,7 +2158,7 @@ export default function CoffeeCartCalculatorPage() {
                 <button
                   type="button"
                   onClick={resetAll}
-                  className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                  className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                 >
                   {CONFIG.copy.lead.startOver}
                 </button>
@@ -2241,7 +2214,7 @@ export default function CoffeeCartCalculatorPage() {
               <button
                 type="button"
                 onClick={closeQuote}
-                className="mt-1 shrink-0 cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                className="mt-1 shrink-0 cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
               >
                 Close
               </button>
@@ -2279,10 +2252,7 @@ export default function CoffeeCartCalculatorPage() {
                       {/* masthead */}
                       <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
                         <div className="min-w-0">
-                          <p className="flex items-center gap-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#8a6f3d]">
-                            <span aria-hidden="true" className="text-[0.9em]">
-                              ✦
-                            </span>
+                          <p className="flex items-center gap-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#6a5f4e]">
                             Event Quote
                           </p>
                           <h3 className="mt-3 font-heading font-thin not-italic leading-[1.1] tracking-[-0.02em] text-[clamp(1.6rem,4.5vw,2.4rem)]">
@@ -2420,12 +2390,6 @@ export default function CoffeeCartCalculatorPage() {
                       {/* foot */}
                       <p className="mt-10 flex items-center justify-center gap-2 border-t border-[#261f15]/20 pt-4 text-center font-sans text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-[#261f15]/55">
                         Quote valid 14 days · Prepared with LocalEyes
-                        <span
-                          aria-hidden="true"
-                          className="text-[0.9em] text-[#8a6f3d]"
-                        >
-                          ✦
-                        </span>
                       </p>
                     </div>
 
@@ -2434,28 +2398,28 @@ export default function CoffeeCartCalculatorPage() {
                       <button
                         type="button"
                         onClick={printQuote}
-                        className="cursor-pointer bg-[#a3843f] px-6 py-3 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#261f15] transition-colors hover:bg-[#8a6f3d] hover:text-[#ededd5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer bg-[#6a5f4e] px-6 py-3 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#261f15] transition-colors hover:bg-[#6a5f4e] hover:text-[#ededd5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
                       >
                         Print / PDF
                       </button>
                       <button
                         type="button"
                         onClick={downloadQuote}
-                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#a3843f] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
                         Download
                       </button>
                       <button
                         type="button"
                         onClick={copyQuoteText}
-                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#a3843f] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
                         {quoteCopied ? CONFIG.copy.lead.copied : "Copy text"}
                       </button>
                       <button
                         type="button"
                         onClick={copySummary}
-                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#a3843f] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
                         {summaryCopied
                           ? CONFIG.copy.lead.copied
@@ -2464,14 +2428,14 @@ export default function CoffeeCartCalculatorPage() {
                       <button
                         type="button"
                         onClick={editDetails}
-                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#a3843f] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
                         Edit details
                       </button>
                       <button
                         type="button"
                         onClick={resetAll}
-                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/55 transition-colors hover:border-[#261f15]/70 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
                         {CONFIG.copy.lead.startOver}
                       </button>
@@ -2517,7 +2481,7 @@ export default function CoffeeCartCalculatorPage() {
                         >
                           {f.label}
                           {leadErrors[f.id] && (
-                            <span className="text-[#a3843f]">
+                            <span className="text-[#6a5f4e]">
                               {leadErrors[f.id]}
                             </span>
                           )}
@@ -2530,9 +2494,9 @@ export default function CoffeeCartCalculatorPage() {
                           onChange={(e) =>
                             setLead({ ...lead, [f.id]: e.target.value })
                           }
-                          className={`mt-2 w-full rounded-none border-0 border-b bg-transparent px-0 py-2 font-sans text-sm text-[#261f15] transition-colors focus-visible:border-[#a3843f] focus-visible:outline-none ${
+                          className={`mt-2 w-full rounded-none border-0 border-b bg-transparent px-0 py-2 font-sans text-sm text-[#261f15] transition-colors focus-visible:border-[#6a5f4e] focus-visible:outline-none ${
                             leadErrors[f.id]
-                              ? "border-[#a3843f]"
+                              ? "border-[#6a5f4e]"
                               : "border-[#261f15]/30"
                           }`}
                         />
@@ -2548,7 +2512,7 @@ export default function CoffeeCartCalculatorPage() {
                     </div>
                     {leadStatus === "error" && (
                       <div className="sm:col-span-2">
-                        <p className="font-sans text-xs text-[#a3843f]">
+                        <p className="font-sans text-xs text-[#6a5f4e]">
                           {CONFIG.copy.lead.errorSubmit}
                         </p>
                       </div>
@@ -2557,14 +2521,14 @@ export default function CoffeeCartCalculatorPage() {
                       <button
                         type="submit"
                         disabled={leadStatus === "submitting"}
-                        className="group flex w-full cursor-pointer items-stretch text-left disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                        className="group flex w-full cursor-pointer items-stretch text-left disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
-                        <span className="flex flex-1 items-center justify-center bg-[#a3843f] px-6 py-4 text-center font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-[#261f15] transition-colors duration-300 group-hover:bg-[#8a6f3d] group-hover:text-[#ededd5]">
+                        <span className="flex flex-1 items-center justify-center bg-[#6a5f4e] px-6 py-4 text-center font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-[#261f15] transition-colors duration-300 group-hover:bg-[#6a5f4e] group-hover:text-[#ededd5]">
                           {leadStatus === "submitting"
                             ? "..."
                             : CONFIG.copy.lead.submit}
                         </span>
-                        <span className="relative flex items-center border-l border-dashed border-[#261f15]/40 bg-[#a3843f] px-5 font-heading not-italic text-lg leading-none tabular-nums text-[#261f15] transition-colors duration-300 group-hover:bg-[#8a6f3d] group-hover:text-[#ededd5]">
+                        <span className="relative flex items-center border-l border-dashed border-[#261f15]/40 bg-[#6a5f4e] px-5 font-heading not-italic text-lg leading-none tabular-nums text-[#261f15] transition-colors duration-300 group-hover:bg-[#6a5f4e] group-hover:text-[#ededd5]">
                           {money(quote.recommended)}
                           <span
                             aria-hidden="true"
@@ -2639,7 +2603,7 @@ export default function CoffeeCartCalculatorPage() {
             aria-expanded={mobileOpen}
             aria-controls="lec-mobile-panel"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex min-w-0 flex-1 cursor-pointer items-center gap-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+            className="flex min-w-0 flex-1 cursor-pointer items-center gap-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
           >
             <span
               aria-hidden="true"
@@ -2651,7 +2615,7 @@ export default function CoffeeCartCalculatorPage() {
               <span className="block truncate font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#261f15]/50">
                 {CONFIG.copy.results.recommendedLabel}
               </span>
-              <span className="block font-heading not-italic text-2xl leading-tight tabular-nums text-[#a3843f]">
+              <span className="block font-heading not-italic text-2xl leading-tight tabular-nums text-[#6a5f4e]">
                 <RollingMoney value={quote.recommended} reduced={reduced} />
               </span>
             </span>
@@ -2659,7 +2623,7 @@ export default function CoffeeCartCalculatorPage() {
           <button
             type="button"
             onClick={openQuote}
-            className="shrink-0 cursor-pointer bg-[#b5965a] px-6 py-3.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#a3843f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
+            className="shrink-0 cursor-pointer bg-[#ededd5] px-6 py-3.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#6a5f4e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
           >
             {CONFIG.copy.lead.ctaShort}
           </button>
@@ -2671,7 +2635,7 @@ export default function CoffeeCartCalculatorPage() {
   /* ==================== EMBED MODE =================================== */
   if (embed) {
     return (
-      <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] px-5 py-8 text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15] sm:px-8">
+      <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] px-5 py-8 text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15] sm:px-8">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
@@ -2686,14 +2650,11 @@ export default function CoffeeCartCalculatorPage() {
           </p>
           <div className="mt-8">{calculator}</div>
           <p className="mt-8 flex items-center gap-2 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/50">
-            <span aria-hidden="true" className="text-[0.8em] text-[#8a6f3d]">
-              ✦
-            </span>
             <a
               href={CONFIG.links.CANONICAL_URL}
               target="_blank"
               rel="noopener"
-              className="border-b border-[#a3843f]/50 pb-0.5 transition-colors duration-300 hover:border-[#a3843f] hover:text-[#261f15]"
+              className="border-b border-[#6a5f4e]/50 pb-0.5 transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#261f15]"
             >
               {CONFIG.copy.embed.poweredBy}
             </a>
@@ -2712,7 +2673,7 @@ export default function CoffeeCartCalculatorPage() {
 
   /* ==================== FULL PAGE ==================================== */
   return (
-    <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
@@ -2733,7 +2694,7 @@ export default function CoffeeCartCalculatorPage() {
 
         {/* Soft blurred circle in contrast color filling the bottom-left empty space */}
         <div
-          className={`absolute bottom-[-15%] left-[-5%] w-[26vw] h-[26vw] max-w-[420px] max-h-[420px] min-w-[240px] min-h-[240px] rounded-full bg-[#a3843f]/30 blur-[90px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
+          className={`absolute bottom-[-15%] left-[-5%] w-[26vw] h-[26vw] max-w-[420px] max-h-[420px] min-w-[240px] min-h-[240px] rounded-full bg-[#6a5f4e]/30 blur-[90px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
           aria-hidden="true"
         />
 
@@ -2751,7 +2712,7 @@ export default function CoffeeCartCalculatorPage() {
             initial={reduced ? false : { y: 20 }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 max-w-2xl font-sans text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#8a6f3d] sm:text-xs md:mt-10"
+            className="mt-8 max-w-2xl font-sans text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#6a5f4e] sm:text-xs md:mt-10"
           >
             {CONFIG.copy.eyebrow}
           </motion.p>
@@ -2774,10 +2735,7 @@ export default function CoffeeCartCalculatorPage() {
               <p className="font-sans text-sm leading-relaxed text-[#261f15]/75 md:text-base">
                 {CONFIG.copy.intro}
               </p>
-              <p className="mt-8 flex items-start gap-3 font-sans text-[0.78rem] font-semibold uppercase leading-loose tracking-[0.16em] text-[#8a6f3d]">
-                <span aria-hidden="true" className="mt-1 text-[0.8em]">
-                  ✦
-                </span>
+              <p className="mt-8 flex items-start gap-3 font-sans text-[0.78rem] font-semibold uppercase leading-loose tracking-[0.16em] text-[#6a5f4e]">
                 {CONFIG.copy.trustLine}
               </p>
             </motion.div>
@@ -2850,11 +2808,11 @@ export default function CoffeeCartCalculatorPage() {
 
         {/* Soft gold blurred circles */}
         <div
-          className={`absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] min-w-[400px] min-h-[400px] rounded-full bg-[#a3843f]/10 blur-[140px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
+          className={`absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] min-w-[400px] min-h-[400px] rounded-full bg-[#6a5f4e]/10 blur-[140px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
           aria-hidden="true"
         />
         <div
-          className={`absolute bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] min-w-[300px] min-h-[300px] rounded-full bg-[#8a6f3d]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
+          className={`absolute bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] min-w-[300px] min-h-[300px] rounded-full bg-[#6a5f4e]/15 blur-[120px] pointer-events-none mix-blend-multiply ${!reduced ? "lec-spin-slow" : ""}`}
           style={{ animationDirection: "reverse" }}
           aria-hidden="true"
         />
@@ -2871,7 +2829,6 @@ export default function CoffeeCartCalculatorPage() {
             <h2 className="mt-8 font-heading font-thin not-italic leading-[1.05] tracking-[-0.02em] text-[clamp(2.5rem,4vw,3.8rem)] text-[#261f15] md:mt-10">
               {CONFIG.copy.faq.title}
             </h2>
-            <div aria-hidden="true" className="mt-6 h-px w-10 bg-[#a3843f]" />
           </motion.div>
 
           <div className="mt-16 md:mt-24 mx-auto max-w-[1000px]">
@@ -2894,7 +2851,7 @@ export default function CoffeeCartCalculatorPage() {
                   >
                     {/* Soft Gold Glow behind open item */}
                     <div
-                      className={`absolute inset-0 z-0 bg-gradient-to-r from-transparent via-[#a3843f]/[0.08] to-transparent transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? "opacity-100" : "opacity-0"}`}
+                      className={`absolute inset-0 z-0 bg-gradient-to-r from-transparent via-[#6a5f4e]/[0.08] to-transparent transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? "opacity-100" : "opacity-0"}`}
                     />
 
                     <button
@@ -2902,7 +2859,7 @@ export default function CoffeeCartCalculatorPage() {
                       aria-expanded={open}
                       aria-controls={`lec-faq-${i}`}
                       onClick={() => setOpenFaq(open ? null : i)}
-                      className="relative z-10 flex w-full cursor-pointer items-start justify-between gap-4 py-8 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f] sm:gap-8 sm:py-10"
+                      className="relative z-10 flex w-full cursor-pointer items-start justify-between gap-4 py-8 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e] sm:gap-8 sm:py-10"
                     >
                       {/* Oversized Ghost Numeral */}
                       <span className="absolute left-0 top-6 -z-10 font-heading not-italic text-[5rem] tabular-nums leading-none tracking-tighter text-[#261f15]/[0.04] transition-colors duration-500 sm:text-[6.5rem]">
@@ -2911,12 +2868,12 @@ export default function CoffeeCartCalculatorPage() {
 
                       <div className="flex flex-1 items-baseline gap-4 sm:gap-6 pt-2">
                         {/* Smaller visible numeral */}
-                        <span className="pt-1 font-sans text-[0.68rem] font-semibold uppercase tabular-nums tracking-[0.2em] text-[#8a6f3d] shrink-0">
+                        <span className="pt-1 font-sans text-[0.68rem] font-semibold uppercase tabular-nums tracking-[0.2em] text-[#6a5f4e] shrink-0">
                           No. {num}
                         </span>
 
                         {/* Giant Thin-Serif Question */}
-                        <span className="font-heading not-italic text-2xl leading-[1.15] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#8a6f3d] sm:text-4xl">
+                        <span className="font-heading not-italic text-2xl leading-[1.15] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#6a5f4e] sm:text-4xl">
                           {item.q}
                         </span>
 
@@ -2926,18 +2883,8 @@ export default function CoffeeCartCalculatorPage() {
 
                       {/* Rotating Gold Stamp */}
                       <div className="relative mt-2 flex h-8 w-8 shrink-0 items-center justify-center sm:h-10 sm:w-10">
-                        <span
-                          aria-hidden="true"
-                          className={`absolute text-xl text-[#8a6f3d] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-2xl ${
-                            open
-                              ? "rotate-[135deg] scale-110"
-                              : "rotate-0 scale-100"
-                          }`}
-                        >
-                          ✦
-                        </span>
                         <div
-                          className={`absolute inset-0 rounded-full border border-[#8a6f3d]/30 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                          className={`absolute inset-0 rounded-full border border-[#6a5f4e]/30 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                             open
                               ? "scale-125 opacity-0"
                               : "scale-100 opacity-100"
@@ -2997,8 +2944,8 @@ function PageStyles() {
         height: 2px;
         background: linear-gradient(
           to right,
-          #a3843f 0%,
-          #a3843f var(--lec-fill, 50%),
+          #6a5f4e 0%,
+          #6a5f4e var(--lec-fill, 50%),
           rgba(38, 31, 21, 0.2) var(--lec-fill, 50%),
           rgba(38, 31, 21, 0.2) 100%
         );
@@ -3019,7 +2966,7 @@ function PageStyles() {
       }
       .lec-range::-moz-range-progress {
         height: 2px;
-        background: #a3843f;
+        background: #6a5f4e;
       }
       .lec-range::-moz-range-thumb {
         height: 15px;
@@ -3032,11 +2979,11 @@ function PageStyles() {
         outline: none;
       }
       .lec-range:focus-visible::-webkit-slider-thumb {
-        outline: 2px solid #a3843f;
+        outline: 2px solid #6a5f4e;
         outline-offset: 3px;
       }
       .lec-range:focus-visible::-moz-range-thumb {
-        outline: 2px solid #a3843f;
+        outline: 2px solid #6a5f4e;
         outline-offset: 3px;
       }
 
@@ -3057,11 +3004,11 @@ function PageStyles() {
         transition: border-color 0.2s, color 0.2s;
       }
       .lec-step:hover {
-        border-color: #a3843f;
+        border-color: #6a5f4e;
         color: #261f15;
       }
       .lec-step:focus-visible {
-        outline: 2px solid #a3843f;
+        outline: 2px solid #6a5f4e;
         outline-offset: 2px;
       }
 
@@ -3089,14 +3036,14 @@ function PageStyles() {
       .lec-stamped {
         display: inline-block;
         padding: 0.35rem 0.75rem;
-        border: 1.5px solid #8a6f3d;
-        color: #8a6f3d;
+        border: 1.5px solid #6a5f4e;
+        color: #6a5f4e;
         transform: rotate(-2deg);
         animation: lec-stamp-in 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
       }
       .lec-stampmark {
         display: inline-block;
-        color: #8a6f3d;
+        color: #6a5f4e;
         animation: lec-stamp-in 0.24s cubic-bezier(0.2, 0.9, 0.3, 1);
       }
       .lec-estrate {
@@ -3105,7 +3052,7 @@ function PageStyles() {
         top: 1.6rem;
         padding: 0.3rem 0.6rem;
         border: 1.5px solid rgba(138, 111, 61, 0.8);
-        color: #8a6f3d;
+        color: #6a5f4e;
         font-size: 0.55rem;
         font-weight: 600;
         letter-spacing: 0.22em;
@@ -3132,7 +3079,7 @@ function PageStyles() {
       /* ---- quote-modal scrollbar — thin, rounded, brand gold ---- */
       .lec-modal-scroll {
         scrollbar-width: thin; /* Firefox */
-        scrollbar-color: #a3843f rgba(38, 31, 21, 0.07);
+        scrollbar-color: #6a5f4e rgba(38, 31, 21, 0.07);
       }
       .lec-modal-scroll::-webkit-scrollbar {
         width: 6px;
@@ -3142,11 +3089,11 @@ function PageStyles() {
         border-radius: 9999px;
       }
       .lec-modal-scroll::-webkit-scrollbar-thumb {
-        background: #a3843f;
+        background: #6a5f4e;
         border-radius: 9999px;
       }
       .lec-modal-scroll::-webkit-scrollbar-thumb:hover {
-        background: #8a6f3d;
+        background: #6a5f4e;
       }
 
       /* ---- reveal panels (add-ons, embed, FAQ, mobile ledger) ---- */

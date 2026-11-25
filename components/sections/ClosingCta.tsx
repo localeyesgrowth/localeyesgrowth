@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 import {
   useCalendly,
@@ -108,7 +107,7 @@ export default function ClosingCta() {
           border-radius: 9999px;
           background: radial-gradient(
             closest-side,
-            rgba(198, 166, 106, 0.26),
+            rgba(163, 155, 132, 0.26),
             transparent 72%
           );
           opacity: 0;
@@ -123,7 +122,7 @@ export default function ClosingCta() {
           right: 0;
           bottom: -5px;
           height: 1px;
-          background: #c6a66a;
+          background: #a39b84;
         }
         .le-cta-secondary:hover {
           color: #ededd5;
@@ -154,7 +153,7 @@ export default function ClosingCta() {
         {/* ------------------------ sub-text --------------------------- */}
         <div className="le-cta-sub mt-5 md:mt-6">
           <p className="mx-auto max-w-md font-sans text-[0.8rem] leading-relaxed text-[#ededd5]/60 sm:text-sm">
-            Stop wasting your time — get free leads that pay for SEO in no time.
+            Stop wasting your time, get free leads that pay for SEO in no time.
           </p>
         </div>
 
@@ -171,36 +170,16 @@ export default function ClosingCta() {
               e.preventDefault();
               openCalendly();
             }}
-            className="group/btn relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:gap-3.5 sm:pl-8 sm:text-xs"
+            className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#ededd5] text-[#261f15] hover:bg-white"
           >
-            <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-              Book a Call
-            </span>
-            <span className="relative flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11">
-              {/* ink wash — slow flood in, quicker retreat out */}
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 scale-100 rounded-full bg-[#261f15] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-              />
-              {/* icon chip — ink at rest, inverts to gold on hover */}
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#c6a66a]"
-              />
-              <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#261f15]" />
-              </span>
-            </span>
+            Book a Call
           </a>
 
           <button
             type="button"
             onClick={openQuiz}
-            className="le-cta-secondary relative inline-flex cursor-pointer items-center gap-2.5 px-2 py-3 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#ededd5]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:text-xs"
+            className="le-cta-secondary relative inline-flex cursor-pointer items-center gap-2.5 px-2 py-3 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#ededd5]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a39b84] sm:text-xs"
           >
-            <span aria-hidden="true" className="text-[0.8em] text-[#c6a66a]">
-              ✦
-            </span>
             <span className="le-cta-underline">Assessments</span>
           </button>
         </div>

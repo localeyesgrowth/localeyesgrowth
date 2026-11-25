@@ -151,7 +151,7 @@ const closing = {
 
 export default function SeoPage() {
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <SeoHero />
       <SeoDisciplines {...disciplines} />
       <SeoResults {...results} />

@@ -63,11 +63,11 @@ function JournalCard({ post, reduced }: { post: BlogPostMeta; reduced: boolean }
     >
       <motion.div
         style={{ rotateX, rotateY, y: lift }}
-        className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#c6a66a]/25 bg-[#f7f5e8] p-7 text-[#261f15] shadow-[0_1px_2px_rgba(0,0,0,0.12),0_28px_56px_-26px_rgba(38,31,21,0.35)] transition-shadow duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:shadow-[0_1px_2px_rgba(0,0,0,0.14),0_44px_84px_-26px_rgba(38,31,21,0.45)] sm:p-9"
+        className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#a39b84]/25 bg-[#f7f5e8] p-7 text-[#261f15] shadow-[0_1px_2px_rgba(0,0,0,0.12),0_28px_56px_-26px_rgba(38,31,21,0.35)] transition-shadow duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:shadow-[0_1px_2px_rgba(0,0,0,0.14),0_44px_84px_-26px_rgba(38,31,21,0.45)] sm:p-9"
       >
         <span
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#c6a66a]/50 via-[#c6a66a] to-[#c6a66a]/50"
+          className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#a39b84]/50 via-[#a39b84] to-[#a39b84]/50"
         />
         <span
           aria-hidden="true"
@@ -76,12 +76,12 @@ function JournalCard({ post, reduced }: { post: BlogPostMeta; reduced: boolean }
 
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -left-16 -top-20 h-56 w-56 rounded-full bg-[#c6a66a]/15 blur-3xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-125"
+          className="pointer-events-none absolute -left-16 -top-20 h-56 w-56 rounded-full bg-[#ededd5]/15 blur-3xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-125"
         />
 
         <div className="relative z-10 flex h-full flex-col">
           <div className="flex items-center justify-between gap-3">
-            <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
+            <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
               {post.category}
             </span>
             {post.author && (
@@ -93,7 +93,7 @@ function JournalCard({ post, reduced }: { post: BlogPostMeta; reduced: boolean }
 
           {post.statValue ? (
             <div className="mt-6 flex items-baseline gap-3">
-              <p className="font-heading font-thin not-italic text-[3.1rem] leading-none tracking-[-0.02em] text-[#8a6f3d] sm:text-[3.5rem]">
+              <p className="font-heading font-thin not-italic text-[3.1rem] leading-none tracking-[-0.02em] text-[#6a5f4e] sm:text-[3.5rem]">
                 {post.statValue}
               </p>
               <p className="max-w-[9.5rem] font-sans text-[0.72rem] font-semibold leading-snug text-[#261f15]/60">
@@ -108,13 +108,12 @@ function JournalCard({ post, reduced }: { post: BlogPostMeta; reduced: boolean }
 
           <span aria-hidden="true" className="mt-6 h-px w-full bg-[#261f15]/10" />
 
-          <h2 className="mt-5 line-clamp-2 font-heading font-thin not-italic text-[1.35rem] leading-[1.2] tracking-[-0.01em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-[#8a6f3d] sm:text-[1.5rem]">
+          <h2 className="mt-5 line-clamp-2 font-heading font-thin not-italic text-[1.35rem] leading-[1.2] tracking-[-0.01em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-[#6a5f4e] sm:text-[1.5rem]">
             {post.title}
           </h2>
 
           <p className="mt-auto pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/45">
             {post.date}
-            <span className="mx-2 text-[#8a6f3d]/70">✦</span>
             {post.readTime}
           </p>
         </div>
@@ -274,24 +273,18 @@ export default function BlogListing({ posts }: { posts: BlogPostMeta[] }) {
 
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 md:px-12">
         <div className="le-journal-head text-center">
-          <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
             The Journal
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
           </p>
 
           <h1 className="mx-auto mt-5 max-w-3xl font-heading font-thin not-italic text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[1.05] tracking-[-0.01em] text-[#261f15]">
             Field notes for growing your{" "}
-            <span className="text-[#8a6f3d] not-italic">booking calendar</span>
+            booking calendar
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl font-sans text-sm leading-relaxed text-[#261f15]/65 sm:text-base">
             Practical local SEO breakdowns for coffee carts, mobile bars, and
-            every kind of caterer — no fluff, just what&apos;s moving the
+            every kind of caterer. No fluff, just what&apos;s moving the
             needle for real operators.
           </p>
         </div>
@@ -308,7 +301,7 @@ export default function BlogListing({ posts }: { posts: BlogPostMeta[] }) {
             className={`rounded-full px-4 py-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] transition-colors duration-300 ${
               category === null
                 ? "bg-[#261f15] text-[#ededd5]"
-                : "border border-[#261f15]/20 text-[#261f15]/60 hover:border-[#8a6f3d] hover:text-[#8a6f3d]"
+                : "border border-[#261f15]/20 text-[#261f15]/60 hover:border-[#6a5f4e] hover:text-[#6a5f4e]"
             }`}
           >
             All
@@ -322,7 +315,7 @@ export default function BlogListing({ posts }: { posts: BlogPostMeta[] }) {
               className={`rounded-full px-4 py-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] transition-colors duration-300 ${
                 category === cat
                   ? "bg-[#261f15] text-[#ededd5]"
-                  : "border border-[#261f15]/20 text-[#261f15]/60 hover:border-[#8a6f3d] hover:text-[#8a6f3d]"
+                  : "border border-[#261f15]/20 text-[#261f15]/60 hover:border-[#6a5f4e] hover:text-[#6a5f4e]"
               }`}
             >
               {cat}
@@ -355,7 +348,7 @@ export default function BlogListing({ posts }: { posts: BlogPostMeta[] }) {
               onClick={() => goToPage(page - 1)}
               disabled={page === 1}
               aria-label="Previous page"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15] transition-colors duration-300 hover:border-[#8a6f3d] hover:text-[#8a6f3d] disabled:pointer-events-none disabled:opacity-30"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15] transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e] disabled:pointer-events-none disabled:opacity-30"
             >
               <ArrowUpRight className="h-4 w-4 -rotate-[135deg]" strokeWidth={1.5} />
             </button>
@@ -381,7 +374,7 @@ export default function BlogListing({ posts }: { posts: BlogPostMeta[] }) {
               onClick={() => goToPage(page + 1)}
               disabled={page === totalPages}
               aria-label="Next page"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15] transition-colors duration-300 hover:border-[#8a6f3d] hover:text-[#8a6f3d] disabled:pointer-events-none disabled:opacity-30"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15] transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e] disabled:pointer-events-none disabled:opacity-30"
             >
               <ArrowUpRight className="h-4 w-4 rotate-45" strokeWidth={1.5} />
             </button>

@@ -17,7 +17,7 @@ import { Noise } from "@/components/effects/Noise";
    ---------------------------------------------------------------------- */
 
 const STATEMENT =
-  "Search is the #1 lead source for event brands — but most are barely scratching the surface. We help you get found by the right people, convince them before they even reach out, and build the kind of momentum that doesn't stop at one location.";
+  "Search is the #1 lead source for event brands, but most are barely scratching the surface. We help you get found by the right people, convince them before they even reach out, and build the kind of momentum that doesn't stop at one location.";
 
 export default function KnownFor() {
   return (
@@ -28,7 +28,7 @@ export default function KnownFor() {
       {/* Soft gold glow — slowly breathes behind the statement */}
       <div
         aria-hidden="true"
-        className="animate-le-breathe pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(90%_75%_at_28%_45%,rgba(166,124,61,0.18),transparent_62%)]"
+        className="animate-le-breathe pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(90%_75%_at_28%_45%,color-mix(in_srgb,var(--le-accent)_18%,transparent),transparent_62%)]"
       />
 
       {/* Vignette — edges recede ever so slightly for quiet depth */}
@@ -44,18 +44,9 @@ export default function KnownFor() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 py-24 md:px-12 md:py-36">
         {/* Eyebrow heading — hairline ends in a small spinning ✦ */}
-        <h2 className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a67c3d] sm:text-xs">
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
+        <h2 className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
           What we&rsquo;re known for
-          <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
-          <span
-            aria-hidden="true"
-            className="animate-le-spin inline-block text-[1.1em] leading-none"
-          >
-            ✦
-          </span>
+          <span aria-hidden="true" className="flex-1" />
         </h2>
 
         {/* The statement — ScrollReveal is the centerpiece */}
@@ -77,7 +68,6 @@ export default function KnownFor() {
 
         {/* Quiet sign-off rule */}
         <div className="mt-12 flex items-center gap-4 md:mt-16">
-          <span aria-hidden="true" className="h-px w-16 bg-[#a67c3d]/60" />
           <span className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-[#261f15]/55 sm:text-[0.6rem]">
             SEO-first growth systems
           </span>

@@ -150,11 +150,11 @@ function ResourceCard({
   return (
     <div
       ref={cardRef}
-      className={`rounded-2xl border border-[#c6a66a]/30 bg-[#f7f5e8] p-6 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_24px_48px_-28px_rgba(38,31,21,0.35)] ${
+      className={`rounded-2xl border border-[#a39b84]/30 bg-[#f7f5e8] p-6 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_24px_48px_-28px_rgba(38,31,21,0.35)] ${
         sticky ? "sticky top-28" : ""
       }`}
     >
-      <span className="inline-flex w-fit rounded-full bg-[#c6a66a]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
+      <span className="inline-flex w-fit rounded-full bg-[#ededd5]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
         Free Resource
       </span>
 
@@ -183,7 +183,7 @@ function ResourceCard({
           {done ? (
             <p className="flex items-center gap-2 font-sans text-[0.8rem] font-semibold text-[#4a6b3d]">
               <Check className="h-4 w-4" strokeWidth={2} />
-              Sent — your download has started.
+              Sent. Your download has started.
             </p>
           ) : (
             <>
@@ -203,7 +203,7 @@ function ResourceCard({
                   setError(false);
                 }}
                 placeholder="you@business.com"
-                className="mt-2 w-full rounded-full border border-[#261f15]/20 bg-[#ededd5] px-4 py-2.5 font-sans text-sm text-[#261f15] outline-none transition-colors duration-300 focus:border-[#8a6f3d]"
+                className="mt-2 w-full rounded-full border border-[#261f15]/20 bg-[#ededd5] px-4 py-2.5 font-sans text-sm text-[#261f15] outline-none transition-colors duration-300 focus:border-[#6a5f4e]"
               />
               {error && (
                 <p className="mt-1.5 font-sans text-[0.72rem] text-[#a3432f]">
@@ -246,7 +246,7 @@ function ResourceCard({
             <button
               type="button"
               onClick={() => requestFormat("docx")}
-              className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#261f15]/20 px-5 py-2.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15]/75 transition-colors duration-300 hover:border-[#8a6f3d] hover:text-[#8a6f3d]"
+              className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#261f15]/20 px-5 py-2.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15]/75 transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e]"
             >
               <Download className="h-3.5 w-3.5" strokeWidth={1.75} />
               Download Word
@@ -419,7 +419,7 @@ export default function BlogArticle({
               e.preventDefault();
               window.dispatchEvent(new Event("le-resource-open"));
             }}
-            className="cursor-pointer text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+            className="cursor-pointer text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
           >
             {children}
           </a>
@@ -433,7 +433,7 @@ export default function BlogArticle({
               e.preventDefault();
               openQuiz();
             }}
-            className="cursor-pointer text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+            className="cursor-pointer text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
           >
             {children}
           </a>
@@ -442,7 +442,7 @@ export default function BlogArticle({
       return (
         <a
           href={href}
-          className="text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+          className="text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
         >
           {children}
         </a>
@@ -452,12 +452,12 @@ export default function BlogArticle({
       <strong className="font-semibold text-[#261f15]">{children}</strong>
     ),
     ul: ({ children }) => (
-      <ul className="mt-5 flex list-disc flex-col gap-2 pl-5 marker:text-[#c6a66a]">
+      <ul className="mt-5 flex list-disc flex-col gap-2 pl-5 marker:text-[#a39b84]">
         {children}
       </ul>
     ),
     ol: ({ children }) => (
-      <ol className="mt-5 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-[#8a6f3d]">
+      <ol className="mt-5 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-[#6a5f4e]">
         {children}
       </ol>
     ),
@@ -467,7 +467,7 @@ export default function BlogArticle({
       </li>
     ),
     table: ({ children }) => (
-      <div className="le-article-table-scroll mt-8 overflow-x-auto rounded-2xl border border-[#c6a66a]/25">
+      <div className="le-article-table-scroll mt-8 overflow-x-auto rounded-2xl border border-[#a39b84]/25">
         <table className="w-full min-w-[560px] border-collapse text-left">
           {children}
         </table>
@@ -490,7 +490,7 @@ export default function BlogArticle({
       <tr className="in-[tbody]:odd:bg-[#f7f5e8]">{children}</tr>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="mt-6 border-l-2 border-[#c6a66a]/50 pl-5 font-sans text-[1.05em] not-italic text-[#261f15]/70">
+      <blockquote className="mt-6 border-l-2 border-[#a39b84]/50 pl-5 font-sans text-[1.05em] not-italic text-[#261f15]/70">
         {children}
       </blockquote>
     ),
@@ -500,7 +500,7 @@ export default function BlogArticle({
         <button
           type="button"
           onClick={() => openLightbox(src)}
-          className="group/img mt-8 block w-full cursor-zoom-in overflow-hidden rounded-2xl border border-[#c6a66a]/25"
+          className="group/img mt-8 block w-full cursor-zoom-in overflow-hidden rounded-2xl border border-[#a39b84]/25"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -525,7 +525,7 @@ export default function BlogArticle({
       <style>{`
         .le-article-table-scroll {
           scrollbar-width: thin;
-          scrollbar-color: #c6a66a transparent;
+          scrollbar-color: #a39b84 transparent;
         }
         .le-article-table-scroll::-webkit-scrollbar {
           height: 6px;
@@ -534,7 +534,7 @@ export default function BlogArticle({
           background: transparent;
         }
         .le-article-table-scroll::-webkit-scrollbar-thumb {
-          background-color: #c6a66a;
+          background-color: #a39b84;
           border-radius: 999px;
         }
       `}</style>
@@ -546,7 +546,7 @@ export default function BlogArticle({
       >
         <div
           ref={progressRef}
-          className="h-full w-full origin-left bg-[#c6a66a]"
+          className="h-full w-full origin-left bg-[#ededd5]"
           style={{ transform: "scaleX(0)" }}
         />
       </div>
@@ -570,14 +570,14 @@ export default function BlogArticle({
         <div className={hasResource ? "min-w-0" : ""}>
           <a
             href="/blog"
-            className="group inline-flex items-center gap-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#261f15]/50 transition-colors duration-300 hover:text-[#8a6f3d]"
+            className="group inline-flex items-center gap-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#261f15]/50 transition-colors duration-300 hover:text-[#6a5f4e]"
           >
             <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-x-1" />
             The Journal
           </a>
 
           <div className="le-article-head mt-8">
-            <span className="inline-flex w-fit rounded-full bg-[#c6a66a]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
+            <span className="inline-flex w-fit rounded-full bg-[#ededd5]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
               {meta.category}
             </span>
 
@@ -590,11 +590,9 @@ export default function BlogArticle({
                 {meta.author && (
                   <>
                     By {meta.author}
-                    <span className="mx-2 text-[#8a6f3d]/70">✦</span>
                   </>
                 )}
                 {meta.date}
-                <span className="mx-2 text-[#8a6f3d]/70">✦</span>
                 {meta.readTime}
               </p>
 
@@ -609,7 +607,7 @@ export default function BlogArticle({
                   onClick={() => bumpFontScale(-1)}
                   disabled={fontScale <= FONT_SCALE_MIN}
                   aria-label="Decrease text size"
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15]/70 transition-colors duration-300 hover:border-[#8a6f3d] hover:text-[#8a6f3d] disabled:pointer-events-none disabled:opacity-30"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15]/70 transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e] disabled:pointer-events-none disabled:opacity-30"
                 >
                   <Minus className="h-3.5 w-3.5" strokeWidth={2} />
                 </button>
@@ -618,7 +616,7 @@ export default function BlogArticle({
                   onClick={() => bumpFontScale(1)}
                   disabled={fontScale >= FONT_SCALE_MAX}
                   aria-label="Increase text size"
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15]/70 transition-colors duration-300 hover:border-[#8a6f3d] hover:text-[#8a6f3d] disabled:pointer-events-none disabled:opacity-30"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-[#261f15]/20 text-[#261f15]/70 transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e] disabled:pointer-events-none disabled:opacity-30"
                 >
                   <Plus className="h-3.5 w-3.5" strokeWidth={2} />
                 </button>
@@ -629,7 +627,7 @@ export default function BlogArticle({
           {meta.ctaLabel && meta.ctaHref && (
             <a
               href={meta.ctaHref}
-              className="group/cta mt-8 flex items-center justify-between gap-4 rounded-2xl border border-[#c6a66a]/40 bg-[#261f15] px-6 py-5 text-[#ededd5] transition-colors duration-300 hover:bg-[#3a3020] sm:px-8 sm:py-6"
+              className="group/cta mt-8 flex items-center justify-between gap-4 rounded-2xl border border-[#a39b84]/40 bg-[#261f15] px-6 py-5 text-[#ededd5] transition-colors duration-300 hover:bg-[#3a3020] sm:px-8 sm:py-6"
             >
               <div>
                 <p className="font-heading font-thin not-italic text-lg leading-snug text-[#ededd5] sm:text-xl">
@@ -641,7 +639,7 @@ export default function BlogArticle({
                   </p>
                 )}
               </div>
-              <ArrowUpRight className="h-6 w-6 shrink-0 text-[#c6a66a] transition-transform duration-500 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/cta:rotate-45" />
+              <ArrowUpRight className="h-6 w-6 shrink-0 text-[#a39b84] transition-transform duration-500 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/cta:rotate-45" />
             </a>
           )}
 
@@ -666,24 +664,9 @@ export default function BlogArticle({
           <div className="mt-16 border-t border-[#261f15]/10 pt-10">
             <a
               href="/blog"
-              className="group/btn relative inline-flex cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full border border-[#261f15]/25 py-1 pl-6 pr-1 font-sans text-[0.7rem] uppercase tracking-[0.12em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:gap-4 sm:py-1.5 sm:pl-8 sm:pr-1.5 sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] border border-[#261f15]/30 text-[#261f15] hover:border-[#261f15]"
             >
-              <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-white">
-                More From The Journal
-              </span>
-              <span className="relative flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#4a3421] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[25] group-hover/btn:duration-[1100ms]"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#4a3421] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-white"
-                />
-                <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                  <ArrowUpRight className="h-[1.15rem] w-[1.15rem] text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#4a3421]" />
-                </span>
-              </span>
+              More From The Journal
             </a>
           </div>
         </div>
@@ -706,7 +689,7 @@ export default function BlogArticle({
             type="button"
             aria-label="Close"
             onClick={closeLightbox}
-            className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-[#ededd5]/25 text-[#ededd5] transition-colors duration-300 hover:border-[#c6a66a] hover:text-[#c6a66a]"
+            className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-[#ededd5]/25 text-[#ededd5] transition-colors duration-300 hover:border-[#a39b84] hover:text-[#a39b84]"
           >
             <X className="h-4 w-4" strokeWidth={1.5} />
           </button>
@@ -725,7 +708,7 @@ export default function BlogArticle({
               e.stopPropagation();
               copyViewUrl();
             }}
-            className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-[#ededd5]/25 bg-[#261f15] px-5 py-2.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#ededd5] transition-colors duration-300 hover:border-[#c6a66a] hover:text-[#c6a66a]"
+            className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-[#ededd5]/25 bg-[#261f15] px-5 py-2.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#ededd5] transition-colors duration-300 hover:border-[#a39b84] hover:text-[#a39b84]"
           >
             {copied ? (
               <>

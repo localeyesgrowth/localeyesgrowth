@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, ImagePlus } from "lucide-react";
+import { ImagePlus } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 import { useGrowthDiagnostic } from "@/components/growth-diagnostic/GrowthDiagnosticProvider";
 
@@ -72,7 +72,7 @@ function FounderCard({ founder }: { founder: Founder }) {
       <p className="mt-5 font-heading font-thin not-italic text-xl text-[#261f15]">
         {founder.name}
       </p>
-      <p className="mt-1 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
+      <p className="mt-1 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
         {founder.role}
       </p>
       {!founder.photo && (
@@ -88,7 +88,7 @@ export default function AboutPage() {
   const { open: openQuiz } = useGrowthDiagnostic();
 
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <section className="relative w-full pb-24 pt-40 md:pb-32 md:pt-48">
         <div
           aria-hidden="true"
@@ -104,14 +104,8 @@ export default function AboutPage() {
           <div className="relative mx-auto max-w-3xl text-center">
             <Noise patternAlpha={5} />
             <div className="relative z-10">
-              <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-                <span aria-hidden="true" className="text-[0.8em]">
-                  ✦
-                </span>
+              <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
                 About LocalEyes
-                <span aria-hidden="true" className="text-[0.8em]">
-                  ✦
-                </span>
               </p>
               <h1 className="mx-auto mt-5 font-heading font-thin not-italic text-[clamp(2.4rem,5.2vw,4.2rem)] leading-[1.06] tracking-[-0.01em] text-[#261f15]">
                 Two Guys Who Got Tired of Watching Good Businesses Stay
@@ -147,8 +141,8 @@ export default function AboutPage() {
                 </p>
               ))}
             </div>
-            <p className="mt-8 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d]">
-              — Kent
+            <p className="mt-8 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e]">
+Kent
             </p>
           </div>
 
@@ -159,9 +153,9 @@ export default function AboutPage() {
             </h2>
             <div className="mt-10 flex flex-col">
               {[
-                "You talk directly to the person doing the work — not an account manager relaying messages back and forth. Text us and you'll hear back the same day.",
-                "We're not a “set it and check in once a quarter” agency. Every month you'll know exactly what moved, what we changed, and what's next — not a black box you pay into and hope works.",
-                "Just the real stuff only you have — event photos, past client feedback, quick answers when we ask. We handle the strategy and the technical work; you keep running your business.",
+                "You talk directly to the person doing the work. Not an account manager relaying messages back and forth. Text us and you'll hear back the same day.",
+                "We're not a “set it and check in once a quarter” agency. Every month you'll know exactly what moved, what we changed, and what's next. Not a black box you pay into and hope works.",
+                "Just the real stuff only you have: event photos, past client feedback, quick answers when we ask. We handle the strategy and the technical work; you keep running your business.",
               ].map((text, i) => (
                 <div
                   key={i}
@@ -169,9 +163,6 @@ export default function AboutPage() {
                     i > 0 ? "border-t border-[#261f15]/10" : ""
                   }`}
                 >
-                  <span className="font-heading font-thin not-italic text-2xl text-[#c6a66a] sm:w-14 sm:shrink-0">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                   <p className="font-sans text-[0.95rem] leading-relaxed text-[#261f15]/75">
                     {text}
                   </p>
@@ -181,7 +172,7 @@ export default function AboutPage() {
           </div>
 
           {/* --------------------------- closing ---------------------------- */}
-          <div className="mx-auto mt-20 max-w-2xl rounded-[1.75rem] border border-[#c6a66a]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-24 md:px-14 md:py-16">
+          <div className="mx-auto mt-20 max-w-2xl rounded-[1.75rem] border border-[#a39b84]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-24 md:px-14 md:py-16">
             <h2 className="font-heading font-thin not-italic text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.15] tracking-[-0.01em]">
               Want to see what we'd do for you?
             </h2>
@@ -192,24 +183,9 @@ export default function AboutPage() {
             <button
               type="button"
               onClick={openQuiz}
-              className="group/btn2 relative mt-8 inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#ededd5] text-[#261f15] hover:bg-white mt-8"
             >
-              <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#ededd5]">
-                Run My Free Growth Diagnostic
-              </span>
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#3a3020] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn2:scale-[25] group-hover/btn2:duration-[1100ms]"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#3a3020] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:bg-[#ededd5]"
-                />
-                <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn2:rotate-45">
-                  <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#3a3020]" />
-                </span>
-              </span>
+              Run My Free Growth Diagnostic
             </button>
           </div>
         </div>

@@ -195,18 +195,14 @@ export default function WebsitesHero() {
       <div className="pointer-events-none relative z-10 mx-auto flex h-full w-full max-w-[1480px] flex-col justify-end px-6 pb-32 pt-28 md:px-12 lg:justify-center lg:pb-16">
         <div className="le-wh-rise pointer-events-auto max-w-[34rem]">
           <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6630] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
             Websites
-            <span aria-hidden="true" className="h-px w-16 bg-[#261f15]/[0.2]" />
           </p>
           <h1
             id="websites-hero-title"
             className="mt-6 font-heading font-thin not-italic text-[clamp(2.8rem,5vw,4.9rem)] leading-[1] tracking-[-0.02em] text-[#261f15]"
           >
             Websites Built to Rank,{" "}
-            <span className="text-[#8f6a2f]">Not Just Look Good</span>
+            Not Just Look Good
           </h1>
           <p className="mt-6 max-w-[29rem] font-sans text-[1rem] leading-[1.7] text-[#261f15]/75 sm:text-[1.05rem]">
             A beautiful site that Google can&apos;t find is a brochure. Every
@@ -217,24 +213,9 @@ export default function WebsitesHero() {
             <button
               type="button"
               onClick={openQuiz}
-              className="group/btn relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8f6a2f] sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#261f15] text-[#ededd5] hover:bg-[#4a3421]"
             >
-              <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-                Free Growth Score
-              </span>
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#261f15] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#c6a66a]"
-                />
-                <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                  <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#261f15]" />
-                </span>
-              </span>
+              Free Growth Score
             </button>
             <a
               href={CALENDLY_BOOKING_URL}
@@ -242,7 +223,7 @@ export default function WebsitesHero() {
                 e.preventDefault();
                 openCalendly();
               }}
-              className="group/call inline-flex items-center gap-2 border-b border-[#261f15]/30 pb-1 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#261f15] transition-colors duration-300 hover:border-[#8f6a2f] hover:text-[#8f6a2f] sm:text-xs"
+              className="group/call inline-flex items-center gap-2 border-b border-[#261f15]/30 pb-1 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#261f15] transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e] sm:text-xs"
             >
               Book a call
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/call:-translate-y-0.5 group-hover/call:translate-x-0.5" />
@@ -262,7 +243,7 @@ export default function WebsitesHero() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/v mt-1 inline-flex items-baseline gap-2 font-heading font-thin not-italic text-[1.5rem] leading-tight tracking-[-0.01em] text-[#261f15] transition-colors duration-300 hover:text-[#8f6a2f]"
+              className="group/v mt-1 inline-flex items-baseline gap-2 font-heading font-thin not-italic text-[1.5rem] leading-tight tracking-[-0.01em] text-[#261f15] transition-colors duration-300 hover:text-[#6a5f4e]"
             >
               {site.name}
               <span className="font-sans text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/55">{site.place}</span>

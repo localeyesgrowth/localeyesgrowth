@@ -166,7 +166,7 @@ export function CalendlyProvider({ children }: { children: ReactNode }) {
 
           {/* panel — rises and settles with the site's easing */}
           <div
-            className={`relative flex w-[min(94vw,30rem)] flex-col overflow-hidden rounded-[1.75rem] border border-[#c6a66a]/35 bg-[#ededd5] shadow-[0_60px_140px_-30px_rgba(20,15,8,0.65)] transition-[opacity,transform] duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`relative flex w-[min(94vw,30rem)] flex-col overflow-hidden rounded-[1.75rem] border border-[#a39b84]/35 bg-[#ededd5] shadow-[0_60px_140px_-30px_rgba(20,15,8,0.65)] transition-[opacity,transform] duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
               reduced ? "!duration-0" : ""
             } ${
               visible
@@ -176,21 +176,15 @@ export function CalendlyProvider({ children }: { children: ReactNode }) {
           >
             {/* panel header — eyebrow + close */}
             <div className="flex items-center justify-between gap-4 border-b border-[#261f15]/10 py-4 pl-6 pr-4">
-              <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#8a6f3d]">
-                <span aria-hidden="true" className="mr-2.5 text-[0.8em]">
-                  ✦
-                </span>
+              <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#6a5f4e]">
                 Book a Call
-                <span aria-hidden="true" className="ml-2.5 text-[0.8em]">
-                  ✦
-                </span>
               </p>
               <button
                 ref={closeBtnRef}
                 type="button"
                 onClick={close}
                 aria-label="Close booking dialog"
-                className="group/x flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-[#261f15]/15 text-[#261f15]/60 transition-colors duration-300 hover:border-[#261f15]/60 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3843f]"
+                className="group/x flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-[#261f15]/15 text-[#261f15]/60 transition-colors duration-300 hover:border-[#261f15]/60 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
               >
                 <X
                   strokeWidth={1.5}
@@ -207,7 +201,7 @@ export function CalendlyProvider({ children }: { children: ReactNode }) {
                   className="absolute inset-0 flex flex-col items-center justify-center gap-4"
                 >
                   <span
-                    className={`h-8 w-8 rounded-full border border-[#261f15]/15 border-t-[#8a6f3d] ${
+                    className={`h-8 w-8 rounded-full border border-[#261f15]/15 border-t-[#6a5f4e] ${
                       reduced ? "" : "animate-spin"
                     }`}
                   />

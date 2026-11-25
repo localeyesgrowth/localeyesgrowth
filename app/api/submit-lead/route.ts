@@ -57,7 +57,7 @@ export async function POST(request: Request) {
   const sheetUrl = process.env.SHEETS_WEBHOOK_URL;
   if (!sheetUrl) {
     console.warn(
-      "SHEETS_WEBHOOK_URL is not set — lead not recorded in a sheet:",
+      "SHEETS_WEBHOOK_URL is not set, lead not recorded in a sheet:",
       record,
     );
     return NextResponse.json({ ok: true, recorded: false });

@@ -58,7 +58,7 @@ const SERVICES: Service[] = [
   {
     word: "Rankings",
     img: "/services-01-ranking.png",
-    alt: "Top keyword rankings on Google — every keyword trending up",
+    alt: "Top keyword rankings on Google. Every keyword trending up",
     fit: "contain",
   },
   {
@@ -248,7 +248,7 @@ export default function Services() {
           will-change: transform;
         }
         .le-svc-btn.is-active .le-svc-word {
-          color: #a3843f;
+          color: #6a5f4e;
           transform: translateY(-0.05em);
         }
         .le-svc-arrow {
@@ -288,13 +288,10 @@ export default function Services() {
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 py-16 md:px-12 md:py-24">
         {/* ------------------------- heading --------------------------- */}
         <div className="le-svc-eyebrow flex items-center gap-6">
-          <h2 className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-            <span aria-hidden="true" className="mr-4 text-[0.8em]">
-              ✦
-            </span>
+          <h2 className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
             Our Services
           </h2>
-          <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
+          <span aria-hidden="true" className="flex-1" />
         </div>
 
         {/* ---------------- the column + the proof --------------------
@@ -314,17 +311,11 @@ export default function Services() {
                 onFocus={() => handleHover(i)}
                 onBlur={() => handleHover(null)}
                 onClick={() => handleTap(i)}
-                className={`le-svc-btn flex cursor-pointer items-baseline gap-4 whitespace-nowrap border-0 bg-transparent p-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-[#a3843f] md:gap-6${
+                className={`le-svc-btn flex cursor-pointer items-baseline gap-4 whitespace-nowrap border-0 bg-transparent p-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-[#6a5f4e] md:gap-6${
                   active === i ? " is-active" : ""
                 }`}
               >
                 {/* index numeral — quiet, editorial */}
-                <span
-                  aria-hidden="true"
-                  className="w-6 shrink-0 font-sans text-[0.62rem] font-semibold tracking-[0.24em] text-[#a3843f]/60 sm:text-xs"
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
 
                 {/* the word — oversized thin display type */}
                 <span className="le-svc-word inline-block font-heading font-thin not-italic text-[clamp(2.6rem,7.5vw,6rem)] leading-[1.02] tracking-[-0.02em] text-[#261f15]">
@@ -341,7 +332,7 @@ export default function Services() {
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
-                    className="le-svc-arrow mt-[0.3em] h-[0.42em] w-[0.42em] text-[clamp(2.6rem,7.5vw,6rem)] text-[#a3843f]"
+                    className="le-svc-arrow mt-[0.3em] h-[0.42em] w-[0.42em] text-[clamp(2.6rem,7.5vw,6rem)] text-[#6a5f4e]"
                   >
                     <path
                       d={
@@ -394,9 +385,6 @@ export default function Services() {
         {/* quiet sign-off — no rules, just type */}
         <p className="le-svc-caption mt-10 text-right font-sans text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-[#261f15]/45 md:mt-12">
           Everything, up and to the right
-          <span aria-hidden="true" className="ml-2 text-[#a3843f]">
-            ✦
-          </span>
         </p>
       </div>
     </section>

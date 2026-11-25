@@ -239,27 +239,23 @@ export default function WorkRing() {
 
       {/* the heading */}
       <div className="relative mx-auto w-full max-w-[1480px] px-6 md:px-12">
-        <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
+        <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
           The work
-          <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/[0.12]" />
+          <span aria-hidden="true" className="flex-1" />
         </p>
         <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <h2
             id="work-ring-title"
             className="font-heading font-thin not-italic text-[clamp(2.5rem,5vw,4.6rem)] leading-[1.02] tracking-[-0.02em]"
           >
-            {COUNT} brands, <span className="text-[#a67c3d]">not one template</span>
+            {COUNT} brands, <span>not one template</span>
           </h2>
           <div className="max-w-[23rem] lg:pb-2 lg:text-right">
             <p className="font-sans text-[0.95rem] leading-relaxed text-[#261f15]/65">
               Each one designed around the client&apos;s own look, all built on the same search-first foundation.
             </p>
             <p className="mt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/45">
-              Drag to turn <span className="text-[#c6a66a]">✦</span>
-            </p>
+              Drag to turn            </p>
           </div>
         </div>
       </div>
@@ -275,13 +271,13 @@ export default function WorkRing() {
           if (e.key === "ArrowRight") ctl.current?.step(1);
           if (e.key === "ArrowLeft") ctl.current?.step(-1);
         }}
-        className="le-ring-stage relative mt-10 cursor-grab select-none outline-none active:cursor-grabbing focus-visible:ring-1 focus-visible:ring-[#c6a66a] md:mt-14"
+        className="le-ring-stage relative mt-10 cursor-grab select-none outline-none active:cursor-grabbing focus-visible:ring-1 focus-visible:ring-[#a39b84] md:mt-14"
       >
         {/* the ring's shadow on the paper */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-[calc(var(--card-w)*0.84)] h-[calc(var(--card-w)*0.16)] w-[calc(var(--card-w)*2.6)] -translate-x-1/2 rounded-[50%]"
-          style={{ background: "radial-gradient(closest-side, rgba(38,31,21,0.16), rgba(38,31,21,0.05) 60%, rgba(38,31,21,0))" }}
+          style={{ background: "radial-gradient(closest-side, rgba(38, 31, 21,0.16), rgba(38, 31, 21,0.05) 60%, rgba(38, 31, 21,0))" }}
         />
         <ul ref={ringRef} className="le-ring">
           {WORK_SITES.map((s, i) => (
@@ -366,7 +362,7 @@ export default function WorkRing() {
             >
               <span
                 className={`block w-full transition-all duration-500 ${
-                  i === active ? "h-[2px] bg-[#a67c3d]" : "h-px bg-[#261f15]/25 group-hover/tick:bg-[#261f15]/60"
+                  i === active ? "h-[2px] bg-[var(--le-accent)]" : "h-px bg-[#261f15]/25 group-hover/tick:bg-[#261f15]/60"
                 }`}
               />
             </button>
@@ -383,7 +379,7 @@ export default function WorkRing() {
             <ArrowLeft className="h-4 w-4" />
           </button>
           <div key={site.key} aria-live="polite" className="le-ring-in min-w-0 text-center">
-            <p className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.26em] text-[#8a6f3d] sm:text-[0.62rem]">
+            <p className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.26em] text-[#6a5f4e] sm:text-[0.62rem]">
               N°{pad(active + 1)} of {pad(N)} · {site.kind}
             </p>
             <h3 className="mt-3 truncate font-heading font-thin not-italic text-[clamp(2.1rem,4.2vw,3.4rem)] leading-[1.05] tracking-[-0.02em]">
@@ -393,14 +389,14 @@ export default function WorkRing() {
               {site.place}
               {site.url && (
                 <>
-                  <span aria-hidden="true" className="mx-2 hidden text-[#c6a66a] sm:inline">
+                  <span aria-hidden="true" className="mx-2 hidden text-[#a39b84] sm:inline">
                     ·
                   </span>
                   <a
                     href={site.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/visit inline-flex items-center gap-1 border-b border-[#261f15]/25 pb-0.5 text-[#261f15] transition-colors duration-300 hover:border-[#8f6a2f] hover:text-[#8f6a2f]"
+                    className="group/visit inline-flex items-center gap-1 border-b border-[#261f15]/25 pb-0.5 text-[#261f15] transition-colors duration-300 hover:border-[#6a5f4e] hover:text-[#6a5f4e]"
                   >
                     Visit {site.domain}
                     <ArrowUpRight className="h-3 w-3 transition-transform duration-500 group-hover/visit:-translate-y-0.5 group-hover/visit:translate-x-0.5" />
