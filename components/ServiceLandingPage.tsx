@@ -1,7 +1,6 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 import { useGrowthDiagnostic } from "@/components/growth-diagnostic/GrowthDiagnosticProvider";
 import {
@@ -56,7 +55,7 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
   const { open: openCalendly } = useCalendly();
 
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <section className="relative w-full pb-24 pt-40 md:pb-32 md:pt-48">
         <div
           aria-hidden="true"
@@ -72,14 +71,8 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
           <div className="relative mx-auto max-w-3xl text-center">
             <Noise patternAlpha={5} />
             <div className="relative z-10">
-              <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-                <span aria-hidden="true" className="text-[0.8em]">
-                  ✦
-                </span>
+              <p className="flex items-center justify-center gap-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
                 {content.eyebrow}
-                <span aria-hidden="true" className="text-[0.8em]">
-                  ✦
-                </span>
               </p>
 
               <h1 className="mx-auto mt-5 font-heading font-thin not-italic text-[clamp(2.4rem,5.2vw,4.2rem)] leading-[1.06] tracking-[-0.01em] text-[#261f15]">
@@ -94,24 +87,9 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
                 <button
                   type="button"
                   onClick={openQuiz}
-                  className="group/btn relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-xs"
+                  className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#261f15] text-[#ededd5] hover:bg-[#4a3421]"
                 >
-                  <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-                    Free Growth Score
-                  </span>
-                  <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 scale-100 rounded-full bg-[#261f15] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-                    />
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#c6a66a]"
-                    />
-                    <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                      <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#261f15]" />
-                    </span>
-                  </span>
+                  Free Growth Score
                 </button>
               </div>
             </div>
@@ -119,7 +97,7 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
 
           {/* ------------------------- pull-stat --------------------------- */}
           <div className="mx-auto mt-16 flex max-w-md items-baseline justify-center gap-4 border-y border-[#261f15]/10 py-8 text-center md:mt-20">
-            <p className="font-heading font-thin not-italic text-[3.2rem] leading-none tracking-[-0.02em] text-[#8a6f3d] sm:text-[3.8rem]">
+            <p className="font-heading font-thin not-italic text-[3.2rem] leading-none tracking-[-0.02em] text-[#6a5f4e] sm:text-[3.8rem]">
               {content.statValue}
             </p>
             <p className="max-w-[14rem] text-left font-sans text-[0.78rem] font-semibold leading-snug text-[#261f15]/60">
@@ -190,9 +168,6 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
                     i > 0 ? "border-t border-[#261f15]/10" : ""
                   }`}
                 >
-                  <span className="font-heading font-thin not-italic text-2xl text-[#c6a66a] sm:w-14 sm:shrink-0">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                   <div>
                     <h3 className="font-heading font-thin not-italic text-xl text-[#261f15]">
                       {item.title}
@@ -207,7 +182,7 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
           </div>
 
           {/* --------------------------- closing ---------------------------- */}
-          <div className="mx-auto mt-20 max-w-2xl rounded-[1.75rem] border border-[#c6a66a]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-24 md:px-14 md:py-16">
+          <div className="mx-auto mt-20 max-w-2xl rounded-[1.75rem] border border-[#a39b84]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:mt-24 md:px-14 md:py-16">
             <h2 className="font-heading font-thin not-italic text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.15] tracking-[-0.01em]">
               {content.closing.heading}
             </h2>
@@ -217,24 +192,9 @@ export default function ServiceLandingPage({ content }: { content: ServiceConten
             <button
               type="button"
               onClick={openQuiz}
-              className="group/btn2 relative mt-8 inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#ededd5] text-[#261f15] hover:bg-white mt-8"
             >
-              <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#ededd5]">
-                Run My Free Growth Diagnostic
-              </span>
-              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#3a3020] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn2:scale-[25] group-hover/btn2:duration-[1100ms]"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#3a3020] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:bg-[#ededd5]"
-                />
-                <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn2:rotate-45">
-                  <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn2:text-[#3a3020]" />
-                </span>
-              </span>
+              Run My Free Growth Diagnostic
             </button>
             <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               <a

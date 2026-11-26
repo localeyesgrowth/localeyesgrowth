@@ -50,11 +50,11 @@
 
 .magic-bento-card:hover,
 .magic-bento-card:focus-visible {
-  border-color: rgba(198, 166, 106, 0.4);
+  border-color: rgba(163, 155, 132, 0.4);
 }
 
 .magic-bento-card:focus-visible {
-  outline: 2px solid #a67c3d;
+  outline: 2px solid var(--le-accent);
   outline-offset: 3px;
 }
 
@@ -82,7 +82,7 @@
   font-style: normal;
   font-size: 1.5rem;
   line-height: 1;
-  color: #a67c3d;
+  color: var(--le-accent);
 }
 
 .magic-bento-card__meta {
@@ -128,12 +128,12 @@
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(198, 166, 106, 0.75);
+  color: rgba(163, 155, 132, 0.75);
   transition: color 0.4s ease;
 }
 
 .magic-bento-card:hover .magic-bento-card__footer {
-  color: #c6a66a;
+  color: #a39b84;
 }
 
 /* Photo cards — the screenshot fills the whole tile edge-to-edge; the
@@ -223,8 +223,8 @@
   padding: 1px;
   background: radial-gradient(
     var(--glow-radius) circle at var(--glow-x) var(--glow-y),
-    rgba(198, 166, 106, calc(var(--glow-intensity) * 0.85)) 0%,
-    rgba(198, 166, 106, calc(var(--glow-intensity) * 0.35)) 30%,
+    rgba(163, 155, 132, calc(var(--glow-intensity) * 0.85)) 0%,
+    rgba(163, 155, 132, calc(var(--glow-intensity) * 0.35)) 30%,
     transparent 60%
   );
   border-radius: inherit;
@@ -252,7 +252,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: rgba(198, 166, 106, 0.2);
+  background: rgba(163, 155, 132, 0.2);
   border-radius: 50%;
   z-index: -1;
 }

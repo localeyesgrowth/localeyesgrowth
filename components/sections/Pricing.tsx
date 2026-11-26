@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 import { useCalendly } from "../../components/sections/CalendlyModal";
 
@@ -66,10 +65,9 @@ const PLANS: Plan[] = [
     per: "/mo",
     note: "6-month commit · $1800 month-to-month",
     glow: "#b2883c",
-    popular: true,
     who: [
-      "You've got 1–2 carts and a real business looking to generate mid-high 5-figure months",
-      "You're getting bookings, but you want more — and better events",
+      "You've got 1 to 2 carts and a real business looking to generate mid-high 5-figure months",
+      "You're getting bookings, but you want more, and better events",
       "You're full-time or planning to go full time soon",
       "You want someone running the whole system, not just SEO",
     ],
@@ -83,9 +81,10 @@ const PLANS: Plan[] = [
     per: "/mo",
     note: "6-month commit · $2800 month-to-month",
     glow: "#75804a",
+    popular: true,
     who: [
       "You've got 2+ carts (or one operation doing serious volume)",
-      "You're expanding — new carts, new markets, premium events",
+      "You're expanding: new carts, new markets, premium events",
       "You want content, campaigns, and paid traffic working together",
       "You want someone strategic in the seat with you",
     ],
@@ -128,11 +127,11 @@ const FEATURE_ROWS: { label: string; values: [string, string, string] }[] = [
   },
   {
     label: "CRO",
-    values: ["—", "On-page optimization", "On-page optimization"],
+    values: ["-", "On-page optimization", "On-page optimization"],
   },
   {
     label: "Seasonal Campaigns",
-    values: ["—", "—", "4 / year (recurring revenue capture)"],
+    values: ["-", "-", "4 / year (recurring revenue capture)"],
   },
   {
     label: "Tracking",
@@ -152,7 +151,7 @@ const FEATURE_ROWS: { label: string; values: [string, string, string] }[] = [
   },
   {
     label: "Priority",
-    values: ["—", "Standard", "Priority support"],
+    values: ["-", "Standard", "Priority support"],
   },
   {
     label: "Client Communication",
@@ -164,7 +163,7 @@ const FEATURE_ROWS: { label: string; values: [string, string, string] }[] = [
   },
   {
     label: "Ads Management Discount",
-    values: ["—", "$100 off", "$200 off"],
+    values: ["-", "$100 off", "$200 off"],
   },
 ];
 
@@ -318,7 +317,7 @@ export default function Pricing({
       {/* Faint gold aura leaning toward the rate card */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(70%_55%_at_70%_45%,rgba(198,166,106,0.09),transparent_65%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(70%_55%_at_70%_45%,rgba(163,155,132,0.09),transparent_65%)]"
       />
 
       {/* Film grain — above the ink, below every card, price and button.
@@ -328,24 +327,21 @@ export default function Pricing({
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 py-20 md:px-12 md:py-28">
         {/* ------------------------- header --------------------------- */}
         <div ref={headerRef}>
-          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
             Pricing
-            <span aria-hidden="true" className="h-px flex-1 bg-[#ededd5]/10" />
+            <span aria-hidden="true" className="flex-1" />
           </p>
 
           <div className="mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-end md:justify-between md:gap-12">
             <h2 className="max-w-3xl font-heading font-thin not-italic text-4xl leading-[1.08] tracking-[-0.01em] sm:text-5xl md:text-6xl">
               Pricing for each{" "}
-              <span className="not-italic text-[#c6a66a]">phase</span> of your
+              phase of your
               journey
             </h2>
             {!hideIntro && (
               <p className="max-w-sm shrink-0 font-sans text-sm leading-relaxed text-[#ededd5]/60 md:pb-2 md:text-[0.95rem]">
-                We run the entire booking system for mobile event caterers —
-                SEO, Google, Flashquotes, automations, reviews, campaigns — so
+                We run the entire booking system for mobile event caterers, 
+                SEO, Google, Flashquotes, automations, reviews, campaigns. So
                 your carts stay booked and your phone stops being your job.
               </p>
             )}
@@ -386,7 +382,7 @@ export default function Pricing({
                     tabIndex={isSelected ? 0 : -1}
                     onClick={() => setSelected(index)}
                     onKeyDown={(e) => onTabKeyDown(e, index)}
-                    className={`le-plan-row group relative block w-full cursor-pointer border-b border-[#ededd5]/10 text-left transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c6a66a] ${
+                    className={`le-plan-row group relative block w-full cursor-pointer border-b border-[#ededd5]/10 text-left transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a39b84] ${
                       isSelected ? "opacity-100" : "opacity-55 hover:opacity-90"
                     }`}
                   >
@@ -403,9 +399,14 @@ export default function Pricing({
                           {entry.name}
                         </span>
                         {entry.popular && (
-                          <span className="rounded-full border border-[#c6a66a]/50 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#c6a66a]">
+                          <>
+                          <span className="rounded-full border border-[#a39b84]/50 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#a39b84]">
                             Most Popular
                           </span>
+                          <span className="rounded-full border border-[#a39b84]/50 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#a39b84]">
+                            Fastest Growth
+                          </span>
+                          </>
                         )}
                       </span>
 
@@ -419,7 +420,7 @@ export default function Pricing({
                     {/* Gold rule — sweeps in and STAYS on the selected plan */}
                     <span
                       aria-hidden="true"
-                      className={`absolute inset-x-0 bottom-0 h-px origin-left bg-[#c6a66a]/80 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                      className={`absolute inset-x-0 bottom-0 h-px origin-left bg-[#ededd5]/80 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                         isSelected
                           ? "scale-x-100"
                           : "scale-x-0 group-hover:scale-x-100"
@@ -432,9 +433,6 @@ export default function Pricing({
 
             {/* Quiet editorial footnote */}
             <p className="mt-8 flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#ededd5]/45">
-              <span aria-hidden="true" className="text-[#c6a66a]">
-                ✦
-              </span>
               Every plan runs on the same system
             </p>
           </div>
@@ -448,13 +446,13 @@ export default function Pricing({
             id="le-plan-panel"
             role="tabpanel"
             aria-labelledby={`le-plan-tab-${plan.id}`}
-            className="relative overflow-hidden rounded-2xl border border-[#c6a66a]/25 bg-[#f7f5e8] text-[#261f15] shadow-[0_1px_2px_rgba(0,0,0,0.2),0_44px_88px_-32px_rgba(0,0,0,0.6)]"
+            className="relative overflow-hidden rounded-2xl border border-[#a39b84]/25 bg-[#f7f5e8] text-[#261f15] shadow-[0_1px_2px_rgba(0,0,0,0.2),0_44px_88px_-32px_rgba(0,0,0,0.6)]"
           >
             {/* Gilded top edge — a thin gold-leaf strip, like the painted
                edge of an expensive card */}
             <span
               aria-hidden="true"
-              className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-[#c6a66a]/20 via-[#c6a66a] to-[#c6a66a]/20"
+              className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-[#a39b84]/20 via-[#a39b84] to-[#a39b84]/20"
             />
             {/* Inset letterpress frame — a hairline plate border floating
                just inside the sheet */}
@@ -486,15 +484,10 @@ export default function Pricing({
               <div className="relative z-10 flex items-center gap-4">
                 <p className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/45">
                   LocalEyes{" "}
-                  <span aria-hidden="true" className="text-[#c6a66a]">
-                    ✦
-                  </span>{" "}
+{" "}
                   Rate Card
                 </p>
-                <span
-                  aria-hidden="true"
-                  className="h-px flex-1 bg-[#261f15]/10"
-                />
+                <span aria-hidden="true" className="flex-1" />
               </div>
 
               {/* Card masthead — name + badge, price enormous */}
@@ -503,9 +496,14 @@ export default function Pricing({
                   {plan.name}
                 </h3>
                 {plan.popular && (
-                  <span className="rounded-full bg-[#c6a66a]/15 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#8a6f3d]">
+                  <>
+                  <span className="rounded-full bg-[#ededd5]/15 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#6a5f4e]">
                     Most Popular
                   </span>
+                  <span className="rounded-full bg-[#ededd5]/15 px-2.5 py-1 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.22em] text-[#6a5f4e]">
+                    Fastest Growth
+                  </span>
+                  </>
                 )}
               </div>
 
@@ -516,7 +514,7 @@ export default function Pricing({
                     {plan.per}
                   </span>
                 </p>
-                <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#8a6f3d]">
+                <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#6a5f4e]">
                   {plan.note}
                 </p>
               </div>
@@ -525,12 +523,9 @@ export default function Pricing({
               <div className="relative z-10 mt-9 grid grid-cols-1 gap-9 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] md:gap-10">
                 {/* Who this is for */}
                 <div>
-                  <p className="flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d]">
+                  <p className="flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e]">
                     Who this is for
-                    <span
-                      aria-hidden="true"
-                      className="h-px flex-1 bg-[#261f15]/10"
-                    />
+                    <span aria-hidden="true" className="flex-1" />
                   </p>
                   <ul className="mt-5 flex list-none flex-col gap-4 p-0">
                     {plan.who.map((line) => (
@@ -538,12 +533,6 @@ export default function Pricing({
                         key={line}
                         className="flex gap-3 font-sans text-sm leading-relaxed text-[#261f15]/75"
                       >
-                        <span
-                          aria-hidden="true"
-                          className="mt-[0.3em] shrink-0 text-[0.6rem] text-[#c6a66a]"
-                        >
-                          ✦
-                        </span>
                         {line}
                       </li>
                     ))}
@@ -561,31 +550,17 @@ export default function Pricing({
                           }
                         : undefined
                     }
-                    className="group/btn relative mt-8 inline-flex w-auto cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full border border-[#261f15]/30 py-1 pl-5 pr-1 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:gap-3 sm:py-1.5 sm:pl-6 sm:pr-1.5 sm:text-xs sm:tracking-[0.14em]"
+                    className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] border border-[#261f15]/30 text-[#261f15] hover:border-[#261f15] mt-8 w-auto"
                   >
-                    <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-                      {plan.ctaLabel}
-                    </span>
-                    <span className="relative flex h-8 w-8 shrink-0 items-center justify-center sm:h-9 sm:w-9">
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-0 rounded-full bg-[#4a3421] scale-100 transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[14] group-hover/btn:duration-[1100ms]"
-                      />
-                      <span className="relative z-10 flex text-[#ededd5] transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45 will-change-transform">
-                        <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-                      </span>
-                    </span>
+                    {plan.ctaLabel}
                   </a>
                 </div>
 
                 {/* Feature ledger — hairline rows, label / value */}
                 <div>
-                  <p className="flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d]">
+                  <p className="flex items-center gap-3 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e]">
                     What's included
-                    <span
-                      aria-hidden="true"
-                      className="h-px flex-1 bg-[#261f15]/10"
-                    />
+                    <span aria-hidden="true" className="flex-1" />
                   </p>
                   <dl className="mt-2">
                     {FEATURE_ROWS.map((row) => (

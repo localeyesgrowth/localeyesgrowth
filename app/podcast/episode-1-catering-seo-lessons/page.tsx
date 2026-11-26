@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "What Three Years of Catering SEO Actually Taught Us",
     description:
       "Over 95% of our clients' leads come from Google, not Instagram. Episode 1 of the LocalEyes podcast breaks down what three years of catering SEO taught us.",
-    images: [{ url: OG_IMAGE, width: 1280, height: 720, alt: "LocalEyes Podcast — Episode 1" }],
+    images: [{ url: OG_IMAGE, width: 1280, height: 720, alt: "LocalEyes Podcast: Episode 1" }],
     type: "video.other",
   },
   twitter: {
@@ -356,7 +356,7 @@ function ArticleTable({
   children: React.ReactNode;
 }) {
   return (
-    <div className="le-podcast-table-scroll mt-8 overflow-x-auto rounded-2xl border border-[#c6a66a]/25">
+    <div className="le-podcast-table-scroll mt-8 overflow-x-auto rounded-2xl border border-[#a39b84]/25">
       <table className="w-full min-w-[560px] border-collapse text-left">
         <thead className="bg-[#261f15] text-[#ededd5]">{head}</thead>
         <tbody>{children}</tbody>
@@ -372,12 +372,12 @@ const td = "border-t border-[#261f15]/8 px-3 py-3 font-sans text-[0.875em] leadi
 
 export default function PodcastEpisodeOnePage() {
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <style>{`
-        .le-podcast-table-scroll { scrollbar-width: thin; scrollbar-color: #c6a66a transparent; }
+        .le-podcast-table-scroll { scrollbar-width: thin; scrollbar-color: #a39b84 transparent; }
         .le-podcast-table-scroll::-webkit-scrollbar { height: 6px; }
         .le-podcast-table-scroll::-webkit-scrollbar-track { background: transparent; }
-        .le-podcast-table-scroll::-webkit-scrollbar-thumb { background-color: #c6a66a; border-radius: 999px; }
+        .le-podcast-table-scroll::-webkit-scrollbar-thumb { background-color: #a39b84; border-radius: 999px; }
       `}</style>
 
       <section className="relative w-full pb-24 pt-40 md:pb-32 md:pt-48">
@@ -392,9 +392,8 @@ export default function PodcastEpisodeOnePage() {
 
         <div className="relative z-20 mx-auto w-full max-w-[820px] px-6 md:px-12">
           {/* -------------------------- head -------------------------- */}
-          <span className="inline-flex w-fit items-center gap-2 rounded-full bg-[#c6a66a]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#8a6f3d]">
-            <span aria-hidden="true">✦</span>
-            Podcast — Episode 1
+          <span className="inline-flex w-fit items-center gap-2 rounded-full bg-[#ededd5]/15 px-3 py-1 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-[#6a5f4e]">
+            Podcast: Episode 1
           </span>
 
           <h1 className="mt-5 font-heading font-thin not-italic text-[clamp(2.2rem,4.8vw,3.4rem)] leading-[1.08] tracking-[-0.01em] text-[#261f15]">
@@ -403,9 +402,7 @@ export default function PodcastEpisodeOnePage() {
 
           <p className="mt-5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/45">
             Kent Sheridan, Zane &amp; Gvantsa
-            <span className="mx-2 text-[#8a6f3d]/70">✦</span>
             August 25, 2026
-            <span className="mx-2 text-[#8a6f3d]/70">✦</span>
             {RUNTIME}
           </p>
 
@@ -434,7 +431,7 @@ export default function PodcastEpisodeOnePage() {
           {/* ---------------- Google vs Instagram stat ------------------ */}
           <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#261f15]/12 bg-[#261f15]/12">
             <div className="flex flex-col items-center gap-2 bg-[#261f15] px-4 py-8 text-center sm:py-10">
-              <span className="font-heading font-thin not-italic text-[3rem] leading-none tracking-[-0.02em] text-[#c6a66a] sm:text-[3.6rem]">
+              <span className="font-heading font-thin not-italic text-[3rem] leading-none tracking-[-0.02em] text-[#a39b84] sm:text-[3.6rem]">
                 95%+
               </span>
               <span className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#ededd5]/70">
@@ -454,7 +451,7 @@ export default function PodcastEpisodeOnePage() {
           {/* -------------------------- short version -------------------------- */}
           <SectionH2>The short version</SectionH2>
           <Paragraph>If you only read one part of this page, read this.</Paragraph>
-          <ol className="mt-5 flex list-decimal flex-col gap-3 pl-5 marker:font-semibold marker:text-[#8a6f3d]">
+          <ol className="mt-5 flex list-decimal flex-col gap-3 pl-5 marker:font-semibold marker:text-[#6a5f4e]">
             {SHORT_VERSION.map((line) => (
               <li key={line} className="pl-1 font-sans text-[1.05em] leading-[1.7] text-[#261f15]/80">
                 {line}
@@ -488,7 +485,7 @@ export default function PodcastEpisodeOnePage() {
             If your site is invisible and you cannot work out why, start with{" "}
             <a
               href="/blog/local-seo-for-mobile-caterers"
-              className="text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+              className="text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
             >
               the complete local SEO guide for mobile caterers
             </a>
@@ -549,9 +546,9 @@ export default function PodcastEpisodeOnePage() {
             />
           </div>
 
-          <div className="mt-6 rounded-2xl border border-[#c6a66a]/35 bg-[#261f15] px-6 py-7 sm:px-8 sm:py-8">
-            <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#c6a66a]">
-              Worked example — a mobile bar in New York
+          <div className="mt-6 rounded-2xl border border-[#a39b84]/35 bg-[#261f15] px-6 py-7 sm:px-8 sm:py-8">
+            <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#a39b84]">
+              Worked example: a mobile bar in New York
             </p>
             <p className="mt-3 font-heading font-thin not-italic text-xl leading-[1.35] text-[#ededd5] sm:text-2xl">
               &ldquo;Cocktail Bar Catering and Professional Bartenders in New York
@@ -577,7 +574,7 @@ export default function PodcastEpisodeOnePage() {
           <div className="mt-4 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#261f15]/12 bg-[#261f15]/12 sm:grid-cols-2">
             {ABOVE_FOLD_ITEMS.map((item) => (
               <div key={item.n} className="flex items-start gap-3 bg-[#f7f5e8] px-5 py-4">
-                <span className="font-heading font-thin not-italic text-lg text-[#c6a66a]">{item.n}</span>
+                <span className="font-heading font-thin not-italic text-lg text-[#a39b84]">{item.n}</span>
                 <span className="mt-1 font-sans text-sm leading-relaxed text-[#261f15]/75">{item.text}</span>
               </div>
             ))}
@@ -660,7 +657,7 @@ export default function PodcastEpisodeOnePage() {
             first bad night. The five ways to keep them coming are in{" "}
             <a
               href="/blog/how-to-get-more-google-reviews-catering"
-              className="text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+              className="text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
             >
               how to get more Google reviews at every catering event
             </a>
@@ -695,7 +692,7 @@ export default function PodcastEpisodeOnePage() {
             Two tests for any location or service page you have already
             published:
           </Paragraph>
-          <ol className="mt-5 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-[#8a6f3d]">
+          <ol className="mt-5 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-[#6a5f4e]">
             <li className="pl-1 font-sans text-[1.05em] leading-[1.7] text-[#261f15]/80">
               Is it linked from somewhere else on your site? An orphan page is a
               page Google has no reason to trust.
@@ -712,7 +709,7 @@ export default function PodcastEpisodeOnePage() {
             in our{" "}
             <a
               href="/blog/local-seo-for-mobile-caterers"
-              className="text-[#8a6f3d] underline decoration-[#8a6f3d]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6b552f] hover:decoration-[#6b552f]"
+              className="text-[#6a5f4e] underline decoration-[#6a5f4e]/30 underline-offset-4 transition-colors duration-300 hover:text-[#6a5f4e] hover:decoration-[#6a5f4e]"
             >
               complete local SEO guide for mobile caterers
             </a>
@@ -754,7 +751,7 @@ export default function PodcastEpisodeOnePage() {
           >
             {CHAPTERS.map((row) => (
               <tr key={row.t} className="odd:bg-[#f7f5e8]">
-                <td className={`${td} whitespace-nowrap font-semibold tabular-nums text-[#8a6f3d]`}>{row.t}</td>
+                <td className={`${td} whitespace-nowrap font-semibold tabular-nums text-[#6a5f4e]`}>{row.t}</td>
                 <td className={td}>{row.topic}</td>
               </tr>
             ))}
@@ -768,7 +765,7 @@ export default function PodcastEpisodeOnePage() {
             <div key={section.heading}>
               <h3 className="mt-10 font-heading font-thin not-italic text-[1.35em] leading-[1.25] tracking-[-0.005em] text-[#261f15]">
                 {section.heading}{" "}
-                <span className="font-sans text-[0.6em] font-semibold uppercase tracking-[0.14em] text-[#8a6f3d]">
+                <span className="font-sans text-[0.6em] font-semibold uppercase tracking-[0.14em] text-[#6a5f4e]">
                   ({section.time})
                 </span>
               </h3>
@@ -780,7 +777,7 @@ export default function PodcastEpisodeOnePage() {
                       className="mt-5 font-sans text-[1.05em] leading-[1.75] text-[#261f15]/80"
                     >
                       {li === 0 && (
-                        <span className="font-semibold text-[#8a6f3d]">{turn.speaker}: </span>
+                        <span className="font-semibold text-[#6a5f4e]">{turn.speaker}: </span>
                       )}
                       {line}
                     </p>
@@ -792,7 +789,7 @@ export default function PodcastEpisodeOnePage() {
 
           <h3 className="mt-10 font-heading font-thin not-italic text-[1.35em] leading-[1.25] tracking-[-0.005em] text-[#261f15]">
             Rapid fire{" "}
-            <span className="font-sans text-[0.6em] font-semibold uppercase tracking-[0.14em] text-[#8a6f3d]">
+            <span className="font-sans text-[0.6em] font-semibold uppercase tracking-[0.14em] text-[#6a5f4e]">
               (1:13:48)
             </span>
           </h3>
@@ -812,7 +809,7 @@ export default function PodcastEpisodeOnePage() {
           <EpisodeFaq items={FAQ_ITEMS} />
 
           {/* -------------------------- closing CTA -------------------------- */}
-          <div className="mt-16 rounded-[1.75rem] border border-[#c6a66a]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:px-14 md:py-16">
+          <div className="mt-16 rounded-[1.75rem] border border-[#a39b84]/35 bg-[#261f15] px-8 py-12 text-center text-[#ededd5] md:px-14 md:py-16">
             <h2 className="font-heading font-thin not-italic text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.15] tracking-[-0.01em]">
               Where to start
             </h2>

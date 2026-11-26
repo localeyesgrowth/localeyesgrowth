@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 import {
   useCalendly,
@@ -85,7 +84,7 @@ export default function Footer() {
           right: 0;
           bottom: -3px;
           height: 1px;
-          background: #a3843f;
+          background: #6a5f4e;
           transform: scaleX(0);
           transform-origin: left center;
           transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
@@ -138,7 +137,7 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="le-foot-link mt-1.5 inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+              className="le-foot-link mt-1.5 inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
             >
               {CONTACT_EMAIL}
             </a>
@@ -156,7 +155,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="le-foot-link inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                      className="le-foot-link inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                     >
                       {link.label}
                     </a>
@@ -173,7 +172,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="le-foot-link inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                      className="le-foot-link inline-block py-1 font-sans text-sm text-[#261f15]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                     >
                       {link.label}
                     </a>
@@ -199,26 +198,9 @@ export default function Footer() {
                 e.preventDefault();
                 openCalendly();
               }}
-              className="group/btn relative mt-7 inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f] sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] bg-[#261f15] text-[#ededd5] hover:bg-[#4a3421] mt-7"
             >
-              <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]">
-                Book a Call
-              </span>
-              <span className="relative flex h-10 w-10 shrink-0 items-center justify-center">
-                {/* ink wash — slow flood in, quicker retreat out */}
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#261f15] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-                />
-                {/* icon chip — ink at rest, inverts to gold on hover */}
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#c6a66a]"
-                />
-                <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                  <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#261f15]" />
-                </span>
-              </span>
+              Book a Call
             </a>
           </div>
         </div>
@@ -229,7 +211,7 @@ export default function Footer() {
            bottom of the glyphs (negative margin) so the faded mark
            sinks into the page. */}
         <div aria-hidden="true" className="mt-16 overflow-hidden md:mt-24">
-          <p className="le-foot-mark -mb-[0.14em] whitespace-nowrap text-center font-heading font-thin not-italic uppercase leading-none tracking-[-0.03em] text-[clamp(2.9rem,13.4vw,13.2rem)] text-[#c6a66a]">
+          <p className="le-foot-mark -mb-[0.14em] whitespace-nowrap text-center font-heading font-thin not-italic uppercase leading-none tracking-[-0.03em] text-[clamp(2.9rem,13.4vw,13.2rem)] text-[#a39b84]">
             LocalEyes
           </p>
         </div>
@@ -245,7 +227,7 @@ export default function Footer() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="le-foot-link inline-block py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                  className="le-foot-link inline-block py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                 >
                   {link.label}
                 </a>

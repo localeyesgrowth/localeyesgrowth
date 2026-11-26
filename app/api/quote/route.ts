@@ -61,7 +61,7 @@ export async function POST(request: Request) {
       from: "LocalEyes Growth <quotes@localeyesgrowth.com>",
       to: lead.email.trim(),
       replyTo: "hello@localeyesgrowth.com",
-      subject: "Your coffee catering quote — LocalEyes",
+      subject: "Your coffee catering quote | LocalEyes",
       text,
     });
 
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
       console.error("Failed to forward quote request to sheet webhook:", error);
     }
   } else {
-    console.warn("SHEETS_WEBHOOK_URL is not set — quote request not recorded in a sheet.");
+    console.warn("SHEETS_WEBHOOK_URL is not set, quote request not recorded in a sheet.");
   }
 
   return NextResponse.json({ ok: true });

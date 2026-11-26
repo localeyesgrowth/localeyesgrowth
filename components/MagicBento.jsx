@@ -5,7 +5,7 @@ import './MagicBento.css';
 
 const DEFAULT_PARTICLE_COUNT = 7;
 const DEFAULT_SPOTLIGHT_RADIUS = 320;
-const DEFAULT_GLOW_COLOR = '198, 166, 106'; // brand gold (#c6a66a) as an rgb triplet
+const DEFAULT_GLOW_COLOR = '198, 166, 106'; // brand gold (var(--le-accent-dark)) as an rgb triplet
 const MOBILE_BREAKPOINT = 768;
 
 /* ----------------------------------------------------------------------

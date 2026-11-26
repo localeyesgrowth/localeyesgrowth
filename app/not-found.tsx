@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { Noise } from "@/components/effects/Noise";
 
 const EMPTY_ROWS = [
@@ -13,7 +12,7 @@ const EMPTY_ROWS = [
 
 export default function NotFound() {
   return (
-    <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative min-h-[100dvh] w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <section className="relative mx-auto w-full max-w-[1480px] px-6 pb-24 pt-32 md:px-12 md:pb-32 md:pt-40">
         <style>{`
           @keyframes nf-in {
@@ -50,16 +49,10 @@ export default function NotFound() {
           {/* ------------------------------------------------ copy column */}
           <div>
             <p
-              className="nf-in font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#8a6f3d]"
+              className="nf-in font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#6a5f4e]"
               style={{ animationDelay: "420ms" }}
             >
-              <span aria-hidden="true" className="mr-2.5 text-[0.8em]">
-                ✦
-              </span>
               Error 404
-              <span aria-hidden="true" className="ml-2.5 text-[0.8em]">
-                ✦
-              </span>
               Not Found
             </p>
 
@@ -84,7 +77,7 @@ export default function NotFound() {
               style={{ animationDelay: "720ms" }}
             >
               It&rsquo;s not on page one. It&rsquo;s not on page ten. It
-              doesn&rsquo;t exist — which is exactly how your customers feel
+              doesn&rsquo;t exist, which is exactly how your customers feel
               when your business isn&rsquo;t on Google.
             </p>
 
@@ -95,43 +88,23 @@ export default function NotFound() {
               {/* primary — gold, confident; the site's chip-bloom pill */}
               <Link
                 href="/"
-                className="group/btn relative inline-flex shrink-0 cursor-pointer items-center gap-3 overflow-hidden whitespace-nowrap rounded-full border border-[#261f15]/25 py-1 pl-6 pr-1.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] border border-[#261f15]/30 text-[#261f15] hover:border-[#261f15] shrink-0"
               >
-                <span className="relative z-10 py-1">Back to Home</span>
-                <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-                  {/* gold wash — slow bloom in, quicker retreat out */}
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-0 rounded-full bg-[#a3843f] scale-100 transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[12] group-hover/btn:duration-[1100ms]"
-                  />
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-0 rounded-full bg-[#a3843f] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-[#261f15]"
-                  />
-                  <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45">
-                    <ArrowUpRight className="h-3.5 w-3.5 text-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#ededd5]" />
-                  </span>
-                </span>
+                Back to Home
               </Link>
 
               {/* secondary — quiet link, gold underline draws in from left */}
               <Link
                 href="/results"
-                className="group/link relative rounded-sm font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#4a3421]/75 transition-colors duration-300 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+                className="group/link relative rounded-sm font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#4a3421]/75 transition-colors duration-300 hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
               >
                 See what we do for pages that DO exist{" "}
                 <span className="whitespace-nowrap">
-                  <span
-                    aria-hidden="true"
-                    className="mx-2 text-[0.8em] text-[#a3843f]"
-                  >
-                    ✦
-                  </span>
                   Results
                 </span>
                 <span
                   aria-hidden="true"
-                  className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#a3843f] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/link:scale-x-100"
+                  className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#6a5f4e] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/link:scale-x-100"
                 />
               </Link>
             </div>
@@ -143,7 +116,7 @@ export default function NotFound() {
             className="relative mx-auto w-full max-w-[30rem]"
           >
             {/* second sheet behind — '70s stationery, barely there */}
-            <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-[1.2deg] rounded-[1.5rem] border border-[#c6a66a]/40" />
+            <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-[1.2deg] rounded-[1.5rem] border border-[#a39b84]/40" />
 
             <div className="nf-in relative rounded-[1.5rem] border border-[#261f15]/15 bg-[#ededd5] shadow-[0_40px_90px_-40px_rgba(38,31,21,0.4)]">
               {/* search field — the query that found nothing */}
@@ -153,17 +126,11 @@ export default function NotFound() {
                 </span>
                 <span className="flex-1 border-b border-dashed border-[#4a3421]/30 pb-1 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70">
                   this page
-                  <span className="nf-caret ml-1.5 inline-block text-[0.75em] text-[#a3843f]">
-                    ✦
-                  </span>
                 </span>
               </div>
 
               {/* the empty result slots + the searching ✦ cursor */}
               <div className="relative">
-                <span className="nf-scan absolute left-3 top-[1.9rem] text-[0.6rem] leading-none text-[#a3843f]">
-                  ✦
-                </span>
                 {EMPTY_ROWS.map((row, i) => (
                   <div
                     key={i}

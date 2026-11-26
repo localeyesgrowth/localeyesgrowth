@@ -105,9 +105,9 @@ export default function ValorPricing() {
             {/* soft gold aura — deepens on hover */}
             <span
               aria-hidden="true"
-              className="absolute -inset-3 rounded-[14px] bg-[#c9932b]/25 blur-xl transition-colors duration-700 group-hover:bg-[#c9932b]/40"
+              className="absolute -inset-3 rounded-[14px] bg-[#ededd5]/25 blur-xl transition-colors duration-700 group-hover:bg-[#ededd5]/40"
             />
-            <div className="relative overflow-hidden rounded-[9px] bg-gradient-to-br from-[#f0d99c] via-[#c9932b] to-[#8f6a22] px-4 py-3 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_24px_48px_-18px_rgba(0,0,0,0.7)] transition-transform duration-500 ease-out group-hover:-rotate-3 group-hover:scale-[1.06] motion-reduce:transition-none sm:px-6 sm:py-4">
+            <div className="relative overflow-hidden rounded-[9px] bg-gradient-to-br from-[#f0d99c] via-[#a39b84] to-[#8f6a22] px-4 py-3 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_24px_48px_-18px_rgba(0,0,0,0.7)] transition-transform duration-500 ease-out group-hover:-rotate-3 group-hover:scale-[1.06] motion-reduce:transition-none sm:px-6 sm:py-4">
               {/* certificate double frame — two fine hairlines */}
               <span
                 aria-hidden="true"
@@ -119,19 +119,7 @@ export default function ValorPricing() {
               />
 
               <p className="flex items-center justify-center gap-2.5 font-heading font-thin not-italic text-[1.25rem] leading-none text-[#261f15] sm:text-[1.6rem]">
-                <span
-                  aria-hidden="true"
-                  className="text-[0.4em] text-[#261f15]/65"
-                >
-                  ✦
-                </span>
                 20% Discount
-                <span
-                  aria-hidden="true"
-                  className="text-[0.4em] text-[#261f15]/65"
-                >
-                  ✦
-                </span>
               </p>
 
               {/* hairline ✦ hairline divider */}
@@ -139,11 +127,6 @@ export default function ValorPricing() {
                 aria-hidden="true"
                 className="mt-2 flex items-center justify-center gap-2"
               >
-                <span className="h-px w-7 bg-[#261f15]/30" />
-                <span className="text-[0.45rem] leading-none text-[#261f15]/60">
-                  ✦
-                </span>
-                <span className="h-px w-7 bg-[#261f15]/30" />
               </span>
 
               <p className="mt-2 font-sans text-[0.5rem] font-semibold uppercase tracking-[0.24em] text-[#261f15]/80 sm:text-[0.55rem]">

@@ -37,7 +37,7 @@ export async function POST(request: Request) {
   let emailSent = false;
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.warn("RESEND_API_KEY is not set — download confirmation email not sent.");
+    console.warn("RESEND_API_KEY is not set, download confirmation email not sent.");
   } else if (absoluteUrl) {
     try {
       const resend = new Resend(apiKey);
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
           `Here's your copy of ${resourceLabel}:`,
           absoluteUrl,
           ``,
-          `— LocalEyes`,
+          `LocalEyes`,
         ].join("\n"),
       });
       if (error) {
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
   let recorded = false;
   const sheetUrl = process.env.SHEETS_WEBHOOK_URL;
   if (!sheetUrl) {
-    console.warn("SHEETS_WEBHOOK_URL is not set — download not recorded in a sheet:", record);
+    console.warn("SHEETS_WEBHOOK_URL is not set, download not recorded in a sheet:", record);
   } else {
     try {
       const res = await fetch(sheetUrl, {

@@ -42,7 +42,7 @@ export function PodcastPromoCard() {
           : "pointer-events-none translate-y-10 scale-90 opacity-0"
       }`}
     >
-      <div className="group/promo relative flex items-center gap-4 rounded-[1.25rem] border border-[#261f15]/12 bg-[#ededd5]/95 py-3.5 pl-3.5 pr-9 shadow-[0_24px_60px_-20px_rgba(38,31,21,0.5)] backdrop-blur-sm transition-colors duration-500 hover:border-[#8a6f3d]/40">
+      <div className="group/promo relative flex items-center gap-4 rounded-[1.25rem] border border-[#261f15]/12 bg-[#ededd5]/95 py-3.5 pl-3.5 pr-9 shadow-[0_24px_60px_-20px_rgba(38,31,21,0.5)] backdrop-blur-sm transition-colors duration-500 hover:border-[#6a5f4e]/40">
         <a
           href="/podcast/episode-1-catering-seo-lessons"
           tabIndex={shown ? 0 : -1}
@@ -67,9 +67,9 @@ export function PodcastPromoCard() {
                  JS, no rAF — this is as close to free as an animation gets. */}
               <span
                 aria-hidden="true"
-                className="animate-le-breathe absolute h-11 w-11 rounded-full bg-[#c6a66a] blur-md"
+                className="animate-le-breathe absolute h-11 w-11 rounded-full bg-[#ededd5] blur-md"
               />
-              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c6a66a] shadow-[0_6px_16px_-2px_rgba(21,15,9,0.6)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/promo:scale-110">
+              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ededd5] shadow-[0_6px_16px_-2px_rgba(21,15,9,0.6)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/promo:scale-110">
                 <Play
                   className="h-4 w-4 translate-x-px fill-[#261f15] text-[#261f15]"
                   strokeWidth={0}
@@ -79,11 +79,10 @@ export function PodcastPromoCard() {
           </span>
 
           <span className="min-w-0">
-            <span className="flex items-center gap-1.5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#8a6f3d]">
-              <span aria-hidden="true">✦</span>
-              New — Podcast
+            <span className="flex items-center gap-1.5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#6a5f4e]">
+              New: Podcast
             </span>
-            <span className="mt-1.5 block font-heading font-thin not-italic text-[1.25rem] leading-[1.2] text-[#261f15] transition-colors duration-300 group-hover/promo:text-[#8a6f3d]">
+            <span className="mt-1.5 block font-heading font-thin not-italic text-[1.25rem] leading-[1.2] text-[#261f15] transition-colors duration-300 group-hover/promo:text-[#6a5f4e]">
               What 3 Years of Catering SEO Taught Us
             </span>
           </span>

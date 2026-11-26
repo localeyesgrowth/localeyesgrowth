@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/general/Hero";
 import CityRankings from "@/components/sections/CityRankings";
-import PodcastPromoCard from "@/components/podcast/PodcastPromoCardLoader";
 import { getAllBlogPosts } from "@/lib/blog-posts";
 
 /* Everything below the first couple of sections is code-split into its
@@ -21,9 +20,9 @@ const KnownFor = dynamic(() => import("@/components/sections/Knownfor"));
 const Logos = dynamic(() => import("@/components/sections/Logos"));
 /* the Google results, the same section as on the websites page */
 const RankingProof = dynamic(() => import("@/components/websites/RankingProof"));
-const FeaturedCases = dynamic(
+/* const FeaturedCases = dynamic(
   () => import("@/components/sections/FeaturedCases"),
-);
+); */
 const SeoServices = dynamic(() => import("@/components/sections/SeoServices"));
 const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const AddOns = dynamic(() => import("@/components/sections/Addons"));
@@ -53,7 +52,8 @@ export default async function Home() {
       <KnownFor />
       <Logos />
       <RankingProof />
-      <FeaturedCases />
+      {/* Featured work is hidden for now. Uncomment to bring it back. */}
+      {/* <FeaturedCases /> */}
       <WebsitePreviews />
       <SeoServices />
       <Pricing />
@@ -62,7 +62,7 @@ export default async function Home() {
       <Services />
       <Blog posts={posts} />
       <ClosingCta />
-      <PodcastPromoCard />
+      {/* Podcast popup hidden. The podcast is linked from the Services menu and footer. */}
     </>
   );
 }

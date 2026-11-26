@@ -60,9 +60,9 @@ function FactCell({ f, i, on, still }: { f: Fact; i: number; on: boolean; still:
   return (
     <div className={`border-b border-[#261f15]/[0.13] py-7 lg:border-b-0 lg:py-2 ${i ? "lg:px-7" : "lg:pr-7"}`}>
       <p className="font-heading text-[clamp(2.8rem,4vw,3.8rem)] font-thin not-italic leading-none tracking-[-0.03em] tabular-nums">
-        {f.prefix && <span className="text-[#b0904f]">{f.prefix}</span>}
+        {f.prefix && <span className="text-[#a39b84]">{f.prefix}</span>}
         {(still ? f.value : n).toLocaleString("en-US")}
-        {f.suffix && <span className="text-[#b0904f]">{f.suffix}</span>}
+        {f.suffix && <span className="text-[#a39b84]">{f.suffix}</span>}
       </p>
       <p className="mt-3 max-w-[16rem] font-sans text-[0.85rem] leading-[1.55] text-[#6e6555]">{f.label}</p>
     </div>
@@ -139,7 +139,7 @@ export default function SeoGrowth({
         <Eyebrow>{eyebrow}</Eyebrow>
         <div className="mt-10 grid gap-6 lg:grid-cols-4 lg:items-end">
           <h2 id="seo-growth-title" className="text-balance font-heading text-[clamp(2.5rem,4.6vw,4.4rem)] font-thin not-italic leading-[1.02] tracking-[-0.02em] lg:col-span-2">
-            {lead} <span className="text-[#a67c3d]">{accent}</span>
+            {lead} <span>{accent}</span>
           </h2>
           <p className="max-w-[34rem] font-sans text-[1rem] leading-[1.7] text-[#261f15]/70 lg:col-span-2 lg:pb-2 lg:pl-7">{intro}</p>
         </div>
@@ -147,17 +147,15 @@ export default function SeoGrowth({
         {/* the chart */}
         <div ref={ref} data-on={on} className="mt-14 md:mt-16">
           <div className="relative overflow-hidden rounded-2xl border border-[#261f15]/[0.13] bg-[#f7f5e8] px-2 pb-3 pt-6 sm:px-6 sm:pt-8">
-            <span aria-hidden="true" className="pointer-events-none absolute -right-24 -top-28 h-[22rem] w-[22rem] rounded-full bg-[#d6be91]/30 blur-3xl" />
+            <span aria-hidden="true" className="pointer-events-none absolute -right-24 -top-28 h-[22rem] w-[22rem] rounded-full bg-[#ededd5]/30 blur-3xl" />
             <span aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-20 h-[18rem] w-[18rem] rounded-full bg-[#cecda8]/35 blur-3xl" />
             <div className="relative flex items-center gap-4 px-3 sm:px-4">
               <p className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/45">
                 Leads per month{" "}
-                <span aria-hidden="true" className="text-[#c6a66a]">
-                  ✦
-                </span>{" "}
+{" "}
                 Google Business Profile
               </p>
-              <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
+              <span aria-hidden="true" className="flex-1" />
             </div>
             <div className="relative overflow-x-auto [mask-image:linear-gradient(to_right,#000_82%,transparent)] sm:[mask-image:none]">
               <svg
@@ -174,8 +172,8 @@ export default function SeoGrowth({
               >
                 <defs>
                   <linearGradient id="le-grow-gold" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stopColor="#c6a66a" stopOpacity="0.32" />
-                    <stop offset="1" stopColor="#c6a66a" stopOpacity="0" />
+                    <stop offset="0" stopColor="#a39b84" stopOpacity="0.32" />
+                    <stop offset="1" stopColor="#a39b84" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 {[50, 100, 150].map((g) => (
@@ -194,7 +192,7 @@ export default function SeoGrowth({
                       {m.month.toUpperCase()}
                     </text>
                     {m.year && (
-                      <text x={x(i)} y={Y0 + 45} textAnchor="middle" fontSize="11" fill="#b0904f">
+                      <text x={x(i)} y={Y0 + 45} textAnchor="middle" fontSize="11" fill="#a39b84">
                         {m.year}
                       </text>
                     )}
@@ -203,13 +201,13 @@ export default function SeoGrowth({
 
                 {/* the months, as the report gives them */}
                 <path className="le-grow-fill" d={`${line} L${pts[pts.length - 1][0]} ${Y0} L${pts[0][0]} ${Y0} Z`} fill="url(#le-grow-gold)" />
-                <path className="le-grow-line" pathLength={1} d={line} fill="none" stroke="#a67c3d" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                <path className="le-grow-line" pathLength={1} d={line} fill="none" stroke="var(--le-accent)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
                 {known.map((m, k) => {
                   const end = m === last;
                   return (
                     <g key={m.i} className="le-grow-in" style={{ transitionDelay: `${0.35 + (k / known.length) * 2.4}s` }}>
-                      {end && <circle cx={x(m.i)} cy={y(m.value)} r="9" fill="#c6a66a" className="le-grow-pulse" />}
-                      <circle cx={x(m.i)} cy={y(m.value)} r={end ? 6.5 : 4.5} fill={end ? "#a67c3d" : "#f7f5e8"} stroke="#a67c3d" strokeWidth="1.8" />
+                      {end && <circle cx={x(m.i)} cy={y(m.value)} r="9" fill="#a39b84" className="le-grow-pulse" />}
+                      <circle cx={x(m.i)} cy={y(m.value)} r={end ? 6.5 : 4.5} fill={end ? "var(--le-accent)" : "#f7f5e8"} stroke="var(--le-accent)" strokeWidth="1.8" />
                       {!m.quiet && (
                         <text
                           x={x(m.i)}
@@ -230,7 +228,7 @@ export default function SeoGrowth({
                 {/* where we started */}
                 <g className="le-grow-in" style={{ transitionDelay: "0.3s" }}>
                   <line x1={x(first.i)} x2={x(first.i)} y1={y(first.value) - 10} y2={142} stroke="#261f15" strokeOpacity="0.3" strokeDasharray="2 4" />
-                  <text x={x(first.i) + 10} y={140} fontSize="11.5" fontWeight="700" letterSpacing="1.6" fill="#8a6f3d">
+                  <text x={x(first.i) + 10} y={140} fontSize="11.5" fontWeight="700" letterSpacing="1.6" fill="#6a5f4e">
                     WE STARTED HERE
                   </text>
                   <text x={x(first.i) + 10} y={160} fontSize="13" fill="#6e6555">
@@ -241,10 +239,10 @@ export default function SeoGrowth({
                 {/* the month pointed at */}
                 {hovered && (
                   <g pointerEvents="none">
-                    <line x1={x(hovered.i)} x2={x(hovered.i)} y1={30} y2={Y0} stroke="#a67c3d" strokeOpacity="0.45" strokeDasharray="3 4" />
+                    <line x1={x(hovered.i)} x2={x(hovered.i)} y1={30} y2={Y0} stroke="var(--le-accent)" strokeOpacity="0.45" strokeDasharray="3 4" />
                     <g transform={`translate(${Math.min(X1 - 150, Math.max(X0, x(hovered.i) - 75))} ${Math.max(6, y(hovered.value) - 92)})`}>
                       <rect width="150" height="46" rx="10" fill="#261f15" />
-                      <text x="14" y="19" fontSize="10.5" fontWeight="700" letterSpacing="1.4" fill="#c6a66a">
+                      <text x="14" y="19" fontSize="10.5" fontWeight="700" letterSpacing="1.4" fill="#a39b84">
                         {`${hovered.month.toUpperCase()} ${yearOf(hovered.i)}`}
                       </text>
                       <text x="14" y="36" fontSize="13" fontWeight="600" fill="#ededd5">
@@ -269,9 +267,6 @@ export default function SeoGrowth({
         {/* every month, in writing */}
         <div className="mt-12 flex flex-col gap-3 border-t border-[#261f15]/[0.13] pt-6 md:flex-row md:items-baseline md:gap-8">
           <p className="shrink-0 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.26em] text-[#8c7f63]">
-            <span aria-hidden="true" className="mr-2 text-[#b0904f]">
-              ✦
-            </span>
             Every month, in writing
           </p>
           <p className="flex-1 font-sans text-[0.9rem] leading-[1.6] text-[#6e6555]">{report}</p>

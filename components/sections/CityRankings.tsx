@@ -11,43 +11,6 @@ const CITIES = [
   { code: "ATL", leads: 50 },
 ];
 
-const COUNT_DURATION = 1700;
-
-function CountUp({
-  value,
-  started,
-  delay,
-  reduced,
-}: {
-  value: number;
-  started: boolean;
-  delay: number;
-  reduced: boolean;
-}) {
-  const [display, setDisplay] = useState(reduced ? value : 0);
-
-  useEffect(() => {
-    if (reduced) {
-      setDisplay(value);
-      return;
-    }
-    if (!started) return;
-    let raf: number;
-    const t0 = performance.now() + delay;
-    const tick = (now: number) => {
-      const t = Math.min(Math.max((now - t0) / COUNT_DURATION, 0), 1);
-      /* easeOutExpo — fast start, silky settle */
-      const eased = t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-      setDisplay(Math.round(value * eased));
-      if (t < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [started, value, delay, reduced]);
-
-  return <>{display}</>;
-}
-
 export default function CityRankings() {
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
@@ -92,17 +55,12 @@ export default function CityRankings() {
           className="group/city flex items-center px-7 sm:px-10"
         >
           <div className="flex items-baseline">
-            <span className="cursor-default font-heading font-thin not-italic text-6xl leading-none tracking-[-0.01em] text-[#ededd5] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/city:text-[#a67c3d] sm:text-7xl md:text-8xl">
+            <span className="cursor-default font-heading font-thin not-italic text-6xl leading-none tracking-[-0.01em] text-[#ededd5] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/city:text-[#a39b84] sm:text-7xl md:text-8xl">
               {city.code}
             </span>
             <span className="ml-4 flex flex-col sm:ml-5">
-              <span className="font-heading not-italic text-2xl leading-none text-[#a67c3d] sm:text-3xl">
-                <CountUp
-                  value={city.leads}
-                  started={inView}
-                  delay={i * 140}
-                  reduced={reduced}
-                />
+              <span className="font-heading not-italic text-2xl leading-none text-[var(--le-accent-dark)] sm:text-3xl">
+                {city.leads}
                 +
               </span>
               <span className="mt-2 font-sans text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-[#ededd5]/55 sm:text-[0.6rem]">
@@ -110,14 +68,6 @@ export default function CityRankings() {
               </span>
             </span>
           </div>
-          {(!reduced || i < CITIES.length - 1) && (
-            <span
-              aria-hidden="true"
-              className="pl-7 text-sm text-[#a67c3d]/50 sm:pl-10"
-            >
-              ✦
-            </span>
-          )}
         </div>
       ))}
     </div>
@@ -137,12 +87,9 @@ export default function CityRankings() {
 
       {/* Eyebrow */}
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pt-10 md:px-12 md:pt-12">
-        <p className="flex items-center gap-4 font-sans text-sm font-semibold uppercase tracking-[0.3em] text-[#a67c3d] sm:text-base">
-          <span aria-hidden="true" className="text-[0.8em]">
-            ✦
-          </span>
-          RANKING #1 IN
-          <span aria-hidden="true" className="h-px flex-1 bg-[#ededd5]/10" />
+        <p className="flex items-center gap-4 font-sans text-sm font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-base">
+          RANKING <span className="text-[var(--le-accent-dark)]">#1</span> IN
+          <span aria-hidden="true" className="flex-1" />
         </p>
       </div>
 

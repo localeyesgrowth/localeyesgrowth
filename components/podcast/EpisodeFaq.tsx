@@ -35,18 +35,10 @@ export function EpisodeFaq({ items }: { items: EpisodeFaqItem[] }) {
               aria-controls={`ep-faq-answer-${i}`}
               id={`ep-faq-question-${i}`}
               onClick={() => setOpenIndex(open ? null : i)}
-              className="group flex w-full cursor-pointer items-start justify-between gap-6 py-6 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a3843f]"
+              className="group flex w-full cursor-pointer items-start justify-between gap-6 py-6 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
             >
-              <span className="font-heading font-thin not-italic text-xl leading-[1.2] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#8a6f3d] sm:text-2xl">
+              <span className="font-heading font-thin not-italic text-xl leading-[1.2] tracking-tight text-[#261f15] transition-colors duration-300 group-hover:text-[#6a5f4e] sm:text-2xl">
                 {item.q}
-              </span>
-              <span
-                aria-hidden="true"
-                className={`mt-1 shrink-0 text-[1rem] text-[#8a6f3d] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  open ? "rotate-45" : "rotate-0"
-                }`}
-              >
-                ✦
               </span>
             </button>
             <div

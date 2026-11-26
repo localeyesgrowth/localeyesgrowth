@@ -18,7 +18,7 @@ export function GrowthDiagnosticCta({ label }: { label: string }) {
         e.preventDefault();
         openQuiz();
       }}
-      className="group/pcta relative inline-flex w-fit cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#c6a66a] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-xs"
+      className="group/pcta relative inline-flex w-fit cursor-pointer items-center gap-3 overflow-hidden rounded-full bg-[#ededd5] py-2 pl-7 pr-2 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-xs"
     >
       <span className="relative z-10 py-2 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/pcta:text-[#ededd5]">
         {label}
@@ -30,7 +30,7 @@ export function GrowthDiagnosticCta({ label }: { label: string }) {
         />
         <span
           aria-hidden="true"
-          className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/pcta:bg-[#c6a66a]"
+          className="absolute inset-0 rounded-full bg-[#261f15] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/pcta:bg-[#ededd5]"
         />
         <span className="relative z-10 flex rotate-0 transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/pcta:rotate-45">
           <ArrowUpRight className="h-4 w-4 text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/pcta:text-[#261f15]" />

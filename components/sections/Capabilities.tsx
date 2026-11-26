@@ -103,7 +103,7 @@ const TRIOS: Trio[] = [
     photos: [
       {
         src: "/google-ads-performance-dashboard.webp",
-        alt: "Google Ads performance dashboard — conversions up 233%, cost per conversion down 71%",
+        alt: "Google Ads performance dashboard, conversions up 233%, cost per conversion down 71%",
         pos: "object-center",
         fit: "contain",
       },
@@ -281,7 +281,7 @@ export default function Capabilities() {
           transition: color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
             opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .le-cap-hot.is-hot-active { color: #8a6f3d; }
+        .le-cap-hot.is-hot-active { color: #261f15; text-decoration-color: #261f15; }
         .le-cap-plain, .le-cap-suffix {
           transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -307,10 +307,7 @@ export default function Capabilities() {
 
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 py-16 md:px-12 md:py-24 lg:py-28">
         {/* ------------------------- eyebrow --------------------------- */}
-        <p className="le-cap-eyebrow font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-          <span aria-hidden="true" className="mr-4 text-[0.8em] text-[#a67c3d]">
-            ✦
-          </span>
+        <p className="le-cap-eyebrow font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
           What we do
         </p>
 
@@ -333,7 +330,7 @@ export default function Capabilities() {
                       onFocus={() => handleHover(token.hot!)}
                       onBlur={() => handleHover(null)}
                       onClick={() => handleTap(token.hot!)}
-                      className={`le-cap-hot relative cursor-pointer border-0 bg-transparent p-0 font-heading font-normal not-italic text-[#a3843f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8a6f3d]${
+                      className={`le-cap-hot relative cursor-pointer border-0 bg-transparent p-0 font-heading font-normal not-italic text-[#261f15] underline decoration-[#261f15]/30 decoration-1 underline-offset-[0.14em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]${
                         active === token.hot ? " is-hot-active" : ""
                       }`}
                     >
@@ -355,9 +352,6 @@ export default function Capabilities() {
         <p className="le-cap-hint mt-12 text-right font-sans text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-[#261f15]/40 md:mt-16">
           <span className="le-cap-hint-hover">Hover the gold words</span>
           <span className="le-cap-hint-tap">Tap the gold words</span>
-          <span aria-hidden="true" className="ml-2 text-[#a67c3d]">
-            ✦
-          </span>
         </p>
 
         {/* ---- the reveal: a straight, opaque row of three photos ----

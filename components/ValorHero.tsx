@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { Noise } from "@/components/effects/Noise";
 import TiltedCard from "@/components/TiltedCard/TiltedCard";
@@ -81,19 +80,13 @@ export default function ValorHero() {
       <div className="relative z-10 mx-auto grid w-full max-w-[1480px] items-center gap-14 px-6 md:px-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
         {/* ---------------- Text column ---------------- */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <p className="le-valor-reveal font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-            <span aria-hidden="true" className="mr-3 text-[0.8em]">
-              ✦
-            </span>
+          <p className="le-valor-reveal font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
             Exclusive · Valor Listeners
-            <span aria-hidden="true" className="ml-3 text-[0.8em]">
-              ✦
-            </span>
           </p>
 
           <h1 className="le-valor-reveal mt-5 font-heading font-thin not-italic text-[clamp(3.25rem,6.5vw,6.25rem)] leading-[0.92] tracking-[-0.02em] text-[#261f15]">
             Exclusive SEO Offers for{" "}
-            <span className="text-[#8a6f3d] not-italic">Valor Listeners</span>
+            Valor Listeners
           </h1>
 
           <p className="le-valor-reveal mt-10 max-w-xl font-sans text-sm leading-relaxed text-[#261f15]/75 sm:text-base md:text-lg">
@@ -106,24 +99,9 @@ export default function ValorHero() {
                href is a placeholder (#) until the real URL is provided. */}
             <a
               href="#pricing"
-              className="group/btn relative inline-flex cursor-pointer items-center justify-center gap-3 overflow-hidden whitespace-nowrap rounded-full border border-[#261f15]/25 py-1 pl-6 pr-1 font-sans text-[0.7rem] uppercase tracking-[0.12em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:gap-4 sm:py-1.5 sm:pl-8 sm:pr-1.5 sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[4px] px-6 py-3.5 font-sans text-sm font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--le-accent)] border border-[#261f15]/30 text-[#261f15] hover:border-[#261f15]"
             >
-              <span className="relative z-10 py-1 transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-white group-active/btn:text-white">
-                Exclusive Catering SEO Prices
-              </span>
-              <span className="relative flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 scale-100 rounded-full bg-[#4a3421] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover/btn:scale-[25] group-hover/btn:duration-[1100ms] group-active/btn:scale-[25] group-active/btn:duration-[1100ms]"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 rounded-full bg-[#4a3421] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:bg-white group-active/btn:bg-white"
-                />
-                <span className="relative z-10 flex rotate-0 will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/btn:rotate-45 group-active/btn:rotate-45">
-                  <ArrowUpRight className="h-[1.15rem] w-[1.15rem] text-[#ededd5] transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:text-[#4a3421] group-active/btn:text-[#4a3421]" />
-                </span>
-              </span>
+              Exclusive Catering SEO Prices
             </a>
 
             {/* Secondary — quiet bordered pill; stretches to match the
@@ -135,7 +113,7 @@ export default function ValorHero() {
                 e.preventDefault();
                 openCalendly();
               }}
-              className="inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-full border border-[#261f15]/25 px-6 py-4 font-sans text-[0.7rem] uppercase tracking-[0.12em] text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#261f15] hover:text-[#ededd5] active:bg-[#261f15] active:text-[#ededd5] sm:px-8 sm:py-0 sm:text-xs"
+              className="inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-[4px] border border-[#261f15]/30 px-6 py-3.5 font-sans text-sm font-semibold text-[#261f15] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#261f15] hover:text-[#ededd5] active:bg-[#261f15] active:text-[#ededd5] sm:px-8 sm:py-0 sm:text-xs"
             >
               Book A Call
             </a>
@@ -148,12 +126,12 @@ export default function ValorHero() {
              left + right, offset downward; one clean outline, no inner lines */}
           <div
             aria-hidden="true"
-            className="absolute -left-6 -right-6 top-6 -bottom-6 rounded-2xl border-2 border-[#c9932b]/60 bg-[#c9932b]/5"
+            className="absolute -left-6 -right-6 top-6 -bottom-6 rounded-2xl border-2 border-[#a39b84]/60 bg-[#ededd5]/5"
           />
           {reduced ? (
             <Image
               src={IMG("/valor-photo.webp")}
-              alt="Valor Coffee Podcast cover — the three hosts at a table with Valor mugs"
+              alt="Valor Coffee Podcast cover: the three hosts at a table with Valor mugs"
               width={640}
               height={640}
               priority
@@ -163,7 +141,7 @@ export default function ValorHero() {
             <div className="relative aspect-square w-full">
               <TiltedCard
                 imageSrc={IMG("/valor-photo.webp")}
-                altText="Valor Coffee Podcast cover — the three hosts at a table with Valor mugs"
+                altText="Valor Coffee Podcast cover: the three hosts at a table with Valor mugs"
                 containerHeight="100%"
                 containerWidth="100%"
                 imageHeight="100%"
@@ -176,9 +154,6 @@ export default function ValorHero() {
             </div>
           )}
           <p className="mt-8 text-center font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#261f15]/50">
-            <span aria-hidden="true" className="mr-3 text-[0.8em] text-[#c6a66a]">
-              ✦
-            </span>
             As heard on the Valor Coffee Podcast
           </p>
         </div>

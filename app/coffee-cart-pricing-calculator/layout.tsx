@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Coffee Catering Price Calculator | LocalEyes",
   description:
-    "Know exactly what to charge for any coffee cart or mobile espresso event — in seconds. Get value, standard, and premium pricing instantly, plus a client-ready quote.",
+    "Know exactly what to charge for any coffee cart or mobile espresso event, in seconds. Get value, standard, and premium pricing instantly, plus a client-ready quote.",
   alternates: {
     canonical: "/coffee-cart-pricing-calculator",
   },

@@ -102,7 +102,8 @@ type Client = {
   pages: CasePage[];
 };
 
-const CLIENTS: Client[] = [
+/* Cala is hidden from the homepage for now; remove the filter below to bring it back */
+const ALL_CLIENTS: Client[] = [
   {
     number: "01",
     client: "Cala Coffee",
@@ -158,6 +159,7 @@ const CLIENTS: Client[] = [
     ],
   },
 ];
+const CLIENTS = ALL_CLIENTS.filter((c) => c.client !== "Cala Coffee");
 
 /* timing, in ms */
 const HOME_MS = 7600; // the homepage's turn
@@ -538,8 +540,8 @@ export default function FeaturedCases() {
           position: absolute;
           inset: 0;
           border-radius: 50%;
-          border: 1.5px solid rgba(166, 124, 61, 0.25);
-          border-top-color: #a67c3d;
+          border: 1.5px solid color-mix(in srgb, var(--le-accent) 25%, transparent);
+          border-top-color: var(--le-accent);
           opacity: 0;
         }
         .le-fc-tab[data-loading="true"] .le-fc-fav img { opacity: 0; }
@@ -577,7 +579,7 @@ export default function FeaturedCases() {
           inset: 0 0 auto 0;
           z-index: 3;
           height: 2px;
-          background: linear-gradient(90deg, #c6a66a, #a67c3d);
+          background: linear-gradient(90deg, #a39b84, var(--le-accent));
           transform-origin: left;
           transform: scaleX(0);
           opacity: 0;
@@ -651,16 +653,13 @@ export default function FeaturedCases() {
       <div className="relative z-10 mx-auto grid w-full max-w-[1480px] grid-cols-1 px-6 py-20 md:px-12 md:py-24 lg:grid-cols-[minmax(0,0.66fr)_minmax(0,1.34fr)] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-14 xl:gap-x-20">
         {/* the heading and the clients */}
         <div className="lg:col-start-1 lg:row-start-2">
-          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#a67c3d] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
             Featured work
           </p>
           <h2 className="mt-5 font-heading font-thin not-italic text-[clamp(2.7rem,4.6vw,4.3rem)] leading-[1] tracking-[-0.02em] text-[#261f15]">
             Every city,
             <br />
-            <span className="text-[#a67c3d]">its own page</span>
+            <span>its own page</span>
           </h2>
 
           <div
@@ -696,7 +695,7 @@ export default function FeaturedCases() {
                   <span
                     ref={roundRef}
                     aria-hidden="true"
-                    className="absolute -bottom-px left-0 h-px w-full origin-left bg-[#a67c3d]"
+                    className="absolute -bottom-px left-0 h-px w-full origin-left bg-[var(--le-accent)]"
                     style={{ transform: "scaleX(0)", opacity: 0 }}
                   />
                 )}
@@ -737,7 +736,7 @@ export default function FeaturedCases() {
 
           <div ref={leanRef} className="relative py-[6%] pr-[4%] sm:py-[5.5%] sm:pr-[5%]">
             <div className="le-fc-in-browser relative isolate">
-              <div className="overflow-hidden rounded-[16px] bg-[#fdfbf5] shadow-[0_0_0_1px_rgba(38,31,21,0.08),0_44px_80px_-38px_rgba(38,31,21,0.55),0_14px_30px_-20px_rgba(38,31,21,0.3)]">
+              <div className="overflow-hidden rounded-[16px] bg-[#fdfbf5] shadow-[0_0_0_1px_rgba(38,31,21,0.08),0_44px_80px_-38px_rgba(38,31,21,0.55),0_14px_30px_-20px_rgba(38, 31, 21,0.3)]">
                 {/* tabs */}
                 <div className="flex h-10 items-end bg-[#eee8d6] pl-3.5 pr-2">
                   <div aria-hidden="true" className="mr-3 flex shrink-0 items-center gap-[7px] self-center sm:mr-4">
@@ -841,7 +840,7 @@ export default function FeaturedCases() {
                     holdUntilRef.current = performance.now() + 1200;
                     scrubRef.current = null;
                   }}
-                  className="le-fc-view relative block aspect-[16/10] overflow-hidden bg-white outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#a67c3d]"
+                  className="le-fc-view relative block aspect-[16/10] overflow-hidden bg-white outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--le-accent)]"
                 >
                   {client.pages.map((p, i) =>
                     seen[shown][i] || i === page || i === page + 1 ? (
@@ -969,7 +968,7 @@ export default function FeaturedCases() {
               >
                 <dt className="sr-only">{n.label}</dt>
                 <dd>
-                  <span className="block font-heading font-thin not-italic text-[2.6rem] leading-none text-[#a67c3d]">
+                  <span className="block font-heading font-thin not-italic text-[2.6rem] leading-none text-[var(--le-accent)]">
                     {n.value}
                   </span>
                   <span
@@ -986,7 +985,7 @@ export default function FeaturedCases() {
             href={client.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/visit mt-7 inline-flex items-center gap-2 border-b border-[#261f15]/25 pb-1 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#261f15] transition-colors duration-300 hover:border-[#a67c3d] hover:text-[#a67c3d]"
+            className="group/visit mt-7 inline-flex items-center gap-2 border-b border-[#261f15]/25 pb-1 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#261f15] transition-colors duration-300 hover:border-[var(--le-accent)] hover:text-[#6a5f4e]"
           >
             Visit {client.domain}
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.2,0.4,1)] group-hover/visit:-translate-y-0.5 group-hover/visit:translate-x-0.5" />

@@ -18,8 +18,8 @@ const R = 140;
 
 const INK_GRID = "rgba(38, 31, 21, 0.14)";
 const LABEL = "#7a715c";
-const GOLD_FILL = "rgba(198, 166, 106, 0.28)";
-const GOLD_STROKE = "#a3843f";
+const GOLD_FILL = "rgba(163, 155, 132, 0.28)";
+const GOLD_STROKE = "#6a5f4e";
 
 const Radar = forwardRef<SVGSVGElement, { domains: DomainResult[] }>(
   function Radar({ domains }, ref) {

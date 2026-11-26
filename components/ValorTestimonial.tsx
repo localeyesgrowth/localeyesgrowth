@@ -69,16 +69,13 @@ export default function ValorTestimonial() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 md:px-12">
         <div className="le-valor-t-head">
-          <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#c6a66a] sm:text-xs">
-            <span aria-hidden="true" className="mr-3 text-[0.8em]">
-              ✦
-            </span>
+          <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#a39b84] sm:text-xs">
             Proven Results
           </p>
           <div className="mt-5 flex items-end gap-8 lg:gap-12">
             <h2 className="max-w-3xl font-heading font-thin not-italic text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.12] tracking-[-0.01em] text-[#261f15]">
               Finally Crush Google &amp; Rank At The Top For{" "}
-              <span className="text-[#8a6f3d] not-italic">
+              <span className="text-[#6a5f4e] not-italic">
                 Coffee Cart Catering
               </span>{" "}
               &ldquo;Near&nbsp;Me&rdquo;
@@ -87,8 +84,7 @@ export default function ValorTestimonial() {
               aria-hidden="true"
               className="mb-4 hidden flex-1 items-center gap-4 md:flex"
             >
-              <span className="h-px flex-1 bg-gradient-to-r from-[#c9932b]/50 via-[#261f15]/15 to-transparent" />
-              <span className="text-[0.6rem] text-[#c9932b]/70">✦</span>
+              <span aria-hidden="true" className="flex-1" />
             </div>
           </div>
         </div>
@@ -97,14 +93,8 @@ export default function ValorTestimonial() {
           <figure className="relative rounded-[4px] border border-[#261f15]/10 bg-[#f6f2e3] px-7 py-14 shadow-[0_40px_80px_-36px_rgba(38,31,21,0.45)] sm:px-14 sm:py-16">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-3 rounded-[2px] border border-[#c9932b]/45 sm:inset-4"
+              className="pointer-events-none absolute inset-3 rounded-[2px] border border-[#a39b84]/45 sm:inset-4"
             />
-            <span
-              aria-hidden="true"
-              className="absolute left-1/2 top-3 -translate-x-1/2 -translate-y-1/2 bg-[#f6f2e3] px-3 text-base leading-none text-[#c9932b] sm:top-4"
-            >
-              ✦
-            </span>
 
             <div className="relative flex flex-col items-center text-center">
               {/* stars — one accessible image, five filled gold stars */}
@@ -117,7 +107,7 @@ export default function ValorTestimonial() {
                   <Star
                     key={i}
                     aria-hidden="true"
-                    className="h-4 w-4 text-[#c9932b]"
+                    className="h-4 w-4 text-[#a39b84]"
                     fill="currentColor"
                     strokeWidth={0}
                   />
@@ -129,17 +119,13 @@ export default function ValorTestimonial() {
                 &ldquo;Two weeks ago we released our new catering page guided by
                 LocalEyes and we were receiving 1-2 catering inquiries per day,
                 and now we&rsquo;re receiving anywhere in the range of{" "}
-                <span className="text-[#8a6f3d]">
+                <span className="text-[#6a5f4e]">
                   5-7 catering inquiries per day
                 </span>{" "}
                 just from SEO&rdquo;
               </blockquote>
 
               {/* short gold hairline — letterpress divider */}
-              <span
-                aria-hidden="true"
-                className="mt-9 h-px w-12 bg-[#c9932b]/60"
-              />
             </div>
 
             {/* attribution — centered, like a letterpress signature;
@@ -150,12 +136,12 @@ export default function ValorTestimonial() {
                 alt="Riley W., Co-Founder of Valor Coffee"
                 width={128}
                 height={141}
-                className="h-14 w-14 rounded-full border border-[#261f15]/10 object-cover object-top ring-2 ring-[#c9932b]/35"
+                className="h-14 w-14 rounded-full border border-[#261f15]/10 object-cover object-top ring-2 ring-[#a39b84]/35"
               />
               <p className="mt-4 font-sans text-sm font-semibold text-[#261f15]">
                 Riley W.
               </p>
-              <p className="mt-1 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-[#8a6f3d]">
+              <p className="mt-1 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-[#6a5f4e]">
                 Co-Founder, Valor Coffee
               </p>
             </figcaption>

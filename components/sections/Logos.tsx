@@ -218,7 +218,7 @@ export default function TrustedBy() {
         {/* ------------------------- heading --------------------------- */}
         <div className="lt-head text-center">
           <h2 className="font-heading font-thin not-italic text-[clamp(1.6rem,3.4vw,2.75rem)] leading-[1.1] tracking-[-0.01em] text-[#261f15]">
-            Some Businesses Who <span className="text-[#a3843f]">Trust</span>{" "}
+            Some Businesses Who <span>Trust</span>{" "}
             LocalEyes
           </h2>
         </div>

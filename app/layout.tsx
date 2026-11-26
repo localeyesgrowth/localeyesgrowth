@@ -15,7 +15,7 @@ const CLARITY_PROJECT_ID = "yk4f3xg3hl";
 const META_PIXEL_ID = "317714534152790";
 
 const display = localFont({
-  src: "./(fonts)/ivy-presto-headline-thin.otf",
+  src: "./(fonts)/ivy-presto-headline-light.otf",
   variable: "--font-display",
   display: "swap",
   style: "normal",

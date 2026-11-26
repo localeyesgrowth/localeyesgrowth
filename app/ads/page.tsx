@@ -8,17 +8,17 @@ import imgAdsTraffic from "@/public/user-activity-over-time-analytics-dashboard.
 export const metadata: Metadata = {
   title: "Google Ads for Mobile Caterers | LocalEyes",
   description:
-    "Paid search built to bridge the gap while your SEO ranks — for coffee carts, mobile bars, and catering businesses. Real campaign results, not projections.",
+    "Paid search built to bridge the gap while your SEO ranks: for coffee carts, mobile bars, and catering businesses. Real campaign results, not projections.",
   alternates: {
     canonical: "/ads",
   },
 };
 
 const content: ServiceContent = {
-  eyebrow: "Service — Ads",
+  eyebrow: "Service: Ads",
   h1: "Paid Search That Bridges the Gap While SEO Ranks",
   subhead:
-    "SEO takes months to compound. Ads put you in front of buyers this week — the two working together is how you stop losing bookings while you wait to rank.",
+    "SEO takes months to compound. Ads put you in front of buyers this week. The two working together is how you stop losing bookings while you wait to rank.",
   statValue: "+233%",
   statLabel: "conversion increase for a client's Google Ads account in one week",
   proof: [
@@ -28,7 +28,7 @@ const content: ServiceContent = {
   intro: {
     heading: "Ads is not a replacement for SEO. It is the bridge to it.",
     paragraphs: [
-      "A brand new domain can sit in Google's sandbox for five to seven weeks before it starts ranking at all, and organic growth compounds slowly even after that. Paid search is the lever that gets you in front of buyers immediately, on the exact high-intent searches — \"coffee catering near me,\" \"mobile bartender for wedding\" — while the organic side of the account is still building.",
+      "A brand new domain can sit in Google's sandbox for five to seven weeks before it starts ranking at all, and organic growth compounds slowly even after that. Paid search is the lever that gets you in front of buyers immediately, on the exact high-intent searches (\"coffee catering near me,\" \"mobile bartender for wedding\"while the organic side of the account is still building.",
       "We run ads the same way we run SEO: built specifically for mobile catering, not a generic template applied to any local business. That means targeting the searches that actually convert to bookings, not just clicks, and campaign structures built around your real service area and your real event minimums so the budget isn't spent on the wrong buyer.",
       "The account above went from a slow trickle of leads to a 233 percent increase in conversions in a single week, with cost per conversion down 71 percent over the same period. That's what a campaign built for this industry, instead of adapted from a generic one, actually looks like.",
     ],
@@ -43,7 +43,7 @@ const content: ServiceContent = {
       },
       {
         title: "Landing pages that match the ad",
-        body: "Every campaign points to a page built for that specific search, not your homepage — the single biggest lever on cost per conversion.",
+        body: "Every campaign points to a page built for that specific search, not your homepage: the single biggest lever on cost per conversion.",
       },
       {
         title: "Budget matched to your real capacity",

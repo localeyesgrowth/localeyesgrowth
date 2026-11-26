@@ -10,7 +10,7 @@ import WebsitesClosing from "@/components/websites/WebsitesClosing";
 export const metadata: Metadata = {
   title: "Website Design for Mobile Caterers | LocalEyes",
   description:
-    "Websites built to rank, not just look good — for coffee carts, mobile bars, and catering businesses. Real client sites, engineered for search from day one.",
+    "Websites built to rank, not just look good: for coffee carts, mobile bars, and catering businesses. Real client sites, engineered for search from day one.",
   alternates: {
     canonical: "/websites-for-event-businesses",
   },
@@ -79,7 +79,7 @@ const closing = {
 
 export default function WebsitesPage() {
   return (
-    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       <WebsitesHero />
       <WorkRing />
       <RankingClock {...intro} />

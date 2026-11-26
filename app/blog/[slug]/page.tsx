@@ -39,7 +39,7 @@ export default async function BlogArticlePage({
   const faqPairs = extractFaqPairs(post.content);
 
   return (
-    <main className="relative min-h-dvh w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#c9932b] selection:text-[#261f15]">
+    <main className="relative min-h-dvh w-full overflow-x-clip bg-[#ededd5] text-[#261f15] selection:bg-[#ededd5] selection:text-[#261f15]">
       {faqPairs.length > 0 && (
         <script
           type="application/ld+json"

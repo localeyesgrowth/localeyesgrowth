@@ -66,7 +66,7 @@ const ADDONS: AddOn[] = [
     name: "Branding Refresh",
     prefix: "From",
     price: "$8,000",
-    desc: "Full identity refresh — logo, palette, type, brand guidelines, applied across web.",
+    desc: "Full identity refresh: logo, palette, type, brand guidelines, applied across web.",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function AddOns() {
             opacity: 0.6;
           }
           .le-addon:hover .le-addon-inner { transform: translateX(0.75rem); }
-          .le-addon:hover .le-addon-num { color: #a67c3d; }
+          .le-addon:hover .le-addon-num { color: var(--le-accent); }
         }
         @media (prefers-reduced-motion: reduce) {
           .le-addon-inner, .le-addon-num { transition: none; }
@@ -161,7 +161,7 @@ export default function AddOns() {
       {/* Faint warm wash leaning toward the list — barely-there depth */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(60%_50%_at_75%_35%,rgba(166,124,61,0.10),transparent_65%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(60%_50%_at_75%_35%,color-mix(in_srgb,var(--le-accent)_10%,transparent),transparent_65%)]"
       />
 
       {/* Film grain — above the cream ground, below every row and price */}
@@ -170,12 +170,9 @@ export default function AddOns() {
       <div className="relative z-20 mx-auto w-full max-w-[1480px] px-6 py-16 md:px-12 md:py-24">
         {/* ------------------------- header --------------------------- */}
         <div ref={headerRef}>
-          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#8a6f3d] sm:text-xs">
-            <span aria-hidden="true" className="text-[0.8em]">
-              ✦
-            </span>
+          <p className="flex items-center gap-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-[#6a5f4e] sm:text-xs">
             Add-ons
-            <span aria-hidden="true" className="h-px flex-1 bg-[#261f15]/10" />
+            <span aria-hidden="true" className="flex-1" />
           </p>
 
           <div className="mt-7 flex flex-col gap-5 md:mt-9 md:flex-row md:items-end md:justify-between md:gap-12">
@@ -200,18 +197,11 @@ export default function AddOns() {
             >
               <a
                 href="#contact"
-                className="relative block cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#a67c3d]"
+                className="relative block cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--le-accent)]"
               >
                 {/* Numeral / name + description / price — everything
                    stays fully visible in every state */}
-                <span className="le-addon-inner relative z-10 grid grid-cols-[auto_1fr] items-baseline gap-x-4 gap-y-2 py-6 sm:gap-x-6 md:grid-cols-[4rem_minmax(0,1fr)_auto] md:gap-x-8 md:py-8">
-                  {/* Deliberate numeral — quiet gold, warms on hover */}
-                  <span
-                    aria-hidden="true"
-                    className="le-addon-num font-sans text-[0.6rem] font-semibold tracking-[0.3em] text-[#8a6f3d]"
-                  >
-                    {addon.num}
-                  </span>
+                <span className="le-addon-inner relative z-10 grid grid-cols-1 items-baseline gap-x-4 gap-y-2 py-6 sm:gap-x-6 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-8 md:py-8">
 
                   <span className="min-w-0">
                     <span className="block font-heading font-thin not-italic text-3xl leading-[1.05] tracking-[-0.01em] text-[#261f15] sm:text-4xl md:text-[2.75rem]">
@@ -225,7 +215,7 @@ export default function AddOns() {
                   {/* Price — real presence, never hidden */}
                   <span className="col-start-2 flex items-baseline gap-2 md:col-start-3 md:justify-self-end">
                     {addon.prefix && (
-                      <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#8a6f3d]">
+                      <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#6a5f4e]">
                         {addon.prefix}
                       </span>
                     )}

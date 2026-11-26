@@ -130,8 +130,8 @@
     background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .le-cursor-ring[data-hover="true"] {
-  border-color: #a67c3d;
-  background: rgba(166, 124, 61, 0.14);
+  border-color: var(--le-accent);
+  background: color-mix(in srgb, var(--le-accent) 14%, transparent);
 }
 @media (pointer: fine) {
   .le-cursor-active,
@@ -240,17 +240,30 @@
    warm antique brass/bronze: golden in feel without reading as literal
    yellow-gold */
 .le-word-accent {
-  color: #a67c3d;
-  font-style: italic;
-  /* Italic glyphs' slanted right edge can extend past the inline-block's
-     own layout box and get clipped by the section's overflow-hidden —
-     small buffer prevents that without affecting layout/wrapping. */
-  padding-right: 0.12em;
+  color: inherit;
+  font-style: normal;
+  position: relative;
+}
+/* the key phrases carry a gold rule; it bridges the space to the next
+   accented word so a phrase reads as one underline */
+.le-word-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.04em;
+  height: 0.055em;
+  background: var(--le-accent);
+}
+.le-word-accent:has(+ .le-word-accent)::after {
+  right: -0.32em;
 }
 
 /* Extra weight bump for specific words on top of le-word-accent (e.g. "#1") */
 .le-word-bold {
   font-weight: 400;
+  /* gold is back on the #1 only */
+  color: var(--le-accent);
 }
 /* Curved Loop CSS */
 
@@ -334,7 +347,7 @@
   --cream-dim: #e2dcc0;
   --rust: #b8532f;
   --rust-dark: #8f3e22;
-  --mustard: #c9932b;
+  --mustard: #a39b84;
   --olive: #5c6b3f;
 
   --background: var(--cream);
@@ -442,4 +455,23 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+/* Refresh: no spinning ornaments, no breathing glows */
+.animate-le-spin,
+.animate-le-spin-slow {
+  animation: none;
+}
+.animate-le-breathe {
+  animation: none;
+  display: none;
+}
+
+/* The one accent. --le-accent is for cream grounds, --le-accent-dark is
+   its lighter partner for espresso grounds. Change these two values to
+   re-accent the whole site. */
+:root {
+  /* no accent: espresso on cream, cream on espresso */
+  --le-accent: #261f15;
+  --le-accent-dark: #ededd5;
 }

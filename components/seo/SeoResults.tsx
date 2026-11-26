@@ -162,11 +162,11 @@ function Card({ i, proof, still, onOpen }: { i: number; proof: Proof; still: boo
     >
       <header className="flex items-center justify-between gap-4 px-2.5 pb-3 pt-1.5">
         <p className="flex items-baseline gap-2.5">
-          <span className="font-heading text-[1.5rem] font-thin not-italic leading-none text-[#c6a66a]">{c.n}</span>
+          <span className="font-heading text-[1.5rem] font-thin not-italic leading-none text-[#a39b84]">{c.n}</span>
           <span className="font-sans text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[#261f15]/60">{c.name}</span>
         </p>
         {c.next && (
-          <p className="le-then flex items-center gap-1.5 font-sans text-[0.56rem] font-semibold uppercase tracking-[0.24em] text-[#8a6f3d]">
+          <p className="le-then flex items-center gap-1.5 font-sans text-[0.56rem] font-semibold uppercase tracking-[0.24em] text-[#6a5f4e]">
             {c.next}
             <ArrowRight className="h-3 w-3" />
           </p>
@@ -183,7 +183,7 @@ function Card({ i, proof, still, onOpen }: { i: number; proof: Proof; still: boo
         aria-label={`${proof.caption}. Open the screenshot full size`}
         className="group/print block w-full cursor-zoom-in text-left [perspective:1400px] focus-visible:outline-none"
       >
-        <span className="le-print relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[1.1rem] bg-white p-3 ring-1 ring-[#261f15]/[0.07] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/print:shadow-[0_24px_40px_-24px_rgba(38,31,21,0.45)] group-focus-visible/print:ring-2 group-focus-visible/print:ring-[#8f6a2f]">
+        <span className="le-print relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[1.1rem] bg-white p-3 ring-1 ring-[#261f15]/[0.07] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/print:shadow-[0_24px_40px_-24px_rgba(38,31,21,0.45)] group-focus-visible/print:ring-2 group-focus-visible/print:ring-[#6a5f4e]">
           <span className={`relative block ${w / h > 1.6 ? "w-full" : "h-full"}`} style={{ aspectRatio: `${w} / ${h}` }}>
             <Image src={proof.image} alt="" fill sizes="(min-width: 1024px) 31vw, 100vw" className="object-contain" />
             <svg viewBox={`0 0 ${w} ${h}`} aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full mix-blend-multiply">
@@ -208,9 +208,9 @@ function Card({ i, proof, still, onOpen }: { i: number; proof: Proof; still: boo
       {/* the figure, and what it means */}
       <div className="flex items-start gap-5 px-2.5 pb-2.5 pt-5">
         <p aria-hidden="true" className="shrink-0 font-heading text-[clamp(2.9rem,3.7vw,3.8rem)] font-thin not-italic leading-[0.84] tracking-[-0.035em] tabular-nums">
-          {c.sign && <span className="text-[#a67c3d]">{c.sign}</span>}
+          {c.sign && <span className="text-[var(--le-accent)]">{c.sign}</span>}
           {still ? c.final : count}
-          {c.unit && <span className="text-[#a67c3d]">{c.unit}</span>}
+          {c.unit && <span className="text-[var(--le-accent)]">{c.unit}</span>}
         </p>
         <p className="font-sans text-[0.84rem] leading-[1.55] text-[#261f15]/70">
           <span className="sr-only">
@@ -268,13 +268,13 @@ export default function SeoResults({ heading, paragraphs, proof }: { heading: st
         <div className="mt-8 grid gap-6 lg:grid-cols-4 lg:items-end">
           <h2 id="seo-results-title" className="text-balance font-heading text-[clamp(2.6rem,4.6vw,4.9rem)] font-thin not-italic leading-[0.98] tracking-[-0.025em] lg:col-span-3">
             <span className="block">{lever}</span>
-            <span className="block text-[#8f6a2f]">{point}</span>
+            <span className="block text-[#6a5f4e]">{point}</span>
           </h2>
           <div className="max-w-[26rem] lg:pb-1.5 lg:pl-7">
             <p className="font-sans text-[0.95rem] leading-[1.65] text-[#261f15]/70">
               Three screenshots from real client accounts, in the order one causes the next.
             </p>
-            <p className="mt-3 font-sans text-[0.58rem] font-semibold uppercase leading-[1.8] tracking-[0.22em] text-[#8a6f3d]">
+            <p className="mt-3 font-sans text-[0.58rem] font-semibold uppercase leading-[1.8] tracking-[0.22em] text-[#6a5f4e]">
               The gold marks are ours. Everything under them is untouched.
             </p>
           </div>
