@@ -865,3 +865,34 @@
     width: 100%;
   }
 }
+
+/* shown only when the browser made the video start silent */
+.gd .vsl {
+  position: relative;
+}
+.gd .vsl-sound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+.gd .vsl-sound:hover {
+  background: #fff;
+}
+.gd .vsl-sound:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}

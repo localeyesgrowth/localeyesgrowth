@@ -142,6 +142,7 @@ export default function GrowthDiagnostic({
   const calWrapRef = useRef<HTMLDivElement>(null);
   const calInlineRef = useRef<HTMLDivElement>(null);
   const vslRef = useRef<HTMLVideoElement>(null);
+  const [vslMuted, setVslMuted] = useState(false);
   const phaseTimer = useRef<number | undefined>(undefined);
 
   useEffect(() => {
@@ -270,9 +271,25 @@ export default function GrowthDiagnostic({
     if (!v) return;
     v.play().catch(() => {
       v.muted = true;
+      setVslMuted(true);
       v.play().catch(() => {});
     });
+    /* if they turn sound on from the player's own controls, drop the prompt */
+    const onVolume = () => {
+      if (!v.muted) setVslMuted(false);
+    };
+    v.addEventListener("volumechange", onVolume);
+    return () => v.removeEventListener("volumechange", onVolume);
   }, [step]);
+
+  const unmuteVsl = () => {
+    const v = vslRef.current;
+    if (!v) return;
+    v.muted = false;
+    v.currentTime = 0;
+    setVslMuted(false);
+    v.play().catch(() => {});
+  };
 
   /* ---- results: inline Calendly (assets lazy-load here, retries while
           the script arrives, falls back to a plain button) ---- */
@@ -658,6 +675,17 @@ export default function GrowthDiagnostic({
             poster="/video/growth-vsl-poster.jpg"
             src="/video/growth-vsl.mp4"
           />
+          {vslMuted && (
+            <button type="button" className="vsl-sound" onClick={unmuteVsl}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path
+                  d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4 4 0 0 0-2-3.5v7a4 4 0 0 0 2-3.5z"
+                  fill="currentColor"
+                />
+              </svg>
+              Tap for sound
+            </button>
+          )}
         </div>
         <div ref={calWrapRef}>
           <h2 className="rh">Pick a time for your breakdown call</h2>
