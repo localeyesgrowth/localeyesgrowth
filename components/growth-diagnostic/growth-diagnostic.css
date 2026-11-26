@@ -801,3 +801,67 @@
   aspect-ratio: 16 / 9;
   background: #261f15;
 }
+
+/* the results screen leads with one instruction: book the call */
+.gd .next-step {
+  margin: 30px 0 0;
+  padding: 22px 22px 20px;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+}
+.gd .next-step-label {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.75;
+}
+.gd .next-step-title {
+  margin: 8px 0 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(24px, 4.2vw, 34px);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.gd .next-step-copy {
+  margin: 12px auto 0;
+  max-width: 52ch;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+.gd .next-step + .vsl {
+  margin-top: 0;
+}
+/* stays in reach while they read the scorecard further down */
+.gd .book-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 28px -4px 0;
+  padding: 12px 14px;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink);
+}
+.gd .book-bar .btn {
+  flex-shrink: 0;
+  padding: 13px 20px;
+}
+@media (max-width: 520px) {
+  .gd .book-bar span {
+    display: none;
+  }
+  .gd .book-bar .btn {
+    width: 100%;
+  }
+}

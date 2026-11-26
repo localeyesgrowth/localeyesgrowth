@@ -626,10 +626,7 @@ export default function GrowthDiagnostic({
       });
     screen = (
       <>
-        <p className="gd-sub center">
-          Your scorecard. Your full audit gets delivered live on your free
-          breakdown.
-        </p>
+        <p className="gd-sub center">Your score is in. One step left.</p>
         <div className="score-hero">
           <div className="dial">
             {display}
@@ -639,6 +636,18 @@ export default function GrowthDiagnostic({
             <div className="tier">{r.tier.name}</div>
             <p className="tier-copy">{r.tier.copy}</p>
           </div>
+        </div>
+        <div className="next-step">
+          <p className="next-step-label">Your next step</p>
+          <h2 className="next-step-title">
+            Book your call to get the full breakdown and audit
+          </h2>
+          <p className="next-step-copy">
+            Your score is the summary. On a free 20 minute call we walk you
+            through the full audit: your rankings, your Google profile and
+            your website, plus the plan to fix what is costing you bookings.
+            Watch the short video, then pick a time right below it.
+          </p>
         </div>
         <div className="vsl">
           <video
@@ -651,7 +660,7 @@ export default function GrowthDiagnostic({
           />
         </div>
         <div ref={calWrapRef}>
-          <h2 className="rh">Grab your breakdown slot</h2>
+          <h2 className="rh">Pick a time for your breakdown call</h2>
           <p className="note" style={{ marginBottom: 6 }}>
             20 minutes, live with our team. $679 of work, free. Slots go to
             whoever grabs them first.
@@ -758,6 +767,12 @@ export default function GrowthDiagnostic({
           </p>
           <button type="button" className="btn w100" onClick={onBookTop}>
             Pick my time &rarr;
+          </button>
+        </div>
+        <div className="book-bar">
+          <span>The full audit is delivered on your call.</span>
+          <button type="button" className="btn" onClick={onBookTop}>
+            Book my free call &rarr;
           </button>
         </div>
       </>
