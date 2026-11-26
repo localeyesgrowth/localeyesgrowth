@@ -151,8 +151,8 @@
   display: inline-block;
   border: 0;
   cursor: pointer;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   padding: 15px 32px;
   font-family: var(--sans);
   font-size: 11.5px;
@@ -164,7 +164,7 @@
     transform 0.15s ease;
 }
 .gd .btn:hover {
-  background: var(--gold-hover);
+  background: #4a3421;
 }
 .gd .btn:active {
   transform: translateY(1px);
@@ -789,4 +789,15 @@
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* the walkthrough video on the results screen */
+.gd .vsl {
+  margin: 26px 0 8px;
+}
+.gd .vsl video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #261f15;
 }

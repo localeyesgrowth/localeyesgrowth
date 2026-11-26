@@ -141,6 +141,7 @@ export default function GrowthDiagnostic({
   const radarRef = useRef<SVGSVGElement>(null);
   const calWrapRef = useRef<HTMLDivElement>(null);
   const calInlineRef = useRef<HTMLDivElement>(null);
+  const vslRef = useRef<HTMLVideoElement>(null);
   const phaseTimer = useRef<number | undefined>(undefined);
 
   useEffect(() => {
@@ -259,6 +260,19 @@ export default function GrowthDiagnostic({
       cancelled = true;
     };
   }, [step, reduced]);
+
+  /* ---- results: the walkthrough video starts when the score appears.
+     Browsers may refuse sound without a direct tap, so fall back to a
+     muted start; the controls let the viewer turn sound on. ---- */
+  useEffect(() => {
+    if (step !== RESULTS_STEP) return;
+    const v = vslRef.current;
+    if (!v) return;
+    v.play().catch(() => {
+      v.muted = true;
+      v.play().catch(() => {});
+    });
+  }, [step]);
 
   /* ---- results: inline Calendly (assets lazy-load here, retries while
           the script arrives, falls back to a plain button) ---- */
@@ -626,6 +640,45 @@ export default function GrowthDiagnostic({
             <p className="tier-copy">{r.tier.copy}</p>
           </div>
         </div>
+        <div className="vsl">
+          <video
+            ref={vslRef}
+            controls
+            playsInline
+            preload="metadata"
+            poster="/video/growth-vsl-poster.jpg"
+            src="/video/growth-vsl.mp4"
+          />
+        </div>
+        <div ref={calWrapRef}>
+          <h2 className="rh">Grab your breakdown slot</h2>
+          <p className="note" style={{ marginBottom: 6 }}>
+            20 minutes, live with our team. $679 of work, free. Slots go to
+            whoever grabs them first.
+          </p>
+          {calFallback ? (
+            <div style={{ textAlign: "center", padding: "14px 0" }}>
+              <button
+                type="button"
+                className="btn"
+                onClick={openBookingFallback}
+              >
+                Book my free breakdown &rarr;
+              </button>
+            </div>
+          ) : (
+            <div
+              ref={calInlineRef}
+              style={{
+                minWidth: 320,
+                height: 700,
+                border: "1px solid rgba(38, 31, 21, 0.14)",
+                overflow: "hidden",
+                background: "#f6f1e3",
+              }}
+            />
+          )}
+        </div>
         <div className="audit-offer">
           <p className="audit-offer-kicker">Included with your score</p>
           <h2 className="audit-offer-title">
@@ -703,38 +756,9 @@ export default function GrowthDiagnostic({
             month to 34 in two months, with top-three rankings in New York,
             Philadelphia, Orlando, Chicago, and LA.
           </p>
-          <p className="note">
-            Pick your time below. No prep needed, we bring the audit. &darr;
-          </p>
-        </div>
-        <div ref={calWrapRef}>
-          <h2 className="rh">Grab your breakdown slot</h2>
-          <p className="note" style={{ marginBottom: 6 }}>
-            20 minutes, live with our team. $679 of work, free. Slots go to
-            whoever grabs them first.
-          </p>
-          {calFallback ? (
-            <div style={{ textAlign: "center", padding: "14px 0" }}>
-              <button
-                type="button"
-                className="btn"
-                onClick={openBookingFallback}
-              >
-                Book my free breakdown &rarr;
-              </button>
-            </div>
-          ) : (
-            <div
-              ref={calInlineRef}
-              style={{
-                minWidth: 320,
-                height: 700,
-                border: "1px solid rgba(38, 31, 21, 0.14)",
-                overflow: "hidden",
-                background: "#f6f1e3",
-              }}
-            />
-          )}
+          <button type="button" className="btn w100" onClick={onBookTop}>
+            Pick my time &rarr;
+          </button>
         </div>
       </>
     );

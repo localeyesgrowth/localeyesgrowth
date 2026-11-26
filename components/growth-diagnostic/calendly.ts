@@ -56,7 +56,7 @@ export function calendlyUrlWithPrefill(
     encodeURIComponent(email) +
     /* keep it compact + on-brand: LE paper background, ink text, ochre buttons */
     "&hide_event_type_details=1&hide_gdpr_banner=1" +
-    "&background_color=fbf8f2&text_color=20211d&primary_color=c8862a"
+    "&background_color=fbf8f2&text_color=20211d&primary_color=261f15"
   );
 }
 
