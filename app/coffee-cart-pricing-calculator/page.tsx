@@ -2132,10 +2132,10 @@ export default function CoffeeCartCalculatorPage() {
                 onClick={openQuote}
                 className="group mt-7 flex w-full cursor-pointer items-stretch text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
               >
-                <span className="flex flex-1 items-center bg-[#ededd5] px-6 py-4 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 group-hover:bg-[#6a5f4e]">
+                <span className="flex flex-1 items-center bg-[#261f15] px-6 py-4 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-[#ededd5] transition-colors duration-300 group-hover:bg-[#4a3421]">
                   {CONFIG.copy.lead.heading}
                 </span>
-                <span className="relative flex items-center border-l border-dashed border-white/50 bg-[#ededd5] px-5 font-heading not-italic text-lg leading-none tabular-nums text-white transition-colors duration-300 group-hover:bg-[#6a5f4e]">
+                <span className="relative flex items-center border-l border-dashed border-[#ededd5]/40 bg-[#261f15] px-5 font-heading not-italic text-lg leading-none tabular-nums text-[#ededd5] transition-colors duration-300 group-hover:bg-[#4a3421]">
                   {money(quote.recommended)}
                   <span
                     aria-hidden="true"
@@ -2625,7 +2625,7 @@ export default function CoffeeCartCalculatorPage() {
           <button
             type="button"
             onClick={openQuote}
-            className="shrink-0 cursor-pointer bg-[#ededd5] px-6 py-3.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#6a5f4e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
+            className="shrink-0 cursor-pointer bg-[#261f15] px-6 py-3.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[#ededd5] transition-colors hover:bg-[#4a3421] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
           >
             {CONFIG.copy.lead.ctaShort}
           </button>
