@@ -36,6 +36,7 @@ const RESOURCE_LINKS: NavLink[] = [
 const BAR_LINKS: NavLink[] = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Price Calculator", href: "/coffee-cart-pricing-calculator" },
   { label: "About", href: "/about" },
 ];
 

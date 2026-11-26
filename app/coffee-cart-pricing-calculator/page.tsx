@@ -1754,10 +1754,8 @@ export default function CoffeeCartCalculatorPage() {
 
     setLeadStatus("submitting");
     try {
-      /* ------------------------------------------------------------
-         TODO: point this at your CRM / email endpoint. The payload
-         below has everything: the lead + the full quote summary.
-         ------------------------------------------------------------ */
+      /* Sends the quote by email and logs the lead to the leads sheet
+         (see app/api/quote/route.ts). */
       const payload = {
         lead,
         summary: buildSummary({
@@ -1770,8 +1768,12 @@ export default function CoffeeCartCalculatorPage() {
           quote,
         }),
       };
-      void payload; /* placeholder — no backend call yet */
-      await new Promise((resolve) => window.setTimeout(resolve, 600));
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Quote request failed");
       const now = new Date();
       setQuoteRef({
         num: `Q-${now.getFullYear()}-${String(Math.floor(1000 + Math.random() * 9000))}`,
