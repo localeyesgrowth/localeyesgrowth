@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Noise } from "@/components/effects/Noise";
+import type { QuoteDoc } from "@/lib/quote-pdf";
 
 /* ----------------------------------------------------------------------
    Coffee Catering Price Calculator — flagship linkable asset
@@ -274,7 +275,7 @@ const CONFIG = {
       startOver: "Start over",
       successTitle: "Quote request received.",
       successBody:
-        "We're generating your client-ready quote now, a copy is on its way to",
+        "Your client-ready quote is on its way as a PDF to",
       errorRequired: "Required",
       errorEmail: "Enter a valid email",
       errorSubmit: "Something went wrong, please try again.",
@@ -1368,6 +1369,18 @@ function formatEventDate(iso: string) {
 
 type QuoteRef = { num: string; date: string };
 
+function newQuoteRef(): QuoteRef {
+  const now = new Date();
+  return {
+    num: `Q-${now.getFullYear()}-${String(Math.floor(1000 + Math.random() * 9000))}`,
+    date: now.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }),
+  };
+}
+
 function buildQuoteText(args: {
   lead: {
     name: string;
@@ -1418,9 +1431,38 @@ function buildQuoteText(args: {
     pad("TOTAL", money(quote.recommended)),
     `Per guest: ${money(quote.perGuest)}`,
     "",
-    "Quote valid 14 days · Prepared with LocalEyes",
+    "Quote valid 14 days",
   );
   return lines.join("\n");
+}
+
+/* the same quote as plain data: what the API turns into the emailed PDF
+   and what Download PDF builds in the browser */
+function toQuoteDoc(args: Parameters<typeof buildQuoteText>[0]): QuoteDoc {
+  const { lead, quoteRef, quote } = args;
+  return {
+    business: lead.business.trim() || "Mobile Coffee Catering",
+    client: lead.client.trim() || "Your event",
+    eventDate: formatEventDate(lead.date),
+    preparedBy: lead.name.trim(),
+    email: lead.email.trim(),
+    phone: lead.phone.trim(),
+    refNum: quoteRef.num,
+    refDate: quoteRef.date,
+    service: args.cartTitle,
+    positioning: args.posTitle,
+    guests: guestsLabel(args.guests),
+    hours: args.hours,
+    miles: args.miles,
+    drinks: quote.totalDrinks,
+    carts: quote.carts,
+    baristas: quote.baristas,
+    base: quote.basePositioned,
+    travel: quote.travelFee,
+    addons: quote.addonLines.map((l) => ({ label: l.label, amount: l.amount })),
+    total: quote.recommended,
+    perGuest: quote.perGuest,
+  };
 }
 
 function buildQuoteHtml(args: Parameters<typeof buildQuoteText>[0]) {
@@ -1517,7 +1559,7 @@ function buildQuoteHtml(args: Parameters<typeof buildQuoteText>[0]) {
       <table>${ledger}</table>
       <p class="muted" style="text-align:right;margin-top:8px;">${money(quote.perGuest)} per guest</p>
     </section>
-    <p class="foot">Quote valid 14 days · Prepared with LocalEyes</p>
+    <p class="foot">Quote valid 14 days</p>
   </div>
 </body>
 </html>
@@ -1710,15 +1752,26 @@ export default function CoffeeCartCalculatorPage() {
 
   const printQuote = () => window.print();
 
-  const downloadQuote = () => {
+  /* the same PDF that goes out by email; falls back to the HTML page if
+     the PDF cannot be built in this browser */
+  const downloadQuote = async () => {
     if (!quoteDocArgs) return;
-    const blob = new Blob([buildQuoteHtml(quoteDocArgs)], {
-      type: "text/html",
-    });
+    let blob: Blob;
+    let filename: string;
+    try {
+      const { buildQuotePdf, quoteFileName } = await import("../../lib/quote-pdf");
+      const doc = toQuoteDoc(quoteDocArgs);
+      const bytes = await buildQuotePdf(doc);
+      blob = new Blob([bytes as BlobPart], { type: "application/pdf" });
+      filename = quoteFileName(doc);
+    } catch {
+      blob = new Blob([buildQuoteHtml(quoteDocArgs)], { type: "text/html" });
+      filename = `${quoteDocArgs.quoteRef.num}-event-quote.html`;
+    }
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${quoteDocArgs.quoteRef.num}-event-quote.html`;
+    a.download = filename;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -1756,8 +1809,26 @@ export default function CoffeeCartCalculatorPage() {
     try {
       /* Sends the quote by email and logs the lead to the leads sheet
          (see app/api/quote/route.ts). */
+      const ref = newQuoteRef();
       const payload = {
         lead,
+        quote: toQuoteDoc({
+          lead,
+          quoteRef: ref,
+          cartTitle: CONFIG.model.CART_TYPES[cartType].title,
+          posTitle: CONFIG.model.POSITIONING[positioning].title,
+          guests,
+          hours,
+          miles,
+          quote,
+          addonsTotal,
+        }),
+        notes: {
+          low: quote.prices.value,
+          high: quote.prices.premium,
+          perDrink: quote.perDrink,
+          drinksPerHour: quote.drinksPerHour,
+        },
         summary: buildSummary({
           cartType,
           positioning,
@@ -1774,15 +1845,7 @@ export default function CoffeeCartCalculatorPage() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("Quote request failed");
-      const now = new Date();
-      setQuoteRef({
-        num: `Q-${now.getFullYear()}-${String(Math.floor(1000 + Math.random() * 9000))}`,
-        date: now.toLocaleDateString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-        }),
-      });
+      setQuoteRef(ref);
       setLeadStatus("success");
     } catch {
       setLeadStatus("error");
@@ -2391,7 +2454,7 @@ export default function CoffeeCartCalculatorPage() {
 
                       {/* foot */}
                       <p className="mt-10 flex items-center justify-center gap-2 border-t border-[#261f15]/20 pt-4 text-center font-sans text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-[#261f15]/55">
-                        Quote valid 14 days · Prepared with LocalEyes
+                        Quote valid 14 days
                       </p>
                     </div>
 
@@ -2399,17 +2462,17 @@ export default function CoffeeCartCalculatorPage() {
                     <div className="lec-quote-actions mt-7 flex flex-wrap items-baseline gap-x-7 gap-y-4">
                       <button
                         type="button"
-                        onClick={printQuote}
-                        className="cursor-pointer bg-[#6a5f4e] px-6 py-3 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#261f15] transition-colors hover:bg-[#6a5f4e] hover:text-[#ededd5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a5f4e]"
+                        onClick={downloadQuote}
+                        className="cursor-pointer rounded-[4px] bg-[#261f15] px-6 py-3.5 font-sans text-sm font-semibold text-[#ededd5] transition-colors hover:bg-[#4a3421] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#261f15]"
                       >
-                        Print / PDF
+                        Download PDF
                       </button>
                       <button
                         type="button"
-                        onClick={downloadQuote}
+                        onClick={printQuote}
                         className="cursor-pointer border-b border-[#261f15]/30 pb-0.5 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#261f15]/70 transition-colors hover:border-[#6a5f4e] hover:text-[#261f15] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a5f4e]"
                       >
-                        Download
+                        Print
                       </button>
                       <button
                         type="button"
