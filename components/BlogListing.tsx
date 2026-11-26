@@ -114,6 +114,7 @@ function JournalCard({ post, reduced }: { post: BlogPostMeta; reduced: boolean }
 
           <p className="mt-auto pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/45">
             {post.date}
+            <span aria-hidden="true" className="mx-2">·</span>
             {post.readTime}
           </p>
         </div>

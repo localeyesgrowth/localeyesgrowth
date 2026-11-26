@@ -590,9 +590,11 @@ export default function BlogArticle({
                 {meta.author && (
                   <>
                     By {meta.author}
+                  <span aria-hidden="true" className="mx-2">·</span>
                   </>
                 )}
                 {meta.date}
+                <span aria-hidden="true" className="mx-2">·</span>
                 {meta.readTime}
               </p>
 

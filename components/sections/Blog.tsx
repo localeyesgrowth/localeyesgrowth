@@ -144,6 +144,7 @@ function BlogCard({
           <div className="mt-auto flex items-center justify-between gap-4 pt-6">
             <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#261f15]/45">
               {post.date}
+              <span aria-hidden="true" className="mx-2">·</span>
               {post.readTime}
             </p>
             <span className="relative flex h-8 w-8 shrink-0 items-center justify-center">
